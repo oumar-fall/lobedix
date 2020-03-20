@@ -1,5 +1,4 @@
-ls
-        package com.example.lobedix;
+package com.example.lobedix;
 
 import androidx.appcompat.app.AppCompatActivity;
 
