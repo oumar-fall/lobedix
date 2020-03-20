@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:id="@+id/commande"
+        android:title="Ma commande"
+        />
+    <item android:id="@+id/espace"
+        android:title="Changer d'espace"
+        />
+    <item android:id="@+id/aperitif"
+        android:title="Apéritif"
+        />
+
+    <item android:id="@+id/menus"
+        android:title="Nos menus"
+        />
+    <item android:id="@+id/carte"
+        android:title="La carte ">
+
+        <menu android:id="@+id/sousmenucarte">
+            <item android:id="@+id/entrees"
+                android:title="Nos entrées"   />
+
+            <item android:id="@+id/plats"
+                android:title="Nos plats"  />
+
+            <item android:id="@+id/desserts"
+                android:title="Nos desserts"  />
+        </menu>
+    </item>
+
+    <item android:id="@+id/coupdepouce"
+        android:title="Coup de pouce"
+        />
+    <item android:id="@+id/quitter"
+        android:title="Quitter"
+        />
+</menu>
