@@ -3,4 +3,8 @@
     <string name="restaurant_name">L\'Obedix</string>
     <string name="settings">Settings</string>
     <string name="language_french">French</string>
+    <string name="lasagnes">Lasagnes végétariennes</string>
+    <string name="opinions">177 avis</string>
+    <string name="opinions_lasagnes">177 avis</string>
+    <string name="description_lasagnes">Le mot du chef: \n Plates, mais avec de la personnalité. UN plat de pâtes plates, ça m\'éclate !</string>
 </resources>
