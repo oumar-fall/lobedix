@@ -3,6 +3,8 @@ package com.example.lobedix;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class SwipeGestureEADetector extends GestureDetector {
 
@@ -12,7 +14,8 @@ public class SwipeGestureEADetector extends GestureDetector {
 
                     @Override
                     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-
+                        ImageView image = context.getImage();
+                        TextView txt = context.getText();
                         Log.i("DEBUG", e1 + " - " + e2);
 
                         float deltaX = e1.getX() - e2.getX();
@@ -23,11 +26,18 @@ public class SwipeGestureEADetector extends GestureDetector {
                             if (Math.abs(deltaX)>=DELTA_MIN){
                                 if (deltaX < 0) {
                                     context.onSwipe(Swipe_Direction.RIGHT_TO_LEFT);
-
+                                    image.setX(image.getX() - deltaX/2);
+                                    image.setY(image.getY() - deltaY/2);
+                                    txt.setX(txt.getX() - deltaX/2);
+                                    txt.setY(txt.getY() - deltaY/2);
                                     return(true);
                                 }
                                 else{
                                     context.onSwipe(Swipe_Direction.LEFT_TO_RIGHT);
+                                    image.setX(image.getX() - deltaX/2);
+                                    image.setY(image.getY() - deltaY/2);
+                                    txt.setX(txt.getX() - deltaX/2);
+                                    txt.setY(txt.getY() - deltaY/2);
                                     return(true);
                                 }
                             }
