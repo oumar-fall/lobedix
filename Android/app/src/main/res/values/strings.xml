@@ -7,4 +7,7 @@
     <string name="opinions">177 avis</string>
     <string name="opinions_lasagnes">177 avis</string>
     <string name="description_lasagnes">Le mot du chef: \n Plates, mais avec de la personnalité. UN plat de pâtes plates, ça m\'éclate !</string>
+    <string name="nos_menus">Nos Menus</string>
+    <string name="a_la_carte">À la Carte</string>
+    <string name="coups_de_pouce">Coup De\nPouce</string>
 </resources>
