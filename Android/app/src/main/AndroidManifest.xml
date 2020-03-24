@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".listePlats"/>
+        <activity android:name=".Espace_Enfant"/>
         <activity android:name=".ChoixApero" />
         <activity android:name=".Apero" />
         <activity android:name=".Dish_Informations" />
