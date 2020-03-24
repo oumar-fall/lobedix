@@ -147,6 +147,7 @@
                             android:layout_weight="1">
 
                             <ImageButton
+                                android:onClick="carte"
                                 android:layout_width="170dp"
                                 android:layout_height="170dp"
                                 android:layout_gravity="center_horizontal"
