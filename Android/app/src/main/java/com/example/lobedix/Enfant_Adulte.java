@@ -16,7 +16,6 @@ public class Enfant_Adulte extends AppCompatActivity {
     private ImageView image = null;
     private TextView txt = null;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +51,8 @@ public class Enfant_Adulte extends AppCompatActivity {
     }
 
     public void onSwipe(SwipeGestureEADetector.Swipe_Direction direction){
+        Intent here = new Intent(Enfant_Adulte.this, Enfant_Adulte.class);
+        startActivity(here);
         String message = "";
         switch(direction) {
             case LEFT_TO_RIGHT:
