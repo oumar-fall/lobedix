@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Dish_Informations_Nutri"></activity>
+        <activity android:name=".Apero"/>
+        <activity android:name=".Dish_Informations"/>
+        <activity android:name=".Dish_Informations_Nutri" />
         <activity android:name=".commandType" />
         <activity android:name=".Enfant_Adulte" />
         <activity android:name=".MainActivity">

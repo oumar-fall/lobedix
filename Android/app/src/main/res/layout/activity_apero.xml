@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Enfant_Adulte"
+    tools:context=".Apero"
     android:orientation="vertical">
 
     <LinearLayout
@@ -81,37 +81,18 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        android:layout_weight="2">
+        android:layout_weight="2"
+        android:layout_marginHorizontal="40dp">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/apero"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_weight="1">
-
-            <ImageView
-                android:id="@+id/enfants"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/menu_enfant"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_weight="1">
-
-            <ImageView
-                android:id="@+id/adultes"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/menu_adulte" />
-
-        </LinearLayout>
+            android:src="@drawable/menu_adulte"/>
 
     </LinearLayout>
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -121,15 +102,17 @@
         android:layout_margin="20dp">
 
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center">
 
             <Button
+                android:onClick="apero"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Enfant"/>
+                android:text="Non"/>
         </LinearLayout>
 
         <LinearLayout
@@ -139,10 +122,9 @@
             android:gravity="center">
 
             <Button
-                android:onClick="adulte"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Adultes"/>
+                android:text="Oui"/>
 
         </LinearLayout>
 

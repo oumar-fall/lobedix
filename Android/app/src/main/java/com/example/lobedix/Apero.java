@@ -6,17 +6,17 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Dish_Informations extends AppCompatActivity {
+public class Apero extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dish__informations);
+        setContentView(R.layout.activity_apero);
     }
 
-    public void nutriscore(View view){
+    public void apero(View view){
 
-        Intent nutri = new Intent(Dish_Informations.this, Dish_Informations_Nutri.class);
-        startActivity(nutri);
+        Intent dish_information = new Intent(Apero.this, Dish_Informations.class);
+        startActivity(dish_information);
     }
 }
