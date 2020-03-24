@@ -23,6 +23,7 @@ public class SwipeGestureDetector extends GestureDetector {
                     if (Math.abs(deltaX)>=DELTA_MIN){
                         if (deltaX < 0) {
                             context.onSwipe(Swipe_Direction.RIGHT_TO_LEFT);
+
                             return(true);
                         }
                         else{
@@ -31,19 +32,6 @@ public class SwipeGestureDetector extends GestureDetector {
                         }
                     }
                 }
-                else{
-                    if (Math.abs(deltaY)>=DELTA_MIN){
-                        if (deltaY < 0) {
-                            context.onSwipe(Swipe_Direction.BOTTOM_TO_TOP);
-                            return(true);
-                        }
-                        else{
-                            context.onSwipe(Swipe_Direction.TOP_TO_BOTTOM);
-                            return(true);
-                        }
-                    }
-
-                }
 
                 return (false);
             }
@@ -51,8 +39,7 @@ public class SwipeGestureDetector extends GestureDetector {
         );
     }
 
-
     public static enum Swipe_Direction{
-        LEFT_TO_RIGHT, RIGHT_TO_LEFT, TOP_TO_BOTTOM, BOTTOM_TO_TOP
+        LEFT_TO_RIGHT, RIGHT_TO_LEFT
     }
 }

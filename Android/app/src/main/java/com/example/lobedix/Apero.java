@@ -1,9 +1,12 @@
 package com.example.lobedix;
 
 import android.content.Intent;
+import android.graphics.PointF;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.Toast;
 
@@ -12,17 +15,27 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Apero extends AppCompatActivity {
 
     private SwipeGestureDetector swipeDetector;
+    private ImageView image = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apero);
-
+        image = (ImageView) findViewById(R.id.apero);
         swipeDetector = new SwipeGestureDetector(this);
+        image.setOnTouchListener(new View.OnTouchListener() {
+            float x = image.getX();
+            float y = image.getY();
+            public boolean onTouch(View v, MotionEvent event) {
+                //image.setX(x + (event.getX()-x)/10);
+                //image.setY(y + (event.getY()-y)/10);
+                swipeDetector.onTouchEvent(event);
+                return(true);
+            }
+        });
+
     }
 
-    public boolean dispatchTouchEvent(MotionEvent event){
-        return swipeDetector.onTouchEvent(event);
-    }
 
     public void NoApero(View view){
 
@@ -39,15 +52,16 @@ public class Apero extends AppCompatActivity {
     public void onSwipe(SwipeGestureDetector.Swipe_Direction direction){
         String message = "";
         switch(direction) {
-            case RIGHT_TO_LEFT:
+            case LEFT_TO_RIGHT:
                 Intent command = new Intent(Apero.this, commandType.class);
                 startActivity(command);
-                message = "Right to left swipe";
+
+                message = "Pas d'apéro !";
                 break;
-            case LEFT_TO_RIGHT:
+            case RIGHT_TO_LEFT:
                 Intent choixApero = new Intent(Apero.this, ChoixApero.class);
                 startActivity(choixApero);
-                message = "Left to Right swipe";
+                message = "Un petit apéro !";
                 break;
         }
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();

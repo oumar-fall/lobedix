@@ -77,55 +77,78 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        android:layout_weight="2"
-        android:layout_marginHorizontal="40dp">
+        android:layout_weight="5"
+        >
+
 
         <ImageView
             android:id="@+id/apero"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/menu_adulte"/>
+            android:src="@drawable/apero"/>
 
-    </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Un petit Apéro ?"
+            android:textSize="40sp"
+            android:layout_marginTop="30dp"
+            android:gravity="top|center"/>
+
+    </FrameLayout>
 
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal"
-        android:layout_margin="20dp">
+        android:layout_margin="20dp"
+        android:gravity="center">
 
         <LinearLayout
 
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:gravity="center">
 
-            <Button
+            <ImageView
                 android:onClick="NoApero"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Non"/>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/non"/>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center">
 
-            <Button
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/question"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center">
+
+            <ImageView
                 android:onClick="Apero"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Oui"/>
+                android:src="@drawable/oui"/>
 
         </LinearLayout>
 
