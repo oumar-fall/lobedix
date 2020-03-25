@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    Texte-->
+    <dimen name="txtListePlats">22dp</dimen>
+    <dimen name="txtTitrePrincipal">30sp</dimen>
+
+<!-- Autre -->
+    <dimen name="hauteurBarreHaut">50dp</dimen>
+    <dimen name="burgerMenu">30dp</dimen>
+
+<!--Liste Plats-->
+    <dimen name="plusMoins">30dp</dimen>
+</resources>
