@@ -10,7 +10,17 @@
     <string name="opinions">177 avis</string>
     <string name="opinions_lasagnes">177 avis</string>
     <string name="description_lasagnes">Le mot du chef: \n Plates, mais avec de la personnalité. UN plat de pâtes plates, ça m\'éclate !</string>
+    <string name="opinions">3 avis</string>
+    <string name="opinions_lasagnes"> <u>3 avis </u></string>
+    <string name="description_lasagnes"> <u>Le mot du chef: </u> \n Plates, mais avec de la personnalité. UN plat de pâtes plates, ça m\'éclate !</string>
     <string name="nos_menus">Nos Menus</string>
     <string name="a_la_carte">À la Carte</string>
     <string name="coups_de_pouce">Coup De\nPouce</string>
+    <string name="nom1">André Gretil</string>
+    <string name="avis1">Ce plat est vraiment un délice, j\'ai adoré.</string>
+    <string name="nom2">Béatrive Langré</string>
+    <string name="avis2">Agréablement surprise de trouver un plat végétarienne, moi qui ne mange pas de viande</string>
+    <string name="nom3">Camille Tavernier</string>
+    <string name="avis3">Très bon :)</string>
+    <string name="avis"><u>Avis des clients</u></string>
 </resources>
