@@ -24,19 +24,19 @@ public class Enfant_Adulte extends AppCompatActivity {
         txt = (TextView) findViewById(R.id.enf_ad_txt);
         swipeDetector = new SwipeGestureEADetector(this);
         image.setOnTouchListener(new View.OnTouchListener() {
-            float x = image.getX();
-            float x_txt = txt.getX();
-            float y = image.getY();
-            float y_txt = image.getY();
             public boolean onTouch(View v, MotionEvent event) {
-                image.setX(x + (event.getX()-x)/10);
-                image.setY(y + (event.getY()-y)/10);
-                txt.setX(x + (event.getX()-x_txt)/10);
-                txt.setY(y + (event.getY()-y_txt)/10);
                 swipeDetector.onTouchEvent(event);
                 return(true);
             }
         });
+    }
+
+    public ImageView getImage(){
+        return(image);
+    }
+
+    public TextView getText(){
+        return(txt);
     }
 
     public void adulte(View view){
@@ -51,12 +51,13 @@ public class Enfant_Adulte extends AppCompatActivity {
     }
 
     public void onSwipe(SwipeGestureEADetector.Swipe_Direction direction){
+        Intent here = new Intent(Enfant_Adulte.this, Enfant_Adulte.class);
+        startActivity(here);
         String message = "";
         switch(direction) {
             case LEFT_TO_RIGHT:
                 Intent enfant = new Intent(Enfant_Adulte.this, Espace_Enfant.class);
                 startActivity(enfant);
-
                 message = "Menu enfant !";
                 break;
             case RIGHT_TO_LEFT:
@@ -65,6 +66,7 @@ public class Enfant_Adulte extends AppCompatActivity {
                 message = "Menu adulte !";
                 break;
         }
+
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }
