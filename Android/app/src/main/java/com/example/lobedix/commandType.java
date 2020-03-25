@@ -16,7 +16,7 @@ public class commandType extends AppCompatActivity {
 
     public void carte(View view) {
 
-        Intent carte = new Intent(commandType.this, Dish_Informations.class);
+        Intent carte = new Intent(commandType.this, listePlats.class);
         startActivity(carte);
     }
 }
