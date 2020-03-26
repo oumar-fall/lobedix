@@ -7,11 +7,7 @@
     <string name="spaghetti">Spaghetti Bolognaise</string>
     <string name="pouletCurry">Curry de Poulet</string>
     <string name="ratatouille">Ratatouille</string>
-<<<<<<< HEAD
     <string name="opinions">3 avis</string>
-=======
-    <string name="opinions">177 avis</string>
->>>>>>> 9a05f62b81aa204c037272ea7f532e10f00bb1a5
     <string name="opinions_lasagnes"> <u>3 avis </u></string>
     <string name="description_lasagnes"> <u>Le mot du chef: </u> \n Plates, mais avec de la personnalité. UN plat de pâtes plates, ça m\'éclate !</string>
     <string name="nos_menus">Nos Menus</string>
