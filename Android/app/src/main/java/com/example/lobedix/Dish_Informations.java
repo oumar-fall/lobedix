@@ -27,8 +27,7 @@ public class Dish_Informations extends AppCompatActivity {
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         menu_button=(ImageButton)findViewById(R.id.menu_button);
-        avis = (TextView)findViewById(R.id.opinions);
-        scrollview = (ScrollView)findViewById(R.id.scroll);
+
 
         menu_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +35,9 @@ public class Dish_Informations extends AppCompatActivity {
                 drawer.openDrawer(Gravity.LEFT);
             }
         });
+
+        avis = (TextView)findViewById(R.id.opinions);
+        scrollview = (ScrollView)findViewById(R.id.scroll);
 
         avis.setOnClickListener(new View.OnClickListener() {
             @Override

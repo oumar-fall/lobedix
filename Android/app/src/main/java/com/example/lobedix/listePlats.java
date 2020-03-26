@@ -1,11 +1,14 @@
 package com.example.lobedix;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class listePlats extends AppCompatActivity {
@@ -18,6 +21,8 @@ public class listePlats extends AppCompatActivity {
     private TextView spaghetti;
     private TextView curry;
     private TextView ratatouille;
+    private DrawerLayout drawer;
+    private ImageButton menu_button;
 
     /*private  TextView spaghetti = findViewById(R.id.spaghetti);
     private TextView ratatouille = findViewById(R.id.ratatouille);
@@ -31,6 +36,15 @@ public class listePlats extends AppCompatActivity {
         spaghetti = findViewById(R.id.spaghetti);
         ratatouille = findViewById(R.id.ratatouille);
         curry = findViewById(R.id.curry);
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        menu_button=(ImageButton)findViewById(R.id.menu_button);
+
+        menu_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawer.openDrawer(Gravity.LEFT);
+            }
+        });
 
     }
 
