@@ -89,7 +89,7 @@
             android:id="@+id/enf_ad"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/enfant_adulte"/>
+            android:src="@mipmap/enfant_adulte"/>
 
         <TextView
             android:id="@+id/enf_ad_txt"
