@@ -21,23 +21,23 @@ public class SwipeGestureEADetector extends GestureDetector {
                         float deltaX = e1.getX() - e2.getX();
                         float deltaY = e1.getY() - e2.getY();
 
+                        if ((velocityX > 1) | (velocityY > 1)){
+                            image.setX(image.getX() - deltaX/2);
+                            image.setY(image.getY() - deltaY/2);
+                            txt.setX(txt.getX() - deltaX/2);
+                            txt.setY(txt.getY() - deltaY/2);
+
+                        }
 
                         if (Math.abs(deltaX) > Math.abs(deltaY)){
                             if (Math.abs(deltaX)>=DELTA_MIN){
                                 if (deltaX < 0) {
                                     context.onSwipe(Swipe_Direction.RIGHT_TO_LEFT);
-                                    image.setX(image.getX() - deltaX/2);
-                                    image.setY(image.getY() - deltaY/2);
-                                    txt.setX(txt.getX() - deltaX/2);
-                                    txt.setY(txt.getY() - deltaY/2);
                                     return(true);
                                 }
                                 else{
                                     context.onSwipe(Swipe_Direction.LEFT_TO_RIGHT);
-                                    image.setX(image.getX() - deltaX/2);
-                                    image.setY(image.getY() - deltaY/2);
-                                    txt.setX(txt.getX() - deltaX/2);
-                                    txt.setY(txt.getY() - deltaY/2);
+
                                     return(true);
                                 }
                             }
