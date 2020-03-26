@@ -117,11 +117,14 @@
                     android:gravity="center_vertical">
 
                     <ImageButton
+                        android:onClick="removeSpaghetti"
+                        android:id="@+id/moinsspaghetti"
                         android:layout_width="@dimen/plusMoins"
                         android:layout_height="@dimen/plusMoins"
                         android:background="@drawable/moins"/>
 
                     <TextView
+                        android:id="@+id/spaghetti"
                         android:layout_width="@dimen/plusMoins"
                         android:layout_height="@dimen/plusMoins"
                         android:background="@drawable/rect"
@@ -130,6 +133,8 @@
                         android:layout_marginHorizontal="2dp"/>
 
                     <ImageButton
+                        android:onClick="addSpaghetti"
+                        android:id="@+id/plusspaghetti"
                         android:layout_width="@dimen/plusMoins"
                         android:layout_height="@dimen/plusMoins"
                         android:background="@drawable/plus"/>
@@ -164,11 +169,14 @@
                     android:gravity="center_vertical">
 
                     <ImageButton
+                        android:onClick="removeLasagnes"
+                        android:id="@+id/moinslasagnes"
                         android:layout_width="@dimen/plusMoins"
                         android:layout_height="@dimen/plusMoins"
                         android:background="@drawable/moins"/>
 
                     <TextView
+                        android:id="@+id/Textlasagnes"
                         android:layout_width="@dimen/plusMoins"
                         android:layout_height="@dimen/plusMoins"
                         android:background="@drawable/rect"
@@ -177,6 +185,8 @@
                         android:layout_marginHorizontal="2dp"/>
 
                     <ImageButton
+                        android:onClick="addLasagnes"
+                        android:id="@+id/pluslasagnes"
                         android:layout_width="@dimen/plusMoins"
                         android:layout_height="@dimen/plusMoins"
                         android:background="@drawable/plus"/>
@@ -210,11 +220,14 @@
                     android:gravity="center_vertical">
 
                     <ImageButton
+                        android:onClick="removeCurry"
+                        android:id="@+id/moinscurry"
                         android:layout_width="@dimen/plusMoins"
                         android:layout_height="@dimen/plusMoins"
                         android:background="@drawable/moins"/>
 
                     <TextView
+                        android:id="@+id/curry"
                         android:layout_width="@dimen/plusMoins"
                         android:layout_height="@dimen/plusMoins"
                         android:background="@drawable/rect"
@@ -223,6 +236,8 @@
                         android:layout_marginHorizontal="2dp"/>
 
                     <ImageButton
+                        android:onClick="addCurry"
+                        android:id="@+id/pluscurry"
                         android:layout_width="@dimen/plusMoins"
                         android:layout_height="@dimen/plusMoins"
                         android:background="@drawable/plus"/>
@@ -255,11 +270,14 @@
                     android:gravity="center_vertical">
 
                     <ImageButton
+                        android:onClick="removeRatatouille"
+                        android:id="@+id/moinsratatouille"
                         android:layout_width="@dimen/plusMoins"
                         android:layout_height="@dimen/plusMoins"
                         android:background="@drawable/moins"/>
 
                     <TextView
+                        android:id="@+id/ratatouille"
                         android:layout_width="@dimen/plusMoins"
                         android:layout_height="@dimen/plusMoins"
                         android:background="@drawable/rect"
@@ -268,6 +286,8 @@
                         android:layout_marginHorizontal="2dp"/>
 
                     <ImageButton
+                        android:onClick="addRatatouille"
+                        android:id="@+id/plusratatouille"
                         android:layout_width="@dimen/plusMoins"
                         android:layout_height="@dimen/plusMoins"
                         android:background="@drawable/plus"/>
