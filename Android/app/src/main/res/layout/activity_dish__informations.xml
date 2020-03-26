@@ -6,12 +6,11 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:openDrawer="start"
     tools:context=".Dish_Informations">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <LinearLayout
@@ -125,12 +124,30 @@
                         android:layout_marginRight="5dp"
                         android:orientation="vertical">
 
+                        <GridLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/lasagnes" >
 
-                            <ImageView
-                                android:id="@+id/photo"
+                            <Button
+                                android:id="@+id/Ingrédients"
                                 android:layout_width="wrap_content"
-                                android:layout_height="277dp"
-                                android:background="@drawable/lasagnes"/>
+                                android:layout_height="wrap_content"
+                                android:layout_row="0"
+                                android:layout_column="0"
+                                android:text="Ingrédients" />
+
+                            <Button
+                                android:id="@+id/Ajouter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_row="4"
+                                android:layout_column="2"
+                                android:text="Ajouter à la commande" />
+                        </GridLayout>
+
+
+
 
 
                         <LinearLayout
@@ -416,13 +433,13 @@
     </LinearLayout>
 
 
-<!--    <com.google.android.material.navigation.NavigationView
+    <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:menu="@menu/main_menu"/>
-        -->
+
 
 </androidx.drawerlayout.widget.DrawerLayout>
 
