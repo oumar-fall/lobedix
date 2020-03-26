@@ -135,7 +135,11 @@
                                 android:layout_height="wrap_content"
                                 android:layout_row="0"
                                 android:layout_column="0"
-                                android:text="Ingrédients" />
+                                android:text="Ingrédients"
+                                android:textSize="20sp"
+                                android:background="#a4accf"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"/>
 
                             <Button
                                 android:id="@+id/Ajouter"
@@ -143,7 +147,13 @@
                                 android:layout_height="wrap_content"
                                 android:layout_row="4"
                                 android:layout_column="2"
-                                android:text="Ajouter à la commande" />
+                                android:text="Ajouter à la commande"
+                                android:textSize="30sp"
+                                android:background="#a4accf"
+                                android:paddingLeft="25dp"
+                                android:paddingRight="25dp"
+                                android:paddingBottom="15dp"
+                                android:paddingTop="15dp"/>
                         </GridLayout>
 
 
@@ -163,6 +173,8 @@
                                 android:layout_height="40dp"
                                 android:layout_gravity="left"
                                 android:text="@string/lasagnes"
+                                android:textColor="#000000"
+                                android:textStyle="bold"
                                 android:textSize="30sp" />
 
                             </LinearLayout>
@@ -244,6 +256,7 @@
                                 android:layout_marginTop="20dp"
                                 android:layout_marginBottom="10dp"
                                 android:text="@string/avis"
+                                android:textColor="#000000"
                                 android:textSize="15sp" />
 
                             <LinearLayout
