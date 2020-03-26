@@ -6,36 +6,45 @@
 
     <item android:id="@+id/commande"
         android:title="Ma commande"
+        android:titleCondensed="commande"
         />
     <item android:id="@+id/espace"
         android:title="Changer d'espace"
+        android:titleCondensed="espace"
         />
     <item android:id="@+id/aperitif"
         android:title="Apéritif"
+        android:titleCondensed="aperitif"
         />
 
     <item android:id="@+id/menus"
         android:title="Nos menus"
+        android:titleCondensed="menus"
         />
     <item android:id="@+id/carte"
         android:title="La carte ">
 
         <menu android:id="@+id/sousmenucarte">
             <item android:id="@+id/entrees"
-                android:title="Nos entrées"   />
+                android:title="Nos entrées"
+                android:titleCondensed="entrees"/>
 
             <item android:id="@+id/plats"
-                android:title="Nos plats"  />
+                android:title="Nos plats"
+                android:titleCondensed="plats"/>
 
             <item android:id="@+id/desserts"
-                android:title="Nos desserts"  />
+                android:title="Nos desserts"
+                android:titleCondensed="desserts"/>
         </menu>
     </item>
 
     <item android:id="@+id/coupdepouce"
         android:title="Coup de pouce"
+        android:titleCondensed="coupdepouce"
         />
     <item android:id="@+id/quitter"
         android:title="Quitter"
+        android:titleCondensed="quitter"
         />
 </menu>

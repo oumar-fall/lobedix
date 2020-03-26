@@ -3,6 +3,7 @@ package com.example.lobedix;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.ImageButton;
@@ -12,12 +13,15 @@ import android.widget.TextView;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.navigation.NavigationView;
+
 public class Dish_informations_spaghetti extends AppCompatActivity {
 
-    ImageButton menu_button;
-    DrawerLayout drawer;
-    TextView avis;
-    ScrollView scrollview;
+    private ImageButton menu_button;
+    private DrawerLayout drawer;
+    private TextView avis;
+    private ScrollView scrollview;
+    private NavigationView view;
 
 
     @Override
@@ -44,6 +48,50 @@ public class Dish_informations_spaghetti extends AppCompatActivity {
             public void onClick(View v) {
                 scrollview.scrollTo(0, avis.getBottom());
             }
+        });
+
+        view=(NavigationView)findViewById(R.id.nav_view);
+
+        view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+
+            // This method will trigger on item Click of navigation menu
+
+            @Override
+
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+
+                //Check to see which item was being clicked and perform appropriate action
+                System.out.println(menuItem.getTitleCondensed());
+                CharSequence title = menuItem.getTitleCondensed();
+
+                if(title.equals("aperitif")){ // Choix apéro
+                    startActivity(new Intent(Dish_informations_spaghetti.this, ChoixApero.class));}
+
+                if (title.equals("espace")){ // Changer d'espace
+                    startActivity(new Intent(Dish_informations_spaghetti.this, commandType.class));}
+
+                if (title.equals("commande")){ // Ma commande
+                    startActivity(new Intent(Dish_informations_spaghetti.this, commandType.class));}
+
+                if (title.equals("plats")){
+                    System.out.println("oueeeee");
+                    startActivity(new Intent(Dish_informations_spaghetti.this, listePlats.class));}
+
+                if (title.equals("desserts")){
+                    startActivity(new Intent(Dish_informations_spaghetti.this, commandType.class));}
+
+                if (title.equals("coupdepouce")){
+                    startActivity(new Intent(Dish_informations_spaghetti.this, commandType.class));}
+
+                if (title.equals("quitter")){
+                    startActivity(new Intent(Dish_informations_spaghetti.this, MainActivity.class));}
+
+                drawer.closeDrawers();
+                return true;
+
+
+            }
+
         });
     }
 
