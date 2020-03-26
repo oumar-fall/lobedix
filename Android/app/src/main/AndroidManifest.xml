@@ -13,7 +13,10 @@
         <activity android:name=".Espace_Enfant"/>
         <activity android:name=".ChoixApero" />
         <activity android:name=".Apero" />
-        <activity android:name=".Dish_Informations" />
+        <activity android:name=".Dish_informations_lasagnes" />
+        <activity android:name=".Dish_informations_spaghetti" />
+        <activity android:name=".Dish_informations_ratatouille" />
+        <activity android:name=".Dish_informations_curry" />
         <activity android:name=".Dish_Informations_Nutri" />
         <activity android:name=".commandType" />
         <activity android:name=".Enfant_Adulte" />

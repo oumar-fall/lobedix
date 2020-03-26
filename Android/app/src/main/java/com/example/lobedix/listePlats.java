@@ -50,8 +50,26 @@ public class listePlats extends AppCompatActivity {
 
     public void infosLasagnes(View view) {
 
-        Intent infosLasagnes = new Intent(listePlats.this, Dish_Informations.class);
+        Intent infosLasagnes = new Intent(listePlats.this, Dish_informations_lasagnes.class);
         startActivity(infosLasagnes);
+    }
+
+    public void infosSpaghetti(View view) {
+
+        Intent infosSpaghetti = new Intent(listePlats.this, Dish_informations_spaghetti.class);
+        startActivity(infosSpaghetti);
+    }
+
+    public void infosRatatouille(View view) {
+
+        Intent infosRatatouille = new Intent(listePlats.this, Dish_informations_ratatouille.class);
+        startActivity(infosRatatouille);
+    }
+
+    public void infosCurry(View view) {
+
+        Intent infosCurry = new Intent(listePlats.this, Dish_informations_curry.class);
+        startActivity(infosCurry);
     }
 
     public void addLasagnes(View view) {

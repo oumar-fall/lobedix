@@ -6,7 +6,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Dish_Informations">
+    tools:context=".Dish_informations_ratatouille">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -127,7 +127,7 @@
                         <GridLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/lasagnes" >
+                            android:background="@drawable/ratatouille" >
 
                             <Button
                                 android:id="@+id/Ingrédients"
@@ -172,12 +172,12 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="40dp"
                                 android:layout_gravity="left"
-                                android:text="@string/lasagnes"
+                                android:text="@string/ratatouille"
                                 android:textColor="#000000"
                                 android:textStyle="bold"
                                 android:textSize="30sp" />
 
-                            </LinearLayout>
+                        </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="match_parent"

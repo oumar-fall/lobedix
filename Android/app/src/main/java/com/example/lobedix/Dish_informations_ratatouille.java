@@ -12,7 +12,7 @@ import android.widget.TextView;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Dish_Informations extends AppCompatActivity {
+public class Dish_informations_ratatouille extends AppCompatActivity {
 
     ImageButton menu_button;
     DrawerLayout drawer;
@@ -23,7 +23,7 @@ public class Dish_Informations extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dish__informations);
+        setContentView(R.layout.activity_dish__informations_ratatouille);
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         menu_button=(ImageButton)findViewById(R.id.menu_button);
@@ -49,7 +49,7 @@ public class Dish_Informations extends AppCompatActivity {
 
     public void nutriscore(View view){
 
-        Intent nutri = new Intent(Dish_Informations.this, Dish_Informations_Nutri.class);
+        Intent nutri = new Intent(Dish_informations_ratatouille.this, Dish_Informations_Nutri.class);
         startActivity(nutri);
     }
 

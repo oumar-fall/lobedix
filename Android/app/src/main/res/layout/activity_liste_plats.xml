@@ -149,7 +149,8 @@
                         android:layout_marginVertical="@dimen/marginBoutonsPlatsV"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:background="@drawable/rect">
+                        android:background="@drawable/rect"
+                        android:onClick="infosSpaghetti">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -252,7 +253,8 @@
                         android:layout_marginVertical="@dimen/marginBoutonsPlatsV"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:background="@drawable/rect">
+                        android:background="@drawable/rect"
+                        android:onClick="infosCurry">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -302,7 +304,8 @@
                         android:layout_marginVertical="@dimen/marginBoutonsPlatsV"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:background="@drawable/rect">
+                        android:background="@drawable/rect"
+                        android:onClick="infosRatatouille">
 
                         <TextView
                             android:layout_width="match_parent"
