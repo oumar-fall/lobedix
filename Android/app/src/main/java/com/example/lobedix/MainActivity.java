@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.Menu;
 import android.view.View;
 
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
         DataHolder.getInstance().setInitialPlat();
         DataHolder.getInstance().setListeEntree();
         DataHolder.getInstance().setListePlat();
+        DataHolder.getInstance().setBelleListeEntree();
+        DataHolder.getInstance().setBelleListePlat();
     }
 
     public boolean onCreateOptionsMenu(Menu menu){

@@ -11,9 +11,9 @@ public class MyCommand extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_command);
-        TextView commande = findViewById(R.id.commande);
+        /* commande = findViewById(R.id.commande);
         String c = DataHolder.getInstance().textCommande();
-        commande.setText(c);
+        commande.setText(c);*/
     }
     @Override
     public void onResume(){
