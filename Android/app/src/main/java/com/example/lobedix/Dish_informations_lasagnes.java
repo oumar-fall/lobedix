@@ -16,6 +16,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.Hashtable;
+
 public class Dish_informations_lasagnes extends AppCompatActivity {
 
     ImageButton menu_button;
@@ -108,6 +110,8 @@ public class Dish_informations_lasagnes extends AppCompatActivity {
 
     public void addLasagnes(View view){
         Integer nbLasagnes = DataHolder.getInstance().getNbLasagnes() +1;
+        Hashtable<String,Integer> d = DataHolder.getInstance().getPlat();
+        d.put("Lasagnes",nbLasagnes);
         DataHolder.getInstance().setNbLasagnes(nbLasagnes);
         Toast.makeText(this, "Vous venez de commander un plat de lasagnes supplémentaire", Toast.LENGTH_SHORT).show();
     }
