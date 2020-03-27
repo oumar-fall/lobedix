@@ -99,7 +99,6 @@
             android:layout_height="match_parent">
 
             <ImageButton
-                android:id="@+id/menu_button"
                 android:layout_width="@dimen/burgerMenu"
                 android:layout_height="@dimen/burgerMenu"
                 android:layout_margin="@dimen/marginBurgerMenu"
@@ -110,7 +109,7 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:layout_marginHorizontal="@dimen/marginGlobalH"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="@dimen/marginListePlatsT"
                 android:gravity="top">
 
                 <LinearLayout
@@ -316,8 +315,8 @@
                             android:textSize="22dp" />
 
                     </LinearLayout>
-
                 </LinearLayout>
+
 
             </LinearLayout>
 

@@ -8,12 +8,12 @@
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/hauteurBarreHaut"
             android:orientation="horizontal">
 
             <Space
@@ -42,10 +42,10 @@
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="@string/restaurant_name"
-                    android:textSize="30sp" />
+                    android:textSize="@dimen/txtTitrePrincipal" />
 
             </FrameLayout>
 
@@ -85,206 +85,208 @@
 
         </LinearLayout>
 
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="@dimen/burgerMenu"
+                android:layout_height="@dimen/burgerMenu"
+                android:layout_margin="@dimen/marginBurgerMenu"
+                android:background = "@drawable/menu_icon"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginEnd="@dimen/marginGlobalH"
+                android:layout_marginRight="@dimen/marginGlobalH"
+                android:layout_marginStart="@dimen/marginInfosNutL"
+                android:layout_marginLeft="@dimen/marginInfosNutL"
+                android:layout_marginTop="@dimen/marginGlobalV"
+                android:gravity="top">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@string/valeursNutritionelles"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:textSize="33sp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/photo"
+                        android:layout_width="240dp"
+                        android:layout_height="240dp"
+                        android:layout_weight="5"
+                        android:src="@drawable/lasagnes" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity ="center"
+                        android:text="@string/lasagnes"/>
+                </LinearLayout>
 
 
 
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/txtCaloriesLasagnes"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="end"
+                        android:textAlignment="viewEnd"
+                        android:layout_marginRight="@dimen/marginValeursNut"
+                        android:layout_marginEnd="@dimen/marginValeursNut"
+                        android:layout_weight="1"
+                        android:text="@string/valCaloriesLasagnes"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/pointrouge"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/txtLegumesLasagnes"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="end"
+                        android:textAlignment="viewEnd"
+                        android:layout_marginEnd="@dimen/marginValeursNut"
+                        android:layout_marginRight="@dimen/marginValeursNut"
+                        android:layout_weight="1"
+                        android:text="@string/valLegumesLasagnes"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/pointvert"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/txtSelLasagnes"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="end"
+                        android:textAlignment="viewEnd"
+                        android:layout_marginEnd="@dimen/marginValeursNut"
+                        android:layout_marginRight="@dimen/marginValeursNut"
+                        android:layout_weight="1"
+                        android:text="@string/valSelLasagnes"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/pointvert"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/txtGraissesLasagnes"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="end"
+                        android:layout_marginEnd="@dimen/marginValeursNut"
+                        android:layout_marginRight="@dimen/marginValeursNut"
+                        android:textAlignment="viewEnd"
+                        android:layout_weight="1"
+                        android:text="@string/valGraissesLasagnes"/>
 
 
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
 
+                        android:src="@drawable/pointvert"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/txtSucreLasagnes"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="end"
+                        android:layout_marginEnd="@dimen/marginValeursNut"
+                        android:layout_marginRight="@dimen/marginValeursNut"
+                        android:textAlignment="viewEnd"
+                        android:layout_weight="1"
+                        android:text="@string/valSucreLasagnes"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+
+                        android:src="@drawable/pointvert"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
 
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="3">
-
-        <ImageButton
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:background = "@drawable/menu_icon"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:text="Valeurs nutritionnelles"
-                android:textSize="33sp"></TextView>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:id="@+id/photo"
-                    android:layout_width="240dp"
-                    android:layout_height="240dp"
-                    android:layout_weight="5"
-                    android:src="@drawable/lasagnes" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_gravity="center"
-                    android:gravity ="center"
-                    android:text="Lasagnes végétariennes"></TextView>
-            </LinearLayout>
-
-
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="5"
-                    android:text="CALORIES : un peu trop calorique         "></TextView>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:text="451 kCal"></TextView>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:src="@drawable/pointrouge"></ImageView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-
-
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="5"
-                    android:text="LEGUMES : un peu de légumes                      "></TextView>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:text="41%    "></TextView>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:src="@drawable/pointvert"></ImageView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="5"
-                    android:text="SEL : peu de sel                                          "></TextView>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:text="0,5g "></TextView>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:src="@drawable/pointvert"></ImageView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="5"
-                    android:text="GRAISSES SATUREES : Faible impact"></TextView>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:text="3,5g"></TextView>
-
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-
-                    android:src="@drawable/pointvert"></ImageView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-
-
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="5"
-                    android:text="SUCRE : Faible impact                      "></TextView>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:text="0,7g"></TextView>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-
-                    android:src="@drawable/pointvert"></ImageView>
-            </LinearLayout>
-
-
-        </LinearLayout>
-    </LinearLayout>
-
-
-
-
-
-
-
-
-
 
 </androidx.appcompat.widget.LinearLayoutCompat>

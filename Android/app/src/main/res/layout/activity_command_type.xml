@@ -10,12 +10,12 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/hauteurBarreHaut"
             android:orientation="horizontal">
 
             <Space
@@ -44,10 +44,10 @@
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="@string/restaurant_name"
-                    android:textSize="30sp" />
+                    android:textSize="@dimen/txtTitrePrincipal" />
 
             </FrameLayout>
 
@@ -93,40 +93,60 @@
             android:layout_height="1dp"
             android:background="@android:color/darker_gray" />
 
-        <LinearLayout
+
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="606dp"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
 
-
+            <ImageButton
+                android:layout_width="@dimen/burgerMenu"
+                android:layout_height="@dimen/burgerMenu"
+                android:layout_margin="@dimen/marginBurgerMenu"
+                android:background = "@drawable/menu_icon"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/marginGlobalH"
+                android:layout_marginTop="@dimen/marginGlobalV"
+                android:gravity="center">
 
-                <ImageButton
-                    android:id="@+id/menu_button"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:background = "@drawable/menu_icon"/>
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:layout_width="@dimen/assiettes"
+                        android:layout_height="@dimen/assiettes"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/assiette"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/txtAssiettes"
+                        android:text="@string/nos_menus"/>
+                </FrameLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
 
                     <FrameLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
 
                         <ImageButton
-                            android:layout_width="170dp"
-                            android:layout_height="170dp"
-                            android:layout_gravity="bottom"
+                            android:onClick="carte_menu"
+                            android:layout_width="@dimen/assiettes"
+                            android:layout_height="@dimen/assiettes"
+                            android:layout_gravity="center_horizontal"
                             android:background="@drawable/assiette"/>
 
                         <TextView
@@ -134,62 +154,36 @@
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:textAlignment="center"
-                            android:textSize="20dp"
-                            android:text="@string/nos_menus"/>
+                            android:textSize="@dimen/txtAssiettes"
+                            android:text="@string/a_la_carte"/>
                     </FrameLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <FrameLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_horizontal">
+                        android:layout_weight="1">
 
-                        <FrameLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1">
+                        <ImageButton
+                            android:layout_width="@dimen/assiettes"
+                            android:layout_height="@dimen/assiettes"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/assiette"/>
 
-                            <ImageButton
-                                android:onClick="carte_menu"
-                                android:layout_width="170dp"
-                                android:layout_height="170dp"
-                                android:layout_gravity="center_horizontal"
-                                android:background="@drawable/assiette"/>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:textAlignment="center"
-                                android:textSize="20dp"
-                                android:text="@string/a_la_carte"/>
-                        </FrameLayout>
-
-                        <FrameLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1">
-
-                            <ImageButton
-                                android:layout_width="170dp"
-                                android:layout_height="170dp"
-                                android:layout_gravity="center_horizontal"
-                                android:background="@drawable/assiette"/>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:textAlignment="center"
-                                android:textSize="20dp"
-                                android:text="@string/coups_de_pouce"/>
-                        </FrameLayout>
-
-                    </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/txtAssiettes"
+                            android:text="@string/coups_de_pouce"/>
+                    </FrameLayout>
 
                 </LinearLayout>
+
             </LinearLayout>
-        </LinearLayout>
+
+        </FrameLayout>
+
 
     </LinearLayout>
 

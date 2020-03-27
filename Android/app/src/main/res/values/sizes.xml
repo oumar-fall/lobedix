@@ -3,11 +3,16 @@
 <!--    Texte-->
     <dimen name="txtListePlats">22dp</dimen>
     <dimen name="txtTitrePrincipal">30sp</dimen>
+    <dimen name="txtPremieresSlides">35sp</dimen>
+    <dimen name="txtAssiettes">20sp</dimen>
 
 <!-- Autre -->
     <dimen name="hauteurBarreHaut">50dp</dimen>
     <dimen name="burgerMenu">30dp</dimen>
 
-<!--Liste Plats-->
+<!--Listes-->
     <dimen name="plusMoins">30dp</dimen>
+
+<!--Carte-->
+    <dimen name="assiettes">170dp</dimen>
 </resources>
