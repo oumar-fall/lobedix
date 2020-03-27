@@ -4,11 +4,20 @@
     <dimen name="marginGlobalH">10dp</dimen>
     <dimen name="marginGlobalV">10dp</dimen>
 
-    <!--liste plats-->
+    <!--liste-->
     <dimen name="marginBoutonsPlatsH">10dp</dimen>
     <dimen name="marginBoutonsPlatsV">10dp</dimen>
     <dimen name="paddingTxtListePlatsV">10dp</dimen>
     <dimen name="paddingTxtListePlatsL">10dp</dimen>
+    <dimen name="marginListePlatsT">70dp</dimen>
+
+    <!--sliders-->
+    <dimen name="marginImgSliderT">30dp</dimen>
+    <dimen name="marginBtnsSlider">20dp</dimen>
+
+    <!--Infos Nutritionelles-->
+    <dimen name="marginInfosNutL">50dp</dimen>
+    <dimen name="marginValeursNut">5dp</dimen>
 
 
 </resources>

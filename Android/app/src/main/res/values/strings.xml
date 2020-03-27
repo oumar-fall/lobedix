@@ -27,4 +27,18 @@
     <string name="desserts">Nos desserts</string>
     <string name="plats">Nos plats</string>
     <string name="entrees">Nos entrées</string>
+    <string name="unPetitApero">Un petit Apéro ?</string>
+    <string name="enfantOuAdulte">Enfant ou Adulte ?</string>
+    <string name="valeursNutritionelles">Valeurs Nutritionelles</string>
+
+    <string name="txtCaloriesLasagnes">CALORIES : un peu trop calorique</string>
+    <string name="valCaloriesLasagnes">451 kCal</string>
+    <string name="txtLegumesLasagnes">LEGUMES : un peu de légumes</string>
+    <string name="valLegumesLasagnes">41%</string>
+    <string name="txtSelLasagnes">SEL : peu de sel</string>
+    <string name="valSelLasagnes">0,5g</string>
+    <string name="txtGraissesLasagnes">GRAISSES SATUREES : Faible impact</string>
+    <string name="valGraissesLasagnes">3,5g</string>
+    <string name="txtSucreLasagnes">SUCRE : Faible impact</string>
+    <string name="valSucreLasagnes">0,7g</string>
 </resources>
