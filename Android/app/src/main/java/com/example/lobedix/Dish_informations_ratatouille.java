@@ -68,7 +68,7 @@ public class Dish_informations_ratatouille extends AppCompatActivity {
                     startActivity(new Intent(Dish_informations_ratatouille.this, commandType.class));}
 
                 if (title.equals("commande")){ // Ma commande
-                    startActivity(new Intent(Dish_informations_ratatouille.this, commandType.class));}
+                    startActivity(new Intent(Dish_informations_ratatouille.this, MyCommand.class));}
 
                 if (title.equals("entrees")){
                     startActivity(new Intent(Dish_informations_ratatouille.this, listeEntrees.class));}

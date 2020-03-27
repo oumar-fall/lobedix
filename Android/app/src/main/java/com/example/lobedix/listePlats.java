@@ -14,6 +14,8 @@ import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.Hashtable;
+
 public class listePlats extends AppCompatActivity {
 
     private int nbSpaghetti;
@@ -71,7 +73,7 @@ public class listePlats extends AppCompatActivity {
                     startActivity(new Intent(listePlats.this, commandType.class));}
 
                 if (title.equals("commande")){ // Ma commande
-                    startActivity(new Intent(listePlats.this, commandType.class));}
+                    startActivity(new Intent(listePlats.this, MyCommand.class));}
 
 
                 if (title.equals("entrees")){
@@ -126,48 +128,73 @@ public class listePlats extends AppCompatActivity {
     public void addLasagnes(View view) {
         nbLasagnes = nbLasagnes +1;
         lasagnes.setText(Integer.toString(nbLasagnes));
+        Hashtable<String,Integer> d = DataHolder.getInstance().getPlat();
+        d.put("Lasagnes",nbLasagnes);
+        DataHolder.getInstance().setPlat(d);
 
     }
     public void removeLasagnes(View view){
         if(nbLasagnes>0){
             nbLasagnes = nbLasagnes -1;
             lasagnes.setText(Integer.toString(nbLasagnes));
+            Hashtable<String,Integer> d = DataHolder.getInstance().getPlat();
+            d.put("Lasagnes",nbLasagnes);
+            DataHolder.getInstance().setPlat(d);
         }
     }
 
     public void addSpaghetti(View view) {
         nbSpaghetti = nbSpaghetti +1;
         spaghetti.setText(Integer.toString(nbSpaghetti));
+        Hashtable<String,Integer> d = DataHolder.getInstance().getPlat();
+        d.put("Spaghetti",nbSpaghetti);
+        DataHolder.getInstance().setPlat(d);
 
     }
     public void removeSpaghetti(View view){
         if(nbSpaghetti>0){
             nbSpaghetti = nbSpaghetti -1;
             spaghetti.setText(Integer.toString(nbSpaghetti));
+            Hashtable<String,Integer> d = DataHolder.getInstance().getPlat();
+            d.put("Spaghetti",nbSpaghetti);
+            DataHolder.getInstance().setPlat(d);
         }
     }
 
     public void addCurry(View view) {
         nbCurry = nbCurry +1;
         curry.setText(Integer.toString(nbCurry));
+        Hashtable<String,Integer> d = DataHolder.getInstance().getPlat();
+        d.put("Curry",nbCurry);
+        DataHolder.getInstance().setPlat(d);
 
     }
     public void removeCurry(View view){
         if(nbCurry>0){
             nbCurry = nbCurry -1;
             curry.setText(Integer.toString(nbCurry));
+            Hashtable<String,Integer> d = DataHolder.getInstance().getPlat();
+            d.put("Curry",nbCurry);
+            DataHolder.getInstance().setPlat(d);
         }
     }
 
     public void addRatatouille(View view) {
         nbRatatouille = nbRatatouille +1;
         ratatouille.setText(Integer.toString(nbRatatouille));
+        Hashtable<String,Integer> d = DataHolder.getInstance().getPlat();
+        d.put("Ratatouille",nbRatatouille);
+        DataHolder.getInstance().setPlat(d);
 
     }
     public void removeRatatouille(View view){
         if(nbRatatouille>0){
             nbRatatouille = nbRatatouille -1;
             ratatouille.setText(Integer.toString(nbRatatouille));
+            Hashtable<String,Integer> d = DataHolder.getInstance().getPlat();
+            d.put("Ratatouille",nbRatatouille);
+            DataHolder.getInstance().setPlat(d);
+
         }
     }
 

@@ -69,7 +69,7 @@ public class Dish_informations_taboule extends AppCompatActivity {
                     startActivity(new Intent(Dish_informations_taboule.this, commandType.class));}
 
                 if (title.equals("commande")){ // Ma commande
-                    startActivity(new Intent(Dish_informations_taboule.this, commandType.class));}
+                    startActivity(new Intent(Dish_informations_taboule.this, MyCommand.class));}
 
                 if (title.equals("entrees")){
                     startActivity(new Intent(Dish_informations_taboule.this, listeEntrees.class));}

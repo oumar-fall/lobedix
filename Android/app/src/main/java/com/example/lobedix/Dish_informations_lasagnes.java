@@ -68,7 +68,7 @@ public class Dish_informations_lasagnes extends AppCompatActivity {
                         startActivity(new Intent(Dish_informations_lasagnes.this, commandType.class));}
 
                 if (title.equals("commande")){ // Ma commande
-                        startActivity(new Intent(Dish_informations_lasagnes.this, commandType.class));}
+                        startActivity(new Intent(Dish_informations_lasagnes.this, MyCommand.class));}
 
                 if (title.equals("entrees")){
                     startActivity(new Intent(Dish_informations_lasagnes.this, listeEntrees.class));}

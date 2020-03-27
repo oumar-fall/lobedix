@@ -55,7 +55,7 @@ public class commandType extends AppCompatActivity {
                     startActivity(new Intent(commandType.this, commandType.class));}
 
                 if (title.equals("commande")){ // Ma commande
-                    startActivity(new Intent(commandType.this, commandType.class));}
+                    startActivity(new Intent(commandType.this, MyCommand.class));}
 
                 if (title.equals("entrees")){
                     startActivity(new Intent(commandType.this, listeEntrees.class));}

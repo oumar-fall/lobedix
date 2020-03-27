@@ -59,7 +59,7 @@ public class Carte extends AppCompatActivity {
                 }
 
                 if (title.equals("commande")) { // Ma commande
-                    startActivity(new Intent(Carte.this, commandType.class));
+                    startActivity(new Intent(Carte.this, MyCommand.class));
                 }
 
                 if (title.equals("entrees")){

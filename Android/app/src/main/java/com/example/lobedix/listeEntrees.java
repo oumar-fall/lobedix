@@ -14,6 +14,8 @@ import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.Hashtable;
+
 public class listeEntrees extends AppCompatActivity {
 
     private int nbSoupe;
@@ -69,7 +71,7 @@ public class listeEntrees extends AppCompatActivity {
                     startActivity(new Intent(listeEntrees.this, commandType.class));}
 
                 if (title.equals("commande")){ // Ma commande
-                    startActivity(new Intent(listeEntrees.this, commandType.class));}
+                    startActivity(new Intent(listeEntrees.this, MyCommand.class));}
 
                 if (title.equals("entrees")){
                     startActivity(new Intent(listeEntrees.this, listeEntrees.class));}
@@ -123,48 +125,73 @@ public class listeEntrees extends AppCompatActivity {
     public void addTaboule(View view) {
         nbTaboule = nbTaboule +1;
         Taboule.setText(Integer.toString(nbTaboule));
+        Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
+        d.put("Taboule",nbTaboule);
+        DataHolder.getInstance().setEntree(d);
 
     }
     public void removeTaboule(View view){
         if(nbTaboule>0){
             nbTaboule = nbTaboule -1;
             Taboule.setText(Integer.toString(nbTaboule));
+            Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
+            d.put("Taboule",nbTaboule);
+            DataHolder.getInstance().setEntree(d);
         }
     }
 
     public void addSoupe(View view) {
         nbSoupe = nbSoupe +1;
         Soupe.setText(Integer.toString(nbSoupe));
+        Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
+        d.put("Soupe",nbSoupe);
+        DataHolder.getInstance().setEntree(d);
 
     }
     public void removeSoupe(View view){
         if(nbSoupe>0){
             nbSoupe = nbSoupe -1;
             Soupe.setText(Integer.toString(nbSoupe));
+            Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
+            d.put("Soupe",nbSoupe);
+            DataHolder.getInstance().setEntree(d);
         }
     }
 
     public void addTomates(View view) {
         nbTomates = nbTomates +1;
         Tomates.setText(Integer.toString(nbTomates));
+        Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
+        d.put("Tomate",nbTomates);
+        DataHolder.getInstance().setEntree(d);
 
     }
     public void removeTomates(View view){
         if(nbTomates>0){
             nbTomates = nbTomates -1;
             Tomates.setText(Integer.toString(nbTomates));
+            Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
+            d.put("Tomate",nbTomates);
+            DataHolder.getInstance().setEntree(d);
         }
     }
 
     public void addFeuillete(View view) {
         nbFeuillete = nbFeuillete +1;
         Feuillete.setText(Integer.toString(nbFeuillete));
+        Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
+        d.put("Fromage",nbFeuillete);
+        DataHolder.getInstance().setEntree(d);
 
     }
     public void removeFeuillete(View view){
         if(nbFeuillete>0){
             nbFeuillete = nbFeuillete -1;
             Feuillete.setText(Integer.toString(nbFeuillete));
+            Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
+            d.put("Fromage",nbFeuillete);
+            DataHolder.getInstance().setEntree(d);
+
         }
     }
 

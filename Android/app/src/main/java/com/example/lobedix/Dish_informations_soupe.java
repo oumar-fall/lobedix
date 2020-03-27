@@ -69,7 +69,7 @@ public class Dish_informations_soupe extends AppCompatActivity {
                     startActivity(new Intent(Dish_informations_soupe.this, commandType.class));}
 
                 if (title.equals("commande")){ // Ma commande
-                    startActivity(new Intent(Dish_informations_soupe.this, commandType.class));}
+                    startActivity(new Intent(Dish_informations_soupe.this, MyCommand.class));}
 
                 if (title.equals("entrees")){
                     startActivity(new Intent(Dish_informations_soupe.this, listeEntrees.class));}
