@@ -39,16 +39,19 @@
     </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp">
+        android:layout_height="100dp"
+       >
         <LinearLayout
+
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:background="@drawable/rect"
             android:layout_weight="1">
            <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Entrée"
+                android:gravity="center"
                 android:textSize="20sp"
                 android:paddingVertical="10dp"
                 android:paddingRight="10dp"
@@ -56,27 +59,35 @@
                 android:layout_gravity="center"></TextView>
         </LinearLayout>
         <LinearLayout
+
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
+            android:background="@drawable/rect"
+            android:layout_weight="1">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Plat"
+                android:textSize="20sp"></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
             android:background="@drawable/rect"
             android:layout_weight="1">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Plat"
-                android:textSize="20sp"
-                android:paddingVertical="10dp"
-                android:paddingRight="10dp"
-                android:paddingLeft="10dp"
-                android:layout_gravity="center"></TextView>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rect">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Dessert"
                 android:textSize="20sp"
                 android:paddingVertical="10dp"
@@ -86,11 +97,13 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
             android:background="@drawable/rect">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Boisson"
                 android:textSize="20sp"
                 android:paddingVertical="10dp"
