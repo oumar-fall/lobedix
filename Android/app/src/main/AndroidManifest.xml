@@ -17,6 +17,14 @@
         <activity android:name=".Dish_informations_spaghetti" />
         <activity android:name=".Dish_informations_ratatouille" />
         <activity android:name=".Dish_informations_curry" />
+
+        <activity android:name=".Carte" />
+        <activity android:name=".Dish_informations_soupe" />
+        <activity android:name=".Dish_informations_tomates" />
+        <activity android:name=".Dish_informations_taboule" />
+        <activity android:name=".Dish_informations_feuillete" />
+        <activity android:name=".listeEntrees" />
+
         <activity android:name=".Dish_Informations_Nutri" />
         <activity android:name=".commandType" />
         <activity android:name=".Enfant_Adulte" />

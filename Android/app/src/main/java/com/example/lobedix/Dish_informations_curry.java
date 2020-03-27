@@ -59,9 +59,6 @@ public class Dish_informations_curry extends AppCompatActivity {
             @Override
 
             public boolean onNavigationItemSelected(MenuItem menuItem) {
-
-                //Check to see which item was being clicked and perform appropriate action
-                System.out.println(menuItem.getTitleCondensed());
                 CharSequence title = menuItem.getTitleCondensed();
 
                 if(title.equals("aperitif")){ // Choix apéro
@@ -73,8 +70,10 @@ public class Dish_informations_curry extends AppCompatActivity {
                 if (title.equals("commande")){ // Ma commande
                     startActivity(new Intent(Dish_informations_curry.this, commandType.class));}
 
+                if (title.equals("entrees")){
+                    startActivity(new Intent(Dish_informations_curry.this, listeEntrees.class));}
+
                 if (title.equals("plats")){
-                    System.out.println("oueeeee");
                     startActivity(new Intent(Dish_informations_curry.this, listePlats.class));}
 
                 if (title.equals("desserts")){

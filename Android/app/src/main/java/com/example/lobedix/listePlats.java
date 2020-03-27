@@ -73,8 +73,11 @@ public class listePlats extends AppCompatActivity {
                 if (title.equals("commande")){ // Ma commande
                     startActivity(new Intent(listePlats.this, commandType.class));}
 
+
+                if (title.equals("entrees")){
+                    startActivity(new Intent(listePlats.this, listeEntrees.class));}
+
                 if (title.equals("plats")){
-                    System.out.println("oueeeee");
                     startActivity(new Intent(listePlats.this, listePlats.class));}
 
                 if (title.equals("desserts")){

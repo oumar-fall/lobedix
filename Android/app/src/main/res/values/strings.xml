@@ -20,4 +20,11 @@
     <string name="nom3">Camille Tavernier</string>
     <string name="avis3">Très bon :)</string>
     <string name="avis"><u>Avis des clients</u></string>
+    <string name="taboule">Taboulé oriental</string>
+    <string name="soupe">Soupe de légumes du Soleil</string>
+    <string name="feuillete">Feuilleté au fromage</string>
+    <string name="tomates">Salade tomates mozzarella</string>
+    <string name="desserts">Nos desserts</string>
+    <string name="plats">Nos plats</string>
+    <string name="entrees">Nos entrées</string>
 </resources>

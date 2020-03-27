@@ -124,6 +124,7 @@
                         android:layout_height="wrap_content">
 
                         <ImageButton
+                            android:onClick="entrees"
                             android:layout_width="170dp"
                             android:layout_height="170dp"
                             android:layout_gravity="bottom"
@@ -131,11 +132,11 @@
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="22dp"
                             android:layout_gravity="center"
+                            android:text="@string/entrees"
                             android:textAlignment="center"
-                            android:textSize="20dp"
-                            android:text="@string/nos_menus"/>
+                            android:textSize="20dp" />
                     </FrameLayout>
 
                     <LinearLayout
@@ -150,7 +151,7 @@
                             android:layout_weight="1">
 
                             <ImageButton
-                                android:onClick="carte_menu"
+                                android:onClick="plats"
                                 android:layout_width="170dp"
                                 android:layout_height="170dp"
                                 android:layout_gravity="center_horizontal"
@@ -162,7 +163,7 @@
                                 android:layout_gravity="center"
                                 android:textAlignment="center"
                                 android:textSize="20dp"
-                                android:text="@string/a_la_carte"/>
+                                android:text="@string/plats"/>
                         </FrameLayout>
 
                         <FrameLayout
@@ -182,7 +183,7 @@
                                 android:layout_gravity="center"
                                 android:textAlignment="center"
                                 android:textSize="20dp"
-                                android:text="@string/coups_de_pouce"/>
+                                android:text="@string/desserts"/>
                         </FrameLayout>
 
                     </LinearLayout>

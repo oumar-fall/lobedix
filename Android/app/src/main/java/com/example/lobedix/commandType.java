@@ -57,8 +57,10 @@ public class commandType extends AppCompatActivity {
                 if (title.equals("commande")){ // Ma commande
                     startActivity(new Intent(commandType.this, commandType.class));}
 
+                if (title.equals("entrees")){
+                    startActivity(new Intent(commandType.this, listeEntrees.class));}
+
                 if (title.equals("plats")){
-                    System.out.println("oueeeee");
                     startActivity(new Intent(commandType.this, listePlats.class));}
 
                 if (title.equals("desserts")){
@@ -80,9 +82,9 @@ public class commandType extends AppCompatActivity {
 
     }
 
-    public void carte(View view) {
+    public void carte_menu(View view) {
 
-        Intent carte = new Intent(commandType.this, listePlats.class);
-        startActivity(carte);
+        Intent c = new Intent(commandType.this, Carte.class);
+        startActivity(c);
     }
 }

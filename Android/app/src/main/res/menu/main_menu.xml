@@ -22,7 +22,8 @@
         android:titleCondensed="menus"
         />
     <item android:id="@+id/carte"
-        android:title="La carte ">
+        android:title="La carte "
+        android:titleCondensed="carte">
 
         <menu android:id="@+id/sousmenucarte">
             <item android:id="@+id/entrees"
