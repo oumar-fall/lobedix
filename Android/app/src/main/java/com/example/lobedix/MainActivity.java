@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
         DataHolder.getInstance().setListePlat();
         DataHolder.getInstance().setBelleListeEntree();
         DataHolder.getInstance().setBelleListePlat();
+        DataHolder.getInstance().initNb();
+        DataHolder.getInstance().setPrix();
     }
 
     public boolean onCreateOptionsMenu(Menu menu){

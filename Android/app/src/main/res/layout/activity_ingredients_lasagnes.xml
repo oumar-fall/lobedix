@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
-    tools:context=".MyCommand">
-
+    tools:context=".Ingredients_lasagnes"
+    android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -108,30 +108,57 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_marginHorizontal="@dimen/marginGlobalH"
+                android:layout_marginEnd="@dimen/marginGlobalH"
+                android:layout_marginRight="@dimen/marginGlobalH"
+                android:layout_marginStart="@dimen/marginInfosNutL"
+                android:layout_marginLeft="@dimen/marginInfosNutL"
                 android:layout_marginTop="@dimen/marginGlobalV"
                 android:gravity="top">
 
                 <TextView
-                    android:id="@+id/commande"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/marginCommandeV"
-                    android:gravity="center"
-                    android:text="Vous n'avez rien commandé pour l'instant"
-                    android:textSize="35sp"></TextView>
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Valider"
+                    android:layout_weight="0.5"
+                    android:text="@string/ingredients"
                     android:layout_gravity="center"
-                   ></Button>
+                    android:textAlignment="center"
+                    android:textSize="33sp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/photo"
+                        android:layout_width="240dp"
+                        android:layout_height="240dp"
+                        android:layout_weight="5"
+                        android:src="@drawable/lasagnes" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity ="center"
+                        android:text="@string/lasagnes"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/ingredient_lasagnes"
+                        android:textSize="25sp"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
         </FrameLayout>
-
 
     </LinearLayout>
 
@@ -141,4 +168,5 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:menu="@menu/main_menu"/>
+
 </androidx.drawerlayout.widget.DrawerLayout>

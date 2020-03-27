@@ -66,7 +66,7 @@ public class Dish_informations_feuillete extends AppCompatActivity {
                     startActivity(new Intent(Dish_informations_feuillete.this, ChoixApero.class));}
 
                 if (title.equals("espace")){ // Changer d'espace
-                    startActivity(new Intent(Dish_informations_feuillete.this, commandType.class));}
+                    startActivity(new Intent(Dish_informations_feuillete.this, Enfant_Adulte.class));}
 
                 if (title.equals("commande")){ // Ma commande
                     startActivity(new Intent(Dish_informations_feuillete.this, MyCommand.class));}

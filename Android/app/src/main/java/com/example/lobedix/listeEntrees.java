@@ -5,6 +5,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,10 +19,10 @@ import java.util.Hashtable;
 
 public class listeEntrees extends AppCompatActivity {
 
-    private int nbSoupe;
-    private int nbTaboule;
-    private int nbTomates;
-    private int nbFeuillete;
+    private int nbSoupe = DataHolder.getInstance().getNbSoupe();
+    private int nbTaboule = DataHolder.getInstance().getNbTaboule();
+    private int nbTomates = DataHolder.getInstance().getNbTomates();
+    private int nbFeuillete = DataHolder.getInstance().getNbFeuillete();
     private TextView Taboule;
     private TextView Soupe;
     private TextView Tomates;
@@ -68,7 +69,7 @@ public class listeEntrees extends AppCompatActivity {
                     startActivity(new Intent(listeEntrees.this, ChoixApero.class));}
 
                 if (title.equals("espace")){ // Changer d'espace
-                    startActivity(new Intent(listeEntrees.this, commandType.class));}
+                    startActivity(new Intent(listeEntrees.this, Enfant_Adulte.class));}
 
                 if (title.equals("commande")){ // Ma commande
                     startActivity(new Intent(listeEntrees.this, MyCommand.class));}
@@ -127,6 +128,7 @@ public class listeEntrees extends AppCompatActivity {
         Taboule.setText(Integer.toString(nbTaboule));
         Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
         d.put("Taboule",nbTaboule);
+        DataHolder.getInstance().setNbTaboule(nbTaboule);
         DataHolder.getInstance().setEntree(d);
 
     }
@@ -135,6 +137,7 @@ public class listeEntrees extends AppCompatActivity {
             nbTaboule = nbTaboule -1;
             Taboule.setText(Integer.toString(nbTaboule));
             Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
+            DataHolder.getInstance().setNbTaboule(nbTaboule);
             d.put("Taboule",nbTaboule);
             DataHolder.getInstance().setEntree(d);
         }
@@ -145,6 +148,7 @@ public class listeEntrees extends AppCompatActivity {
         Soupe.setText(Integer.toString(nbSoupe));
         Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
         d.put("Soupe",nbSoupe);
+        DataHolder.getInstance().setNbSoupe(nbSoupe);
         DataHolder.getInstance().setEntree(d);
 
     }
@@ -154,6 +158,7 @@ public class listeEntrees extends AppCompatActivity {
             Soupe.setText(Integer.toString(nbSoupe));
             Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
             d.put("Soupe",nbSoupe);
+            DataHolder.getInstance().setNbSoupe(nbSoupe);
             DataHolder.getInstance().setEntree(d);
         }
     }
@@ -163,6 +168,7 @@ public class listeEntrees extends AppCompatActivity {
         Tomates.setText(Integer.toString(nbTomates));
         Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
         d.put("Tomate",nbTomates);
+        DataHolder.getInstance().setNbTomates(nbTomates);
         DataHolder.getInstance().setEntree(d);
 
     }
@@ -172,6 +178,7 @@ public class listeEntrees extends AppCompatActivity {
             Tomates.setText(Integer.toString(nbTomates));
             Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
             d.put("Tomate",nbTomates);
+            DataHolder.getInstance().setNbTomates(nbTomates);
             DataHolder.getInstance().setEntree(d);
         }
     }
@@ -181,6 +188,7 @@ public class listeEntrees extends AppCompatActivity {
         Feuillete.setText(Integer.toString(nbFeuillete));
         Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
         d.put("Fromage",nbFeuillete);
+        DataHolder.getInstance().setNbFeuillete(nbFeuillete);
         DataHolder.getInstance().setEntree(d);
 
     }
@@ -190,6 +198,7 @@ public class listeEntrees extends AppCompatActivity {
             Feuillete.setText(Integer.toString(nbFeuillete));
             Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
             d.put("Fromage",nbFeuillete);
+            DataHolder.getInstance().setNbFeuillete(nbFeuillete);
             DataHolder.getInstance().setEntree(d);
 
         }

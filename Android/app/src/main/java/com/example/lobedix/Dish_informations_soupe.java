@@ -66,7 +66,7 @@ public class Dish_informations_soupe extends AppCompatActivity {
                     startActivity(new Intent(Dish_informations_soupe.this, ChoixApero.class));}
 
                 if (title.equals("espace")){ // Changer d'espace
-                    startActivity(new Intent(Dish_informations_soupe.this, commandType.class));}
+                    startActivity(new Intent(Dish_informations_soupe.this, Enfant_Adulte.class));}
 
                 if (title.equals("commande")){ // Ma commande
                     startActivity(new Intent(Dish_informations_soupe.this, MyCommand.class));}

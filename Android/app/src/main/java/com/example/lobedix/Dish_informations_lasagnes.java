@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
@@ -65,7 +66,7 @@ public class Dish_informations_lasagnes extends AppCompatActivity {
                         startActivity(new Intent(Dish_informations_lasagnes.this, ChoixApero.class));}
 
                 if (title.equals("espace")){ // Changer d'espace
-                        startActivity(new Intent(Dish_informations_lasagnes.this, commandType.class));}
+                        startActivity(new Intent(Dish_informations_lasagnes.this, Enfant_Adulte.class));}
 
                 if (title.equals("commande")){ // Ma commande
                         startActivity(new Intent(Dish_informations_lasagnes.this, MyCommand.class));}
@@ -99,6 +100,19 @@ public class Dish_informations_lasagnes extends AppCompatActivity {
         Intent nutri = new Intent(Dish_informations_lasagnes.this, Dish_Informations_Nutri.class);
         startActivity(nutri);
     }
+
+    public void ingredients(View view){
+        Intent ingredient = new Intent(Dish_informations_lasagnes.this, Ingredients_lasagnes.class);
+        startActivity(ingredient);
+    }
+
+    public void addLasagnes(View view){
+        Integer nbLasagnes = DataHolder.getInstance().getNbLasagnes() +1;
+        DataHolder.getInstance().setNbLasagnes(nbLasagnes);
+        Toast.makeText(this, "Vous venez de commander un plat de lasagnes supplémentaire", Toast.LENGTH_SHORT).show();
+    }
+
+
 
 
 

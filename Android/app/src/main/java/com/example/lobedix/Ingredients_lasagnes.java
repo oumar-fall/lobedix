@@ -12,20 +12,19 @@ import android.widget.ImageButton;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class commandType extends AppCompatActivity {
+public class Ingredients_lasagnes extends AppCompatActivity {
 
-    private ImageButton menu_button;
-    private DrawerLayout drawer;
-    private NavigationView view;
+    DrawerLayout drawer;
+    NavigationView view;
+    ImageButton menu_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_command_type);
+        setContentView(R.layout.activity_ingredients_lasagnes);
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         menu_button=(ImageButton)findViewById(R.id.menu_button);
-
 
         menu_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,33 +43,31 @@ public class commandType extends AppCompatActivity {
 
             public boolean onNavigationItemSelected(MenuItem menuItem) {
 
-                //Check to see which item was being clicked and perform appropriate action
-                System.out.println(menuItem.getTitleCondensed());
                 CharSequence title = menuItem.getTitleCondensed();
 
                 if(title.equals("aperitif")){ // Choix apéro
-                    startActivity(new Intent(commandType.this, ChoixApero.class));}
+                    startActivity(new Intent(Ingredients_lasagnes.this, ChoixApero.class));}
 
                 if (title.equals("espace")){ // Changer d'espace
-                    startActivity(new Intent(commandType.this, Enfant_Adulte.class));}
+                    startActivity(new Intent(Ingredients_lasagnes.this, Enfant_Adulte.class));}
 
                 if (title.equals("commande")){ // Ma commande
-                    startActivity(new Intent(commandType.this, MyCommand.class));}
+                    startActivity(new Intent(Ingredients_lasagnes.this, MyCommand.class));}
 
                 if (title.equals("entrees")){
-                    startActivity(new Intent(commandType.this, listeEntrees.class));}
+                    startActivity(new Intent(Ingredients_lasagnes.this, listeEntrees.class));}
 
-                if (title.equals("plats")){
-                    startActivity(new Intent(commandType.this, listePlats.class));}
+                if (title.equals("plats")){ // Nos plats
+                    startActivity(new Intent(Ingredients_lasagnes.this, listePlats.class));}
 
-                if (title.equals("desserts")){
-                    startActivity(new Intent(commandType.this, commandType.class));}
+                if (title.equals("desserts")){ // Nos desserts
+                    startActivity(new Intent(Ingredients_lasagnes.this, commandType.class));}
 
-                if (title.equals("coupdepouce")){
-                    startActivity(new Intent(commandType.this, commandType.class));}
+                if (title.equals("coupdepouce")){ // Coup de pouce
+                    startActivity(new Intent(Ingredients_lasagnes.this, commandType.class));}
 
-                if (title.equals("quitter")){
-                    startActivity(new Intent(commandType.this, MainActivity.class));}
+                if (title.equals("quitter")){ // Quitter
+                    startActivity(new Intent(Ingredients_lasagnes.this, MainActivity.class));}
 
                 drawer.closeDrawers();
                 return true;
@@ -79,12 +76,7 @@ public class commandType extends AppCompatActivity {
             }
 
         });
-
     }
 
-    public void carte_menu(View view) {
 
-        Intent c = new Intent(commandType.this, Carte.class);
-        startActivity(c);
-    }
 }

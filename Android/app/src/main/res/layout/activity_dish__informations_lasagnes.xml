@@ -139,7 +139,8 @@
                                 android:textSize="20sp"
                                 android:background="#a4accf"
                                 android:paddingLeft="15dp"
-                                android:paddingRight="15dp"/>
+                                android:paddingRight="15dp"
+                                android:onClick="ingredients"/>
 
                             <Button
                                 android:id="@+id/Ajouter"
@@ -153,7 +154,8 @@
                                 android:paddingLeft="25dp"
                                 android:paddingRight="25dp"
                                 android:paddingBottom="15dp"
-                                android:paddingTop="15dp"/>
+                                android:paddingTop="15dp"
+                                android:onClick="addLasagnes"/>
                         </GridLayout>
 
 

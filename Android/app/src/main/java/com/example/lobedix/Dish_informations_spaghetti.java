@@ -66,7 +66,7 @@ public class Dish_informations_spaghetti extends AppCompatActivity {
                     startActivity(new Intent(Dish_informations_spaghetti.this, ChoixApero.class));}
 
                 if (title.equals("espace")){ // Changer d'espace
-                    startActivity(new Intent(Dish_informations_spaghetti.this, commandType.class));}
+                    startActivity(new Intent(Dish_informations_spaghetti.this, Enfant_Adulte.class));}
 
                 if (title.equals("commande")){ // Ma commande
                     startActivity(new Intent(Dish_informations_spaghetti.this, MyCommand.class));}

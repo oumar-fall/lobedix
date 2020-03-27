@@ -18,10 +18,10 @@ import java.util.Hashtable;
 
 public class listePlats extends AppCompatActivity {
 
-    private int nbSpaghetti;
-    private int nbLasagnes;
-    private int nbCurry;
-    private int nbRatatouille;
+    private int nbSpaghetti = DataHolder.getInstance().getNbSpaghetti();
+    private int nbLasagnes = DataHolder.getInstance().getNbLasagnes();
+    private int nbCurry = DataHolder.getInstance().getNbCurry();
+    private int nbRatatouille = DataHolder.getInstance().getNbRatatouille();
     private TextView lasagnes;
     private TextView spaghetti;
     private TextView curry;
@@ -70,7 +70,7 @@ public class listePlats extends AppCompatActivity {
                     startActivity(new Intent(listePlats.this, ChoixApero.class));}
 
                 if (title.equals("espace")){ // Changer d'espace
-                    startActivity(new Intent(listePlats.this, commandType.class));}
+                    startActivity(new Intent(listePlats.this, Enfant_Adulte.class));}
 
                 if (title.equals("commande")){ // Ma commande
                     startActivity(new Intent(listePlats.this, MyCommand.class));}
@@ -131,6 +131,7 @@ public class listePlats extends AppCompatActivity {
         Hashtable<String,Integer> d = DataHolder.getInstance().getPlat();
         d.put("Lasagnes",nbLasagnes);
         DataHolder.getInstance().setPlat(d);
+        DataHolder.getInstance().setNbLasagnes(nbLasagnes);
 
     }
     public void removeLasagnes(View view){
@@ -140,6 +141,7 @@ public class listePlats extends AppCompatActivity {
             Hashtable<String,Integer> d = DataHolder.getInstance().getPlat();
             d.put("Lasagnes",nbLasagnes);
             DataHolder.getInstance().setPlat(d);
+            DataHolder.getInstance().setNbLasagnes(nbLasagnes);
         }
     }
 
@@ -149,6 +151,7 @@ public class listePlats extends AppCompatActivity {
         Hashtable<String,Integer> d = DataHolder.getInstance().getPlat();
         d.put("Spaghetti",nbSpaghetti);
         DataHolder.getInstance().setPlat(d);
+        DataHolder.getInstance().setNbSpaghetti(nbSpaghetti);
 
     }
     public void removeSpaghetti(View view){
@@ -158,6 +161,7 @@ public class listePlats extends AppCompatActivity {
             Hashtable<String,Integer> d = DataHolder.getInstance().getPlat();
             d.put("Spaghetti",nbSpaghetti);
             DataHolder.getInstance().setPlat(d);
+            DataHolder.getInstance().setNbSpaghetti(nbSpaghetti);
         }
     }
 
@@ -167,6 +171,7 @@ public class listePlats extends AppCompatActivity {
         Hashtable<String,Integer> d = DataHolder.getInstance().getPlat();
         d.put("Curry",nbCurry);
         DataHolder.getInstance().setPlat(d);
+        DataHolder.getInstance().setNbCurry(nbCurry);
 
     }
     public void removeCurry(View view){
@@ -176,6 +181,8 @@ public class listePlats extends AppCompatActivity {
             Hashtable<String,Integer> d = DataHolder.getInstance().getPlat();
             d.put("Curry",nbCurry);
             DataHolder.getInstance().setPlat(d);
+            DataHolder.getInstance().setNbCurry(nbCurry);
+
         }
     }
 
@@ -185,6 +192,8 @@ public class listePlats extends AppCompatActivity {
         Hashtable<String,Integer> d = DataHolder.getInstance().getPlat();
         d.put("Ratatouille",nbRatatouille);
         DataHolder.getInstance().setPlat(d);
+        DataHolder.getInstance().setNbRatatouille(nbRatatouille);
+
 
     }
     public void removeRatatouille(View view){
@@ -194,9 +203,22 @@ public class listePlats extends AppCompatActivity {
             Hashtable<String,Integer> d = DataHolder.getInstance().getPlat();
             d.put("Ratatouille",nbRatatouille);
             DataHolder.getInstance().setPlat(d);
+            DataHolder.getInstance().setNbRatatouille(nbRatatouille);
 
         }
     }
 
+    @Override
+    public void onResume(){
+        super.onResume();
+        nbSpaghetti = DataHolder.getInstance().getNbSpaghetti();
+        nbLasagnes = DataHolder.getInstance().getNbLasagnes();
+        nbCurry = DataHolder.getInstance().getNbCurry();
+        nbRatatouille = DataHolder.getInstance().getNbRatatouille();
+        spaghetti.setText(Integer.toString(nbSpaghetti));
+        ratatouille.setText(Integer.toString(nbRatatouille));
+        lasagnes.setText(Integer.toString(nbLasagnes));
+        curry.setText(Integer.toString(nbCurry));
 
+    }
 }
