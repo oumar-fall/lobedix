@@ -99,6 +99,7 @@
             android:layout_height="match_parent">
 
             <ImageButton
+                android:id="@+id/menu_button"
                 android:layout_width="@dimen/burgerMenu"
                 android:layout_height="@dimen/burgerMenu"
                 android:layout_margin="@dimen/marginBurgerMenu"

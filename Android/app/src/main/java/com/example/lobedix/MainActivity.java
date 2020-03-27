@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         DataHolder.getInstance().setInitialEntree();
         DataHolder.getInstance().setInitialPlat();
+        DataHolder.getInstance().setListeEntree();
+        DataHolder.getInstance().setListePlat();
     }
 
     public boolean onCreateOptionsMenu(Menu menu){
