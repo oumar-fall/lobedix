@@ -3,18 +3,36 @@
     <string name="restaurant_name">L\'Obedix</string>
     <string name="settings">Settings</string>
     <string name="language_french">French</string>
-    <string name="lasagnes">15€ Lasagnes végétariennes</string>
-    <string name="spaghetti">12€ Spaghetti Bolognaise</string>
-    <string name="pouletCurry">14€ Curry de Poulet</string>
     <string name="ingredients">Ingrédients</string>
-    <string name="ratatouille">11€ Ratatouille</string>
+
+
     <string name="ingredient_lasagnes">Tomates, courgettes, poivre, sel, basilic, herbes de provence, lasagnes, coulis de tomate, oignons, béchamel</string>
+    <string name="ingredient_curry">Poulet, riz, oignon, crème fraîche, curry, cumin, piment, sel poivre</string>
+    <string name="ingredient_ratatouille">Aubergine, courgette, poivron, oignon, tomate, ail, huile d\'olive, thym, laurier, sel, poivre</string>
+    <string name="ingredient_spaghetti">Spaghetti, oignon, ail, carotte, céleri, tomate, vin rouge, boeuf hâché, persil, sucre, huile d\'olive</string>
+
+    <string name="ingredient_feuillete">Pâte feuilletée, emmental, comté, tome, oeufs, crème fraîche, sel, poivre, noix de muscade, lait</string>
+    <string name="ingredient_soupe">Aubergine, courgette, tomate, poivron, oignon, ail, basilic, huile d\'olive, sel, poivre</string>
+    <string name="ingredient_tomates">Tomate, mozzarella, basilic, huile d\'olive, sel, poivre</string>
+    <string name="ingredient_taboule">Semoule, tomate, concombre, oignon, citron, huile d\'olive, menthe, persil, ciboulette, cerfeuil, sel, poivre</string>
+
+    <string name="ingredient_mousse">Oeufs, chocolat, sucre vanillé</string>
+    <string name="ingredient_creme">Oeufs, sucre, crème, vanille, liqueur d\'orange</string>
+    <string name="ingredient_glace">lait, sucre, oeufs, crème fraîche, vanille</string>
+    <string name="ingredient_salade">Pomme, banane, orange, pamplemousse, kiwi, raisin noir, jus de citron, sucre</string>
+
+
+
     <string name="opinions">3 avis</string>
     <string name="opinions_lasagnes"> <u>3 avis </u></string>
     <string name="description_lasagnes"> <u>Le mot du chef: </u> \n Plates, mais avec de la personnalité. UN plat de pâtes plates, ça m\'éclate !</string>
+
+
     <string name="nos_menus">Nos Menus</string>
     <string name="a_la_carte">À la Carte</string>
     <string name="coups_de_pouce">Coup De\nPouce</string>
+
+
     <string name="nom1">André Gretil</string>
     <string name="avis1">Ce plat est vraiment un délice, j\'ai adoré.</string>
     <string name="nom2">Béatrive Langré</string>
@@ -22,15 +40,31 @@
     <string name="nom3">Camille Tavernier</string>
     <string name="avis3">Très bon :)</string>
     <string name="avis"><u>Avis des clients</u></string>
+
+
     <string name="taboule">6€ Taboulé oriental</string>
     <string name="soupe">5€ Soupe de légumes du Soleil</string>
     <string name="feuillete">7€ Feuilleté au fromage</string>
     <string name="tomates">6€ Salade tomates mozzarella</string>
+
+    <string name="lasagnes">15€ Lasagnes végétariennes</string>
+    <string name="spaghetti">12€ Spaghetti Bolognaise</string>
+    <string name="pouletCurry">14€ Curry de Poulet</string>
+    <string name="ratatouille">11€ Ratatouille</string>
+
+    <string name="mousse">7€ Mousse au chocolat</string>
+    <string name="creme">7€ Crème brûlée</string>
+    <string name="salade">6€ Salade de fruits</string>
+    <string name="glace">4€ Glace à la vanille</string>
+
+
+
     <string name="desserts">Nos desserts</string>
     <string name="plats">Nos plats</string>
     <string name="entrees">Nos entrées</string>
     <string name="unPetitApero">Un petit Apéro ?</string>
     <string name="enfantOuAdulte">Enfant ou Adulte ?</string>
+
     <string name="valeursNutritionelles">Valeurs Nutritionelles</string>
 
     <string name="txtCaloriesLasagnes">CALORIES : un peu trop calorique</string>

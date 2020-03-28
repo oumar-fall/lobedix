@@ -38,7 +38,7 @@ public class listePlats extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_liste_plats);
-        lasagnes = findViewById(R.id.Textlasagnes);
+        lasagnes = findViewById(R.id.lasagnes);
         spaghetti = findViewById(R.id.spaghetti);
         ratatouille = findViewById(R.id.ratatouille);
         curry = findViewById(R.id.curry);
@@ -83,7 +83,7 @@ public class listePlats extends AppCompatActivity {
                     startActivity(new Intent(listePlats.this, listePlats.class));}
 
                 if (title.equals("desserts")){
-                    startActivity(new Intent(listePlats.this, commandType.class));}
+                    startActivity(new Intent(listePlats.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){
                     startActivity(new Intent(listePlats.this, commandType.class));}
@@ -145,6 +145,11 @@ public class listePlats extends AppCompatActivity {
         }
     }
 
+    public void setNbLasagnes(){
+        TextView lasagnes = (TextView) findViewById(R.id.lasagnes);
+        lasagnes.setText(String.valueOf(nbLasagnes));
+    }
+
     public void addSpaghetti(View view) {
         nbSpaghetti = nbSpaghetti +1;
         spaghetti.setText(Integer.toString(nbSpaghetti));
@@ -163,6 +168,11 @@ public class listePlats extends AppCompatActivity {
             DataHolder.getInstance().setPlat(d);
             DataHolder.getInstance().setNbSpaghetti(nbSpaghetti);
         }
+    }
+
+    public void setNbSpaghetti(){
+        TextView spaghetti = (TextView) findViewById(R.id.spaghetti);
+        spaghetti.setText(String.valueOf(nbSpaghetti));
     }
 
     public void addCurry(View view) {
@@ -184,6 +194,11 @@ public class listePlats extends AppCompatActivity {
             DataHolder.getInstance().setNbCurry(nbCurry);
 
         }
+    }
+
+    public void setNbCurry(){
+        TextView curry = (TextView) findViewById(R.id.curry);
+        curry.setText(String.valueOf(nbCurry));
     }
 
     public void addRatatouille(View view) {
@@ -208,6 +223,12 @@ public class listePlats extends AppCompatActivity {
         }
     }
 
+    public void setNbRatatouille(){
+        TextView ratatouille = (TextView) findViewById(R.id.ratatouille);
+        ratatouille.setText(String.valueOf(nbRatatouille));
+    }
+
+
     @Override
     public void onResume(){
         super.onResume();
@@ -219,6 +240,15 @@ public class listePlats extends AppCompatActivity {
         ratatouille.setText(Integer.toString(nbRatatouille));
         lasagnes.setText(Integer.toString(nbLasagnes));
         curry.setText(Integer.toString(nbCurry));
+        setNbCurry();
+        setNbLasagnes();
+        setNbRatatouille();
+        setNbSpaghetti();
 
+    }
+
+    public void retour(View view){
+        Intent entrees = new Intent(listePlats.this, Carte.class);
+        startActivity(entrees);
     }
 }

@@ -9,11 +9,14 @@ import android.view.Menu;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.Hashtable;
 
 public class Dish_informations_tomates extends AppCompatActivity {
 
@@ -79,7 +82,7 @@ public class Dish_informations_tomates extends AppCompatActivity {
                     startActivity(new Intent(Dish_informations_tomates.this, listePlats.class));}
 
                 if (title.equals("desserts")){
-                    startActivity(new Intent(Dish_informations_tomates.this, commandType.class));}
+                    startActivity(new Intent(Dish_informations_tomates.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){
                     startActivity(new Intent(Dish_informations_tomates.this, commandType.class));}
@@ -100,6 +103,24 @@ public class Dish_informations_tomates extends AppCompatActivity {
 
         Intent nutri = new Intent(Dish_informations_tomates.this, Dish_Informations_Nutri.class);
         startActivity(nutri);
+    }
+
+    public void ingredients(View view){
+        Intent ingredient = new Intent(Dish_informations_tomates.this, Ingredients_tomates.class);
+        startActivity(ingredient);
+    }
+
+    public void addTomates(View view){
+        Integer nbTomates = DataHolder.getInstance().getNbTomates() +1;
+        Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
+        d.put("Tomate",nbTomates);
+        DataHolder.getInstance().setNbTomates(nbTomates);
+        Toast.makeText(this, "Vous venez de commander une salade de tomates supplémentaire", Toast.LENGTH_SHORT).show();
+    }
+
+    public void retour(View view){
+        Intent entrees = new Intent(Dish_informations_tomates.this, listeEntrees.class);
+        startActivity(entrees);
     }
 
 

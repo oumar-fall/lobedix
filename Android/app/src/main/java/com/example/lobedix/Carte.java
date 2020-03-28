@@ -99,5 +99,16 @@ public class Carte extends AppCompatActivity {
         Intent plats = new Intent(Carte.this, listePlats.class);
         startActivity(plats);
     }
+
+    public void desserts(View view) {
+
+        Intent desserts = new Intent(Carte.this, listeDesserts.class);
+        startActivity(desserts);
+    }
+
+    public void retour(View view){
+        Intent entrees = new Intent(Carte.this, commandType.class);
+        startActivity(entrees);
+    }
 }
 

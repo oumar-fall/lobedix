@@ -9,11 +9,14 @@ import android.view.Menu;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.Hashtable;
 
 public class Dish_informations_spaghetti extends AppCompatActivity {
 
@@ -79,7 +82,7 @@ public class Dish_informations_spaghetti extends AppCompatActivity {
                     startActivity(new Intent(Dish_informations_spaghetti.this, listePlats.class));}
 
                 if (title.equals("desserts")){
-                    startActivity(new Intent(Dish_informations_spaghetti.this, commandType.class));}
+                    startActivity(new Intent(Dish_informations_spaghetti.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){
                     startActivity(new Intent(Dish_informations_spaghetti.this, commandType.class));}
@@ -100,6 +103,24 @@ public class Dish_informations_spaghetti extends AppCompatActivity {
 
         Intent nutri = new Intent(Dish_informations_spaghetti.this, Dish_Informations_Nutri.class);
         startActivity(nutri);
+    }
+
+    public void ingredients(View view){
+        Intent ingredient = new Intent(Dish_informations_spaghetti.this, Ingredients_spaghetti.class);
+        startActivity(ingredient);
+    }
+
+    public void addSpaghetti(View view){
+        Integer nbSpaghetti = DataHolder.getInstance().getNbSpaghetti() +1;
+        Hashtable<String,Integer> d = DataHolder.getInstance().getPlat();
+        d.put("Spaghetti",nbSpaghetti);
+        DataHolder.getInstance().setNbSpaghetti(nbSpaghetti);
+        Toast.makeText(this, "Vous venez de commander un plat de spaghetti bolognaise supplémentaire", Toast.LENGTH_SHORT).show();
+    }
+
+    public void retour(View view){
+        Intent entrees = new Intent(Dish_informations_spaghetti.this, listePlats.class);
+        startActivity(entrees);
     }
 
 

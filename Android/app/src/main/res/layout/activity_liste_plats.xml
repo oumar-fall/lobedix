@@ -32,7 +32,8 @@
                     android:id="@+id/back"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/back"/>
+                    android:src="@drawable/back"
+                    android:onClick="retour"/>
 
             </FrameLayout>
 
@@ -180,7 +181,7 @@
                         android:background="@drawable/moins"/>
 
                     <TextView
-                        android:id="@+id/Textlasagnes"
+                        android:id="@+id/lasagnes"
                         android:layout_width="@dimen/plusMoins"
                         android:layout_height="@dimen/plusMoins"
                         android:background="@drawable/rect"

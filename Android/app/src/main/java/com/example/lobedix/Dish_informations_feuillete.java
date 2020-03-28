@@ -9,11 +9,14 @@ import android.view.Menu;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.Hashtable;
 
 public class Dish_informations_feuillete extends AppCompatActivity {
 
@@ -79,7 +82,7 @@ public class Dish_informations_feuillete extends AppCompatActivity {
                     startActivity(new Intent(Dish_informations_feuillete.this, listePlats.class));}
 
                 if (title.equals("desserts")){
-                    startActivity(new Intent(Dish_informations_feuillete.this, commandType.class));}
+                    startActivity(new Intent(Dish_informations_feuillete.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){
                     startActivity(new Intent(Dish_informations_feuillete.this, commandType.class));}
@@ -100,6 +103,24 @@ public class Dish_informations_feuillete extends AppCompatActivity {
 
         Intent nutri = new Intent(Dish_informations_feuillete.this, Dish_Informations_Nutri.class);
         startActivity(nutri);
+    }
+
+    public void ingredients(View view){
+        Intent ingredient = new Intent(Dish_informations_feuillete.this, Ingredients_feuillete.class);
+        startActivity(ingredient);
+    }
+
+    public void addFeuillete(View view){
+        Integer nbFeuillete = DataHolder.getInstance().getNbFeuillete() +1;
+        Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
+        d.put("Fromage",nbFeuillete);
+        DataHolder.getInstance().setNbFeuillete(nbFeuillete);
+        Toast.makeText(this, "Vous venez de commander un feuilleté au fromage supplémentaire", Toast.LENGTH_SHORT).show();
+    }
+
+    public void retour(View view){
+        Intent entrees = new Intent(Dish_informations_feuillete.this, listeEntrees.class);
+        startActivity(entrees);
     }
 
 

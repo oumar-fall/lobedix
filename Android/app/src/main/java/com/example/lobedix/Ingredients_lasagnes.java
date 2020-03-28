@@ -61,7 +61,7 @@ public class Ingredients_lasagnes extends AppCompatActivity {
                     startActivity(new Intent(Ingredients_lasagnes.this, listePlats.class));}
 
                 if (title.equals("desserts")){ // Nos desserts
-                    startActivity(new Intent(Ingredients_lasagnes.this, commandType.class));}
+                    startActivity(new Intent(Ingredients_lasagnes.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){ // Coup de pouce
                     startActivity(new Intent(Ingredients_lasagnes.this, commandType.class));}
@@ -76,6 +76,11 @@ public class Ingredients_lasagnes extends AppCompatActivity {
             }
 
         });
+    }
+
+    public void retour(View view){
+        Intent entrees = new Intent(Ingredients_lasagnes.this, Dish_informations_lasagnes.class);
+        startActivity(entrees);
     }
 
 

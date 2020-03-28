@@ -14,12 +14,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         DataHolder.getInstance().setInitialEntree();
         DataHolder.getInstance().setInitialPlat();
+        DataHolder.getInstance().setInitialDessert();
+
         DataHolder.getInstance().setListeEntree();
         DataHolder.getInstance().setListePlat();
+        DataHolder.getInstance().setListeDessert();
+
         DataHolder.getInstance().setBelleListeEntree();
         DataHolder.getInstance().setBelleListePlat();
+        DataHolder.getInstance().setBelleListeDessert();
+
         DataHolder.getInstance().initNb();
         DataHolder.getInstance().setPrix();
     }

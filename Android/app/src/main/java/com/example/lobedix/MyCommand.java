@@ -66,7 +66,7 @@ public class MyCommand extends AppCompatActivity {
                     startActivity(new Intent(MyCommand.this, listePlats.class));}
 
                 if (title.equals("desserts")){
-                    startActivity(new Intent(MyCommand.this, commandType.class));}
+                    startActivity(new Intent(MyCommand.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){
                     startActivity(new Intent(MyCommand.this, commandType.class));}

@@ -32,7 +32,8 @@
                     android:id="@+id/back"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/back"/>
+                    android:src="@drawable/back"
+                    android:onClick="retour"/>
 
             </FrameLayout>
 
@@ -127,7 +128,7 @@
                         android:background="@drawable/moins"/>
 
                     <TextView
-                        android:id="@+id/Taboule"
+                        android:id="@+id/taboule"
                         android:layout_width="@dimen/plusMoins"
                         android:layout_height="@dimen/plusMoins"
                         android:background="@drawable/rect"
@@ -180,7 +181,7 @@
                         android:background="@drawable/moins"/>
 
                     <TextView
-                        android:id="@+id/Soupe"
+                        android:id="@+id/soupe"
                         android:layout_width="@dimen/plusMoins"
                         android:layout_height="@dimen/plusMoins"
                         android:background="@drawable/rect"
@@ -231,7 +232,7 @@
                         android:background="@drawable/moins"/>
 
                     <TextView
-                        android:id="@+id/Tomates"
+                        android:id="@+id/tomates"
                         android:layout_width="@dimen/plusMoins"
                         android:layout_height="@dimen/plusMoins"
                         android:background="@drawable/rect"
@@ -282,7 +283,7 @@
                         android:background="@drawable/moins"/>
 
                     <TextView
-                        android:id="@+id/Feuillete"
+                        android:id="@+id/feuillete"
                         android:layout_width="@dimen/plusMoins"
                         android:layout_height="@dimen/plusMoins"
                         android:background="@drawable/rect"

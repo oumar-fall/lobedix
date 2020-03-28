@@ -32,7 +32,8 @@
                     android:id="@+id/back"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/back"/>
+                    android:src="@drawable/back"
+                    android:onClick="retour"/>
 
             </FrameLayout>
 
@@ -139,7 +140,8 @@
                                 android:textSize="20sp"
                                 android:background="#a4accf"
                                 android:paddingLeft="15dp"
-                                android:paddingRight="15dp"/>
+                                android:paddingRight="15dp"
+                                android:onClick="ingredients"/>
 
                             <Button
                                 android:id="@+id/Ajouter"
@@ -153,7 +155,8 @@
                                 android:paddingLeft="25dp"
                                 android:paddingRight="25dp"
                                 android:paddingBottom="15dp"
-                                android:paddingTop="15dp"/>
+                                android:paddingTop="15dp"
+                                android:onClick="addTomates"/>
                         </GridLayout>
 
 

@@ -23,10 +23,10 @@ public class listeEntrees extends AppCompatActivity {
     private int nbTaboule = DataHolder.getInstance().getNbTaboule();
     private int nbTomates = DataHolder.getInstance().getNbTomates();
     private int nbFeuillete = DataHolder.getInstance().getNbFeuillete();
-    private TextView Taboule;
-    private TextView Soupe;
-    private TextView Tomates;
-    private TextView Feuillete;
+    private TextView taboule;
+    private TextView soupe;
+    private TextView tomates;
+    private TextView feuillete;
     private DrawerLayout drawer;
     private ImageButton menu_button;
     private NavigationView view;
@@ -39,10 +39,10 @@ public class listeEntrees extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_liste_entrees);
-        Taboule = findViewById(R.id.Taboule);
-        Soupe = findViewById(R.id.Soupe);
-        Feuillete = findViewById(R.id.Feuillete);
-        Tomates = findViewById(R.id.Tomates);
+        taboule = findViewById(R.id.taboule);
+        soupe = findViewById(R.id.soupe);
+        feuillete = findViewById(R.id.feuillete);
+        tomates = findViewById(R.id.tomates);
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         menu_button=(ImageButton)findViewById(R.id.menu_button);
 
@@ -81,7 +81,7 @@ public class listeEntrees extends AppCompatActivity {
                     startActivity(new Intent(listeEntrees.this, listePlats.class));}
 
                 if (title.equals("desserts")){
-                    startActivity(new Intent(listeEntrees.this, commandType.class));}
+                    startActivity(new Intent(listeEntrees.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){
                     startActivity(new Intent(listeEntrees.this, commandType.class));}
@@ -125,7 +125,7 @@ public class listeEntrees extends AppCompatActivity {
 
     public void addTaboule(View view) {
         nbTaboule = nbTaboule +1;
-        Taboule.setText(Integer.toString(nbTaboule));
+        taboule.setText(Integer.toString(nbTaboule));
         Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
         d.put("Taboule",nbTaboule);
         DataHolder.getInstance().setNbTaboule(nbTaboule);
@@ -135,7 +135,7 @@ public class listeEntrees extends AppCompatActivity {
     public void removeTaboule(View view){
         if(nbTaboule>0){
             nbTaboule = nbTaboule -1;
-            Taboule.setText(Integer.toString(nbTaboule));
+            taboule.setText(Integer.toString(nbTaboule));
             Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
             DataHolder.getInstance().setNbTaboule(nbTaboule);
             d.put("Taboule",nbTaboule);
@@ -143,9 +143,14 @@ public class listeEntrees extends AppCompatActivity {
         }
     }
 
+    public void setNbTaboule(){
+        TextView taboule = (TextView) findViewById(R.id.taboule);
+        taboule.setText(String.valueOf(nbTaboule));
+    }
+
     public void addSoupe(View view) {
         nbSoupe = nbSoupe +1;
-        Soupe.setText(Integer.toString(nbSoupe));
+        soupe.setText(Integer.toString(nbSoupe));
         Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
         d.put("Soupe",nbSoupe);
         DataHolder.getInstance().setNbSoupe(nbSoupe);
@@ -155,7 +160,7 @@ public class listeEntrees extends AppCompatActivity {
     public void removeSoupe(View view){
         if(nbSoupe>0){
             nbSoupe = nbSoupe -1;
-            Soupe.setText(Integer.toString(nbSoupe));
+            soupe.setText(Integer.toString(nbSoupe));
             Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
             d.put("Soupe",nbSoupe);
             DataHolder.getInstance().setNbSoupe(nbSoupe);
@@ -163,9 +168,14 @@ public class listeEntrees extends AppCompatActivity {
         }
     }
 
+    public void setNbSoupe(){
+        TextView soupe = (TextView) findViewById(R.id.soupe);
+        soupe.setText(String.valueOf(nbSoupe));
+    }
+
     public void addTomates(View view) {
         nbTomates = nbTomates +1;
-        Tomates.setText(Integer.toString(nbTomates));
+        tomates.setText(Integer.toString(nbTomates));
         Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
         d.put("Tomate",nbTomates);
         DataHolder.getInstance().setNbTomates(nbTomates);
@@ -175,7 +185,7 @@ public class listeEntrees extends AppCompatActivity {
     public void removeTomates(View view){
         if(nbTomates>0){
             nbTomates = nbTomates -1;
-            Tomates.setText(Integer.toString(nbTomates));
+            tomates.setText(Integer.toString(nbTomates));
             Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
             d.put("Tomate",nbTomates);
             DataHolder.getInstance().setNbTomates(nbTomates);
@@ -183,9 +193,14 @@ public class listeEntrees extends AppCompatActivity {
         }
     }
 
+    public void setNbTomates(){
+        TextView tomates = (TextView) findViewById(R.id.tomates);
+        tomates.setText(String.valueOf(nbTomates));
+    }
+
     public void addFeuillete(View view) {
         nbFeuillete = nbFeuillete +1;
-        Feuillete.setText(Integer.toString(nbFeuillete));
+        feuillete.setText(Integer.toString(nbFeuillete));
         Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
         d.put("Fromage",nbFeuillete);
         DataHolder.getInstance().setNbFeuillete(nbFeuillete);
@@ -195,7 +210,7 @@ public class listeEntrees extends AppCompatActivity {
     public void removeFeuillete(View view){
         if(nbFeuillete>0){
             nbFeuillete = nbFeuillete -1;
-            Feuillete.setText(Integer.toString(nbFeuillete));
+            feuillete.setText(Integer.toString(nbFeuillete));
             Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
             d.put("Fromage",nbFeuillete);
             DataHolder.getInstance().setNbFeuillete(nbFeuillete);
@@ -204,5 +219,33 @@ public class listeEntrees extends AppCompatActivity {
         }
     }
 
+    public void setNbFeuillete(){
+        TextView feuillete = (TextView) findViewById(R.id.feuillete);
+        feuillete.setText(String.valueOf(nbFeuillete));
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        nbFeuillete = DataHolder.getInstance().getNbFeuillete();
+        nbSoupe = DataHolder.getInstance().getNbSoupe();
+        nbTaboule = DataHolder.getInstance().getNbTaboule();
+        nbTomates = DataHolder.getInstance().getNbTomates();
+        feuillete.setText(Integer.toString(nbFeuillete));
+        tomates.setText(Integer.toString(nbTomates));
+        soupe.setText(Integer.toString(nbSoupe));
+        taboule.setText(Integer.toString(nbTaboule));
+        setNbFeuillete();
+        setNbSoupe();
+        setNbTaboule();
+        setNbTomates();
+
+    }
+
+
+    public void retour(View view){
+        Intent entrees = new Intent(listeEntrees.this, Carte.class);
+        startActivity(entrees);
+    }
 
 }

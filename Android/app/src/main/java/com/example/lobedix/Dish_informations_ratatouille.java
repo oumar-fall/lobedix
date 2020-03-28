@@ -9,11 +9,14 @@ import android.view.Menu;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.Hashtable;
 
 public class Dish_informations_ratatouille extends AppCompatActivity {
 
@@ -78,7 +81,7 @@ public class Dish_informations_ratatouille extends AppCompatActivity {
                     startActivity(new Intent(Dish_informations_ratatouille.this, listePlats.class));}
 
                 if (title.equals("desserts")){
-                    startActivity(new Intent(Dish_informations_ratatouille.this, commandType.class));}
+                    startActivity(new Intent(Dish_informations_ratatouille.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){
                     startActivity(new Intent(Dish_informations_ratatouille.this, commandType.class));}
@@ -101,5 +104,22 @@ public class Dish_informations_ratatouille extends AppCompatActivity {
         startActivity(nutri);
     }
 
+    public void ingredients(View view){
+        Intent ingredient = new Intent(Dish_informations_ratatouille.this, Ingredients_ratatouille.class);
+        startActivity(ingredient);
+    }
+
+    public void addRatatouille(View view){
+        Integer nbRatatouille = DataHolder.getInstance().getNbRatatouille() +1;
+        Hashtable<String,Integer> d = DataHolder.getInstance().getPlat();
+        d.put("Ratatouille",nbRatatouille);
+        DataHolder.getInstance().setNbRatatouille(nbRatatouille);
+        Toast.makeText(this, "Vous venez de commander un plat de ratatouille supplémentaire", Toast.LENGTH_SHORT).show();
+    }
+
+    public void retour(View view){
+        Intent entrees = new Intent(Dish_informations_ratatouille.this, listePlats.class);
+        startActivity(entrees);
+    }
 
 }
