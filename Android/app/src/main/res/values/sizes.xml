@@ -5,6 +5,18 @@
     <dimen name="txtTitrePrincipal">30sp</dimen>
     <dimen name="txtPremieresSlides">35sp</dimen>
     <dimen name="txtAssiettes">20sp</dimen>
+    <dimen name="txtIngredientsButton">18sp</dimen>
+    <dimen name="txtAddCommandButton">18sp</dimen>
+    <dimen name="txtTitrePlats">30sp</dimen>
+    <dimen name="txtAvis">10sp</dimen>
+    <dimen name="txtMotDuChef">12sp</dimen>
+    <dimen name="txtTitreAvis">15sp</dimen>
+    <dimen name="txtNameComments">10sp</dimen>
+    <dimen name="txtComments">12sp</dimen>
+    <dimen name="txtTitreIngredients">33sp</dimen>
+    <dimen name="txtNameIngredients">18sp</dimen>
+    <dimen name="txtListeIngredients">25sp</dimen>
+    <dimen name="txtInfosNut">33sp</dimen>
 
 <!-- Autre -->
     <dimen name="hauteurBarreHaut">50dp</dimen>
@@ -15,4 +27,18 @@
 
 <!--Carte-->
     <dimen name="assiettes">170dp</dimen>
+
+<!--DishInfos-->
+    <dimen name="imgDishInformations">400dp</dimen>
+    <dimen name="hauteurBarreVinEtScore">70dp</dimen>
+    <dimen name="imgCommentsW">38dp</dimen>
+    <dimen name="imgCommentsH">41dp</dimen>
+
+<!--Info Nutri-->
+    <dimen name="imgInformationsNutritionellesH">180dp</dimen>
+    <dimen name="imgInformationsNutritionellesW">220dp</dimen>
+
+
+    <!--Ingrédients-->
+    <dimen name="imgIngredients">240dp</dimen>
 </resources>

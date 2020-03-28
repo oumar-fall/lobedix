@@ -39,7 +39,7 @@
     <string name="avis2">Agréablement surprise de trouver un plat végétarienne, moi qui ne mange pas de viande</string>
     <string name="nom3">Camille Tavernier</string>
     <string name="avis3">Très bon :)</string>
-    <string name="avis"><u>Avis des clients</u></string>
+    <string name="avis"><u>Avis des clients:</u></string>
 
 
     <string name="taboule">6€ Taboulé oriental</string>
@@ -77,4 +77,6 @@
     <string name="valGraissesLasagnes">3,5g</string>
     <string name="txtSucreLasagnes">SUCRE : Faible impact</string>
     <string name="valSucreLasagnes">0,7g</string>
+
+    <string name="ajouterCommande">Ajouter à la commande</string>
 </resources>

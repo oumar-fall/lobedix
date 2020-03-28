@@ -19,7 +19,27 @@
 
     <!--Infos Nutritionelles-->
     <dimen name="marginInfosNutL">50dp</dimen>
+    <dimen name="marginInfosNutT">30dp</dimen>
     <dimen name="marginValeursNut">5dp</dimen>
+    <dimen name="marginImgV">20dp</dimen>
+
+    <!--Infos Plats-->
+    <dimen name="marginDishInfosL">60dp</dimen>
+    <dimen name="paddingDishInfosButton">10dp</dimen>
+    <dimen name="marginDishInfosButton">5dp</dimen>
+    <dimen name="spaceBetweenDiv">5dp</dimen>
+    <dimen name="marginTitrePlats">15dp</dimen>
+    <dimen name="marginAvisL">10dp</dimen>
+    <dimen name="marginAvisB">20dp</dimen>
+    <dimen name="spaceBeforeComments">20dp</dimen>
+    <dimen name="marginComments">10dp</dimen>
+    <dimen name="marginCommentsRate">10dp</dimen>
+    <dimen name="spaceBetweenComments">10dp</dimen>
+
+    <!--Ingrédients-->
+    <dimen name="marginIngredientsL">20dp</dimen>
+    <dimen name="paddingNameIngredientsH">10dp</dimen>
+    <dimen name="paddingListeIngredientsH">10dp</dimen>
 
 
 </resources>
