@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class Espace_Enfant extends AppCompatActivity {
 
@@ -12,6 +14,9 @@ public class Espace_Enfant extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_espace__enfant);
         run();
+        LinearLayout t = findViewById(R.id.text);
+        System.out.println(t.getLeft());
+        System.out.println(t.getTop());
     }
 
     public void run() {
