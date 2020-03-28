@@ -15,4 +15,6 @@
 
 <!--Carte-->
     <dimen name="assiettes">170dp</dimen>
+
+    <dimen name="tailleImgPuzzle">300px</dimen>
 </resources>

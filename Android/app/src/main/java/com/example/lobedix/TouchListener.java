@@ -8,6 +8,26 @@ public class TouchListener implements View.OnTouchListener {
     private float xDelta;
     private float yDelta;
 
+    public float getActualX() {
+        return actualX;
+    }
+
+    public void setActualX(float actualX) {
+        this.actualX = actualX;
+    }
+
+    public float getActualY() {
+        return actualY;
+    }
+
+    public void setActualY(float actualY) {
+        this.actualY = actualY;
+    }
+
+    private float actualX;
+    private float actualY;
+
+
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
         float x = motionEvent.getRawX();
@@ -21,6 +41,8 @@ public class TouchListener implements View.OnTouchListener {
             case MotionEvent.ACTION_MOVE:
                 lParams.leftMargin = (int) (x - xDelta);
                 lParams.topMargin = (int) (y - yDelta);
+                actualX = (int) (x - xDelta);
+                actualY =  (int) (y - yDelta);
                 view.setLayoutParams(lParams);
                 break;
         }

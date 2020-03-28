@@ -22,7 +22,6 @@
     <string name="ingredient_salade">Pomme, banane, orange, pamplemousse, kiwi, raisin noir, jus de citron, sucre</string>
 
 
-
     <string name="opinions">3 avis</string>
     <string name="opinions_lasagnes"> <u>3 avis </u></string>
     <string name="description_lasagnes"> <u>Le mot du chef: </u> \n Plates, mais avec de la personnalité. UN plat de pâtes plates, ça m\'éclate !</string>
@@ -56,7 +55,6 @@
     <string name="creme">7€ Crème brûlée</string>
     <string name="salade">6€ Salade de fruits</string>
     <string name="glace">4€ Glace à la vanille</string>
-
 
 
     <string name="desserts">Nos desserts</string>
