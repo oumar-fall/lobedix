@@ -202,75 +202,75 @@ public class DataHolder {
     public void setNbVege(Integer nbVege) { this.nbVege = nbVege;}
 
     public int getNbBoissonSpaghetti(){
-        return(nbSpaghetti);
+        return(nbBoissonSpaghetti);
     }
-    public void setNbBoissonSpaghetti(int nbSpaghetti){
-        this.nbSpaghetti = nbSpaghetti;
+    public void setNbBoissonSpaghetti(int nbBoissonSpaghetti){
+        this.nbBoissonSpaghetti = nbBoissonSpaghetti;
     }
 
     public int getNbBoissonLasagnes(){
-        return(nbLasagnes);
+        return(nbBoissonLasagnes);
     }
-    public void setNbBoissonLasagnes(int nbLasagnes){
-        this.nbLasagnes= nbLasagnes;
+    public void setNbBoissonLasagnes(int nbBoissonLasagnes){
+        this.nbBoissonLasagnes= nbBoissonLasagnes;
     }
 
     public int getNbBoissonCurry(){
-        return(nbCurry);
+        return(nbBoissonCurry);
     }
-    public void setNbBoissonCurry(int nbCurry){
-        this.nbCurry = nbCurry;
+    public void setNbBoissonCurry(int nbBoissonCurry){
+        this.nbBoissonCurry = nbBoissonCurry;
     }
 
     public int getNbBoissonRatatouille(){
-        return(nbRatatouille);
+        return(nbBoissonRatatouille);
     }
-    public void setNbBoissonRatatouille(int nbRatatouille){
-        this.nbRatatouille = nbRatatouille;
+    public void setNbBoissonRatatouille(int nbBoissonRatatouille){
+        this.nbBoissonRatatouille = nbBoissonRatatouille;
     }
 
 
 
     public int getNbBoissonSoupe(){
-        return(nbSoupe);
+        return(nbBoissonSoupe);
     }
-    public void setNbBoissonSoupe(int nbSoupe){
-        this.nbSoupe = nbSoupe;
+    public void setNbBoissonSoupe(int nbBoissonSoupe){
+        this.nbBoissonSoupe = nbBoissonSoupe;
     }
 
     public int getNbBoissonTaboule(){
-        return(nbTaboule);
+        return(nbBoissonTaboule);
     }
-    public void setNbBoissonTaboule(int nbTaboule){
-        this.nbTaboule = nbTaboule;
+    public void setNbBoissonTaboule(int nbBoissonTaboule){
+        this.nbBoissonTaboule = nbBoissonTaboule;
     }
 
     public int getNbBoissonTomates(){
-        return(nbTomates);
+        return(nbBoissonTomates);
     }
-    public void setNbBoissonTomates(int nbTomates){
-        this.nbTomates = nbTomates;
+    public void setNbBoissonTomates(int nbBoissonTomates){
+        this.nbBoissonTomates = nbBoissonTomates;
     }
 
     public int getNbBoissonFeuillete(){
-        return(nbFeuillete);
+        return(nbBoissonFeuillete);
     }
-    public void setNbBoissonFeuillete(int nbFeuillete){
-        this.nbFeuillete = nbFeuillete;
+    public void setNbBoissonFeuillete(int nbBoissonFeuillete){
+        this.nbBoissonFeuillete = nbBoissonFeuillete;
     }
 
 
 
     public int getNbBoissonCreme(){
-        return(nbCreme);
+        return(nbBoissonCreme);
     }
-    public void setNbBoissonCreme(int nbCreme){
-        this.nbCreme = nbCreme;
+    public void setNbBoissonCreme(int nbBoissonCreme){
+        this.nbBoissonCreme = nbBoissonCreme;
     }
 
-    public int getNbBoissonSalade(){ return(nbSalade); }
-    public void setNbBoissonSalade(int nbSalade){
-        this.nbSalade= nbSalade;
+    public int getNbBoissonSalade(){ return(nbBoissonSalade); }
+    public void setNbBoissonSalade(int nbBoissonSalade){
+        this.nbBoissonSalade= nbBoissonSalade;
     }
 
     public int getNbBoissonMousse(){
@@ -281,10 +281,10 @@ public class DataHolder {
     }
 
     public int getNbBoissonGlace(){
-        return(nbGlace);
+        return(nbBoissonGlace);
     }
-    public void setNbBoissonGlace(int nbGlace){
-        this.nbGlace = nbGlace;
+    public void setNbBoissonGlace(int nbBoissonGlace){
+        this.nbBoissonGlace = nbBoissonGlace;
     }
 
     public void setPrix(){
