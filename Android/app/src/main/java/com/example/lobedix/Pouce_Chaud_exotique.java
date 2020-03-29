@@ -37,13 +37,13 @@ public class Pouce_Chaud_exotique extends AppCompatActivity {
 
     public void PasExotique(View view){
 
-        Intent pasExotique = new Intent(Pouce_Chaud_exotique.this, Ingredients_spaghetti.class);
+        Intent pasExotique = new Intent(Pouce_Chaud_exotique.this, Dish_informations_spaghetti.class);
         startActivity(pasExotique);
     }
 
     public void Exotique(View view){
 
-        Intent exotique = new Intent(Pouce_Chaud_exotique.this, Ingredients_curry.class);
+        Intent exotique = new Intent(Pouce_Chaud_exotique.this, Dish_informations_curry.class);
         startActivity(exotique);
     }
 
@@ -51,13 +51,13 @@ public class Pouce_Chaud_exotique extends AppCompatActivity {
         String message = "";
         switch(direction) {
             case LEFT_TO_RIGHT:
-                Intent pasExotique = new Intent(Pouce_Chaud_exotique.this, Ingredients_spaghetti.class);
+                Intent pasExotique = new Intent(Pouce_Chaud_exotique.this, Dish_informations_spaghetti.class);
                 startActivity(pasExotique);
 
                 message = "Classique indémodable : spaghetti bolognaises !";
                 break;
             case RIGHT_TO_LEFT:
-                Intent exotique = new Intent(Pouce_Chaud_exotique.this, Ingredients_curry.class);
+                Intent exotique = new Intent(Pouce_Chaud_exotique.this, Dish_informations_curry.class);
                 startActivity(exotique);
                 message = "Parfum d'Asie avec ce poulet curry !";
                 break;

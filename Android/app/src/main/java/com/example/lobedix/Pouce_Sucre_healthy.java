@@ -46,7 +46,7 @@ public class Pouce_Sucre_healthy extends AppCompatActivity {
 
     public void Healthy(View view){
 
-        Intent healthy = new Intent(Pouce_Sucre_healthy.this, Ingredients_salade.class);
+        Intent healthy = new Intent(Pouce_Sucre_healthy.this, Dish_informations_salade.class);
         startActivity(healthy);
     }
 
@@ -60,7 +60,7 @@ public class Pouce_Sucre_healthy extends AppCompatActivity {
                 message = "C'est parti pour du bon gras !";
                 break;
             case RIGHT_TO_LEFT:
-                Intent healthy = new Intent(Pouce_Sucre_healthy.this, Ingredients_salade.class);
+                Intent healthy = new Intent(Pouce_Sucre_healthy.this, Dish_informations_salade.class);
                 startActivity(healthy);
                 message = "Salade de fruits !";
                 break;

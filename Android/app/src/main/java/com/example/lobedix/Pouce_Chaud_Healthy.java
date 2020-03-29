@@ -36,7 +36,7 @@ public class Pouce_Chaud_Healthy extends AppCompatActivity {
 
     public void PasHealthy(View view){
 
-        Intent pasHealthy = new Intent(Pouce_Chaud_Healthy.this, Ingredients_lasagnes.class);
+        Intent pasHealthy = new Intent(Pouce_Chaud_Healthy.this, Dish_informations_lasagnes.class);
         startActivity(pasHealthy);
     }
 
@@ -50,7 +50,7 @@ public class Pouce_Chaud_Healthy extends AppCompatActivity {
         String message = "";
         switch(direction) {
             case LEFT_TO_RIGHT:
-                Intent pasHealthy = new Intent(Pouce_Chaud_Healthy.this, Ingredients_lasagnes.class);
+                Intent pasHealthy = new Intent(Pouce_Chaud_Healthy.this, Dish_informations_lasagnes.class);
                 startActivity(pasHealthy);
 
                 message = "Lasagnes Végétariennes spécialité du chef !";

@@ -36,13 +36,13 @@ public class Pouce_soupe extends AppCompatActivity {
 
     public void PasSoupe(View view){
 
-        Intent pasSoupe = new Intent(Pouce_soupe.this, Ingredients_ratatouille.class);
+        Intent pasSoupe = new Intent(Pouce_soupe.this, Dish_informations_ratatouille.class);
         startActivity(pasSoupe);
     }
 
     public void Soupe(View view){
 
-        Intent soupe = new Intent(Pouce_soupe.this, Ingredients_soupe.class);
+        Intent soupe = new Intent(Pouce_soupe.this, Dish_informations_soupe.class);
         startActivity(soupe);
     }
 
@@ -50,13 +50,13 @@ public class Pouce_soupe extends AppCompatActivity {
         String message = "";
         switch(direction) {
             case LEFT_TO_RIGHT:
-                Intent pasSoupe = new Intent(Pouce_soupe.this, Ingredients_ratatouille.class);
+                Intent pasSoupe = new Intent(Pouce_soupe.this, Dish_informations_ratatouille.class);
                 startActivity(pasSoupe);
 
                 message = "Une ratatouille pour raviver vos souvenirs d'enfance !";
                 break;
             case RIGHT_TO_LEFT:
-                Intent soupe = new Intent(Pouce_soupe.this, Ingredients_soupe.class);
+                Intent soupe = new Intent(Pouce_soupe.this, Dish_informations_soupe.class);
                 startActivity(soupe);
                 message = "Soupe des légumes du soleil pour illuminer votre assiette !";
                 break;

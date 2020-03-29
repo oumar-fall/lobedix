@@ -36,13 +36,13 @@ public class Pouce_chocolat extends AppCompatActivity {
 
     public void PasChocolat(View view){
 
-        Intent pasChocolat = new Intent(Pouce_chocolat.this, Ingredients_creme.class);
+        Intent pasChocolat = new Intent(Pouce_chocolat.this, Dish_informations_creme.class);
         startActivity(pasChocolat);
     }
 
     public void Chocolat(View view){
 
-        Intent chocolat = new Intent(Pouce_chocolat.this, Ingredients_mousse.class);
+        Intent chocolat = new Intent(Pouce_chocolat.this, Dish_informations_mousse.class);
         startActivity(chocolat);
     }
 
@@ -50,13 +50,13 @@ public class Pouce_chocolat extends AppCompatActivity {
         String message = "";
         switch(direction) {
             case LEFT_TO_RIGHT:
-                Intent pasChocolat = new Intent(Pouce_chocolat.this, Ingredients_creme.class);
+                Intent pasChocolat = new Intent(Pouce_chocolat.this, Dish_informations_creme.class);
                 startActivity(pasChocolat);
 
                 message = "Il ne reste plus que la crème alors !";
                 break;
             case RIGHT_TO_LEFT:
-                Intent chocolat = new Intent(Pouce_chocolat.this, Ingredients_mousse.class);
+                Intent chocolat = new Intent(Pouce_chocolat.this, Dish_informations_mousse.class);
                 startActivity(chocolat);
                 message = "Une petite mousse pour vous ravir !";
                 break;

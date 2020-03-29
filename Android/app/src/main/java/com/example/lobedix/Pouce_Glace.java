@@ -42,7 +42,7 @@ public class Pouce_Glace extends AppCompatActivity {
 
     public void Glace(View view){
 
-        Intent glace = new Intent(Pouce_Glace.this, Ingredients_glace.class);
+        Intent glace = new Intent(Pouce_Glace.this, Dish_informations_glace.class);
         startActivity(glace);
     }
 
@@ -56,7 +56,7 @@ public class Pouce_Glace extends AppCompatActivity {
                 message = "Essayons quelque chose de moins froid !";
                 break;
             case RIGHT_TO_LEFT:
-                Intent glace = new Intent(Pouce_Glace.this, Ingredients_glace.class);
+                Intent glace = new Intent(Pouce_Glace.this, Dish_informations_glace.class);
                 startActivity(glace);
                 message = "Et une glace vanille, une !";
                 break;

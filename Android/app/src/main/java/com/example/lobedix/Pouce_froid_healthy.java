@@ -36,13 +36,13 @@ public class Pouce_froid_healthy extends AppCompatActivity {
 
     public void PasHealthy(View view){
 
-        Intent pasHealthy = new Intent(Pouce_froid_healthy.this, Ingredients_feuillete.class);
+        Intent pasHealthy = new Intent(Pouce_froid_healthy.this, Dish_informations_feuillete.class);
         startActivity(pasHealthy);
     }
 
     public void Healthy(View view){
 
-        Intent healthy = new Intent(Pouce_froid_healthy.this, Ingredients_tomates.class);
+        Intent healthy = new Intent(Pouce_froid_healthy.this, Dish_informations_tomates.class);
         startActivity(healthy);
     }
 
@@ -50,13 +50,13 @@ public class Pouce_froid_healthy extends AppCompatActivity {
         String message = "";
         switch(direction) {
             case LEFT_TO_RIGHT:
-                Intent pasHealthy = new Intent(Pouce_froid_healthy.this, Ingredients_feuillete.class);
+                Intent pasHealthy = new Intent(Pouce_froid_healthy.this, Dish_informations_feuillete.class);
                 startActivity(pasHealthy);
 
                 message = "Petit feuilleté pour bien démarrer !";
                 break;
             case RIGHT_TO_LEFT:
-                Intent healthy = new Intent(Pouce_froid_healthy.this, Ingredients_tomates.class);
+                Intent healthy = new Intent(Pouce_froid_healthy.this, Dish_informations_tomates.class);
                 startActivity(healthy);
                 message = "Une bonne salade de tomates !";
                 break;

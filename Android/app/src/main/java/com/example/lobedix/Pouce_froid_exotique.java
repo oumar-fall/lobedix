@@ -42,7 +42,7 @@ public class Pouce_froid_exotique extends AppCompatActivity {
 
     public void Exotique(View view){
 
-        Intent exotique = new Intent(Pouce_froid_exotique.this, Ingredients_taboule.class);
+        Intent exotique = new Intent(Pouce_froid_exotique.this, Dish_informations_taboule.class);
         startActivity(exotique);
     }
 
@@ -56,7 +56,7 @@ public class Pouce_froid_exotique extends AppCompatActivity {
                 message = "Restons sur des plats français !";
                 break;
             case RIGHT_TO_LEFT:
-                Intent exotique = new Intent(Pouce_froid_exotique.this, Ingredients_taboule.class);
+                Intent exotique = new Intent(Pouce_froid_exotique.this, Dish_informations_taboule.class);
                 startActivity(exotique);
                 message = "Direction l'orient avec ce petit taboulet !";
                 break;
