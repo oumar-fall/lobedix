@@ -232,45 +232,45 @@ public class DataHolder {
 
 
     public int getNbBoissonSoupe(){
-        return(nbSoupe);
+        return(nbBoissonSoupe);
     }
-    public void setNbBoissonSoupe(int nbSoupe){
-        this.nbSoupe = nbSoupe;
+    public void setNbBoissonSoupe(int nbBoissonSoupe){
+        this.nbBoissonSoupe = nbBoissonSoupe;
     }
 
     public int getNbBoissonTaboule(){
-        return(nbTaboule);
+        return(nbBoissonTaboule);
     }
-    public void setNbBoissonTaboule(int nbTaboule){
-        this.nbTaboule = nbTaboule;
+    public void setNbBoissonTaboule(int nbBoissonTaboule){
+        this.nbBoissonTaboule = nbBoissonTaboule;
     }
 
     public int getNbBoissonTomates(){
-        return(nbTomates);
+        return(nbBoissonTomates);
     }
-    public void setNbBoissonTomates(int nbTomates){
-        this.nbTomates = nbTomates;
+    public void setNbBoissonTomates(int nbBoissonTomates){
+        this.nbBoissonTomates = nbBoissonTomates;
     }
 
     public int getNbBoissonFeuillete(){
-        return(nbFeuillete);
+        return(nbBoissonFeuillete);
     }
-    public void setNbBoissonFeuillete(int nbFeuillete){
-        this.nbFeuillete = nbFeuillete;
+    public void setNbBoissonFeuillete(int nbBoissonFeuillete){
+        this.nbBoissonFeuillete = nbBoissonFeuillete;
     }
 
 
 
     public int getNbBoissonCreme(){
-        return(nbCreme);
+        return(nbBoissonCreme);
     }
-    public void setNbBoissonCreme(int nbCreme){
-        this.nbCreme = nbCreme;
+    public void setNbBoissonCreme(int nbBoissonCreme){
+        this.nbBoissonCreme = nbBoissonCreme;
     }
 
-    public int getNbBoissonSalade(){ return(nbSalade); }
-    public void setNbBoissonSalade(int nbSalade){
-        this.nbSalade= nbSalade;
+    public int getNbBoissonSalade(){ return(nbBoissonSalade); }
+    public void setNbBoissonSalade(int nbBoissonSalade){
+        this.nbBoissonSalade= nbBoissonSalade;
     }
 
     public int getNbBoissonMousse(){
@@ -281,10 +281,10 @@ public class DataHolder {
     }
 
     public int getNbBoissonGlace(){
-        return(nbGlace);
+        return(nbBoissonGlace);
     }
-    public void setNbBoissonGlace(int nbGlace){
-        this.nbGlace = nbGlace;
+    public void setNbBoissonGlace(int nbBoissonGlace){
+        this.nbBoissonGlace = nbBoissonGlace;
     }
 
     public void setPrix(){
