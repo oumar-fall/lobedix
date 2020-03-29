@@ -98,13 +98,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageButton
-                android:id="@+id/menu_button"
-                android:layout_width="@dimen/burgerMenu"
-                android:layout_height="@dimen/burgerMenu"
-                android:layout_margin="@dimen/marginBurgerMenu"
-                android:background = "@drawable/menu_icon"/>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -120,14 +113,13 @@
                     android:layout_marginTop="@dimen/marginCommandeV"
                     android:gravity="center"
                     android:text="Vous n'avez rien commandé pour l'instant"
-                    android:textSize="35sp"></TextView>
+                    android:textSize="35sp"/>
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Valider"
-                    android:layout_gravity="center"
-                    ></Button>
+                    android:layout_gravity="center"/>
 
             </LinearLayout>
 
@@ -136,10 +128,4 @@
 
     </LinearLayout>
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:menu="@menu/main_menu"/>
 </androidx.drawerlayout.widget.DrawerLayout>

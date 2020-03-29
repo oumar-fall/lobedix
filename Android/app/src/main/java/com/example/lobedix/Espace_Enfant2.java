@@ -41,7 +41,7 @@ public class Espace_Enfant2 extends AppCompatActivity {
     FrameLayout positionsPuzzle;
     FrameLayout layout = null;
 
-    int tolerance = 80;
+    int tolerance = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -236,5 +236,10 @@ public class Espace_Enfant2 extends AppCompatActivity {
             startActivity(commande_enfant);
         }
 
+    }
+
+    public void retour(View view){
+        Intent menus = new Intent(Espace_Enfant2.this, Enfant_Adulte.class);
+        startActivity(menus);
     }
 }

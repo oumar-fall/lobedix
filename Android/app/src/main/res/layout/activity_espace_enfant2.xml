@@ -98,57 +98,49 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageButton
-                    android:id="@+id/menu_button"
-                    android:layout_width="@dimen/burgerMenu"
-                    android:layout_height="@dimen/burgerMenu"
-                    android:layout_margin="@dimen/marginBurgerMenu"
-                    android:background = "@drawable/menu_icon"/>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:gravity="center"
-                    android:paddingTop="140dp"
-                    android:layout_marginBottom="20dp">
+                    android:gravity="center|bottom">
 
                     <FrameLayout
                         android:id="@+id/positions_puzzle"
-                        android:layout_width="300dp"
-                        android:layout_height="300dp"
-                        android:layout_gravity="center">
+                        android:layout_width="@dimen/framePositionsPuzzle"
+                        android:layout_height="@dimen/framePositionsPuzzle"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="70dp">
 
 
 
                         <ImageView
                             android:id="@+id/puzzle_entree"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
+                            android:layout_width="@dimen/positionsPuzzle"
+                            android:layout_height="@dimen/positionsPuzzle"
                             android:layout_gravity="top|start"
                             android:src="@drawable/puzzle_back"
                             android:scaleType="fitCenter"
                             android:rotation="90"/>
                         <ImageView
                             android:id="@+id/puzzle_plat"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
+                            android:layout_width="@dimen/positionsPuzzle"
+                            android:layout_height="@dimen/positionsPuzzle"
                             android:layout_gravity="top|end"
                             android:src="@drawable/puzzle_back"
                             android:scaleType="fitCenter"
                             android:rotation="180"/>
                         <ImageView
                             android:id="@+id/puzzle_boisson"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
+                            android:layout_width="@dimen/positionsPuzzle"
+                            android:layout_height="@dimen/positionsPuzzle"
                             android:layout_gravity="bottom|end"
                             android:src="@drawable/puzzle_back"
                             android:scaleType="fitCenter"
                             android:rotation="270"/>
                         <ImageView
                             android:id="@+id/puzzle_dessert"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
+                            android:layout_width="@dimen/positionsPuzzle"
+                            android:layout_height="@dimen/positionsPuzzle"
                             android:layout_gravity="bottom|start"
                             android:src="@drawable/puzzle_back"
                             android:scaleType="fitCenter"
@@ -174,7 +166,7 @@
                         android:background="@drawable/button1"
                         android:paddingHorizontal="@dimen/paddingDishInfosButtonH"
                         android:paddingVertical="@dimen/paddingDishInfosButtonV"
-                        android:layout_gravity="center"
+                        android:layout_marginBottom="40dp"
                         android:onClick="commander"/>
 
                 </LinearLayout>
@@ -185,16 +177,16 @@
 
                     <ImageView
                         android:id="@+id/carottes"
-                        android:layout_width="197dp"
-                        android:layout_height="197dp"
+                        android:layout_width="@dimen/tailleImgPuzzle"
+                        android:layout_height="@dimen/tailleImgPuzzle"
                         android:scaleType="centerCrop"
                         android:src="@drawable/carottes_puzzle"
                         android:elevation="1dp"/>
                     <ImageView
                         android:layout_marginLeft="180dp"
                         android:id="@+id/pates"
-                        android:layout_width="197dp"
-                        android:layout_height="197dp"
+                        android:layout_width="@dimen/tailleImgPuzzle"
+                        android:layout_height="@dimen/tailleImgPuzzle"
                         android:scaleType="centerCrop"
                         android:src="@drawable/pates_puzzle"
                         android:elevation="1dp"/>
@@ -202,16 +194,16 @@
                         android:layout_marginTop="100dp"
                         android:layout_marginLeft="200dp"
                         android:id="@+id/glace"
-                        android:layout_width="197dp"
-                        android:layout_height="197dp"
+                        android:layout_width="@dimen/tailleImgPuzzle"
+                        android:layout_height="@dimen/tailleImgPuzzle"
                         android:scaleType="centerCrop"
                         android:src="@drawable/glace_puzzle"
                         android:elevation="1dp"/>
                     <ImageView
                         android:layout_marginTop="140dp"
                         android:id="@+id/coca"
-                        android:layout_width="197dp"
-                        android:layout_height="197dp"
+                        android:layout_width="@dimen/tailleImgPuzzle"
+                        android:layout_height="@dimen/tailleImgPuzzle"
                         android:scaleType="centerCrop"
                         android:src="@drawable/coca_puzzle"
                         android:elevation="1dp"/>
@@ -219,24 +211,24 @@
                         android:layout_marginTop="70dp"
                         android:layout_marginLeft="80dp"
                         android:id="@+id/salade"
-                        android:layout_width="197dp"
-                        android:layout_height="197dp"
+                        android:layout_width="@dimen/tailleImgPuzzle"
+                        android:layout_height="@dimen/tailleImgPuzzle"
                         android:scaleType="centerCrop"
                         android:src="@drawable/salade_enfant_puzzle"
                         android:elevation="1dp"/>
                     <ImageView
                         android:layout_marginLeft="80dp"
                         android:id="@+id/steak"
-                        android:layout_width="197dp"
-                        android:layout_height="197dp"
+                        android:layout_width="@dimen/tailleImgPuzzle"
+                        android:layout_height="@dimen/tailleImgPuzzle"
                         android:scaleType="centerCrop"
                         android:src="@drawable/steak_puzzle"
                         android:elevation="1dp"/>
                     <ImageView
                         android:layout_marginLeft="90dp"
                         android:id="@+id/crepe"
-                        android:layout_width="197dp"
-                        android:layout_height="197dp"
+                        android:layout_width="@dimen/tailleImgPuzzle"
+                        android:layout_height="@dimen/tailleImgPuzzle"
                         android:scaleType="centerCrop"
                         android:src="@drawable/crepe_puzzle"
                         android:elevation="1dp"/>
@@ -244,8 +236,8 @@
                         android:layout_marginTop="40dp"
                         android:layout_marginLeft="20dp"
                         android:id="@+id/orange"
-                        android:layout_width="197dp"
-                        android:layout_height="197dp"
+                        android:layout_width="@dimen/tailleImgPuzzle"
+                        android:layout_height="@dimen/tailleImgPuzzle"
                         android:scaleType="centerCrop"
                         android:src="@drawable/orange_puzzle"
                         android:elevation="1dp"/>

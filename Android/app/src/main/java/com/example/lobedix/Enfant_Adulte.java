@@ -46,7 +46,7 @@ public class Enfant_Adulte extends AppCompatActivity {
     }
 
     public void enfant(View view){
-        Intent enfant = new Intent(Enfant_Adulte.this, Espace_Enfant.class);
+        Intent enfant = new Intent(Enfant_Adulte.this, Espace_Enfant2.class);
         startActivity(enfant);
     }
 
