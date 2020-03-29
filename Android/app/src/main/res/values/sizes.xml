@@ -31,7 +31,12 @@
     <dimen name="assiettes">170dp</dimen>
 
 <!--Menu enfant-->
-    <dimen name="tailleImgPuzzle">300px</dimen>
+    <!-- /!\ on doit avoir framePositionsPuzzle = 2*positionsPuzzle -->
+    <!-- /!\ et tailleImgPuzzle = 145 * positionsPuzzle / 110 -->
+
+    <dimen name="tailleImgPuzzle">145dp</dimen>
+    <dimen name="positionsPuzzle">110dp</dimen>
+    <dimen name="framePositionsPuzzle">220dp</dimen>
 
     <!--DishInfos-->
     <dimen name="imgDishInformations">400dp</dimen>
