@@ -5,24 +5,39 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ScrollView;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.Hashtable;
 
 public class Boisson_taboulet extends AppCompatActivity {
 
     ScrollView scrollview;
     NavigationView view;
     DrawerLayout drawer;
+    ImageButton menu_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_boisson_taboulet);
+        menu_button=(ImageButton)findViewById(R.id.menu_button);
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        menu_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawer.openDrawer(Gravity.LEFT);
+            }
+        });
+
+
         view=(NavigationView)findViewById(R.id.nav_view);
 
         view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -73,6 +88,12 @@ public class Boisson_taboulet extends AppCompatActivity {
 
 
     public void addBoisson(View view){
+
+        Integer nbBoisson = DataHolder.getInstance().getNbBoissonTaboule() +1;
+        Hashtable<String,Integer> d = DataHolder.getInstance().getBoisson();
+        d.put("Boisson taboule",nbBoisson);
+        DataHolder.getInstance().setNbBoissonTaboule(nbBoisson);
+        Toast.makeText(this, "Vous venez de commander un verre de Vin Rosé Tavel La Cave d'Augustin Florent supplémentaire", Toast.LENGTH_SHORT).show();
 
     }
 

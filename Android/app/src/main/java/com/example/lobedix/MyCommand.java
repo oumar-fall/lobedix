@@ -111,6 +111,7 @@ public class MyCommand extends AppCompatActivity {
                         DataHolder.getInstance().cleanListeEntree();
                         DataHolder.getInstance().cleanListeMenu();
                         DataHolder.getInstance().cleanListePlat();
+                        DataHolder.getInstance().cleanListeBoisson();
                         startActivity(new Intent(MyCommand.this, MainActivity.class));
                     }
                 });

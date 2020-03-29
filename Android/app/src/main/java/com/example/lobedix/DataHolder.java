@@ -304,18 +304,18 @@ public class DataHolder {
         prix.put("Simple", 18);
         prix.put("Vege", 22);
 
-        prix.put("Boisson Taboule",3);
-        prix.put("Boisson Soupe",4);
-        prix.put("Boisson Tomate",3);
-        prix.put("Boisson Fromage",6);
-        prix.put("Boisson Spaghetti",8);
-        prix.put("Boisson Lasagnes",3);
-        prix.put("Boisson Curry",5);
-        prix.put("Boisson Ratatouille",6);
-        prix.put("Boisson Creme", 3);
-        prix.put("Boisson Salade", 5);
-        prix.put("Boisson Mousse", 6);
-        prix.put("Boisson Glace", 3);
+        prix.put("Boisson taboule",3);
+        prix.put("Boisson soupe",4);
+        prix.put("Boisson tomate",3);
+        prix.put("Boisson fromage",6);
+        prix.put("Boisson spaghetti",8);
+        prix.put("Boisson lasagnes",3);
+        prix.put("Boisson curry",5);
+        prix.put("Boisson ratatouille",6);
+        prix.put("Boisson creme", 3);
+        prix.put("Boisson salade", 5);
+        prix.put("Boisson mousse", 6);
+        prix.put("Boisson glace", 3);
     }
     public void setInitialEntree(){
         entree.put("Taboule",0);
@@ -413,9 +413,9 @@ public class DataHolder {
         listeBoissons.add("Boisson ratatouille");
         listeBoissons.add("Boisson lasagnes");
 
-        listeBoissons.add("Boisson feuillete");
+        listeBoissons.add("Boisson fromage");
         listeBoissons.add("Boisson soupe");
-        listeBoissons.add("Boisson tomates");
+        listeBoissons.add("Boisson tomate");
         listeBoissons.add("Boisson taboule");
 
         listeBoissons.add("Boisson creme");
@@ -449,9 +449,9 @@ public class DataHolder {
         boisson.put("Boisson ratatouille",0);
         boisson.put("Boisson lasagnes",0);
 
-        boisson.put("Boisson feuillete",0);
+        boisson.put("Boisson fromage",0);
         boisson.put("Boisson soupe",0);
-        boisson.put("Boisson tomates",0);
+        boisson.put("Boisson tomate",0);
         boisson.put("Boisson taboule",0);
 
         boisson.put("Boisson creme",0);

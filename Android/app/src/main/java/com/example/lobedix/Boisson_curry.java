@@ -5,21 +5,37 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ScrollView;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.Hashtable;
 
 public class Boisson_curry extends AppCompatActivity {
     ScrollView scrollview;
     NavigationView view;
     DrawerLayout drawer;
+    ImageButton menu_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_boisson_curry);
+
+        menu_button=(ImageButton)findViewById(R.id.menu_button);
+
+
+        menu_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawer.openDrawer(Gravity.LEFT);
+            }
+        });
 
         view=(NavigationView)findViewById(R.id.nav_view);
 
@@ -71,6 +87,11 @@ public class Boisson_curry extends AppCompatActivity {
 
 
     public void addBoisson(View view){
+        Integer nbBoisson = DataHolder.getInstance().getNbBoissonCurry() +1;
+        Hashtable<String,Integer> d = DataHolder.getInstance().getBoisson();
+        d.put("Boisson curry",nbBoisson);
+        DataHolder.getInstance().setNbBoissonCurry(nbBoisson);
+        Toast.makeText(this, "Vous venez de commander un verre de Crozes-Hermitage supplémentaire", Toast.LENGTH_SHORT).show();
 
     }
 
