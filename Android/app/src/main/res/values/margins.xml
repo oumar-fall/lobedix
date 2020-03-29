@@ -25,7 +25,8 @@
 
     <!--Infos Plats-->
     <dimen name="marginDishInfosL">60dp</dimen>
-    <dimen name="paddingDishInfosButton">10dp</dimen>
+    <dimen name="paddingDishInfosButtonV">5dp</dimen>
+    <dimen name="paddingDishInfosButtonH">20dp</dimen>
     <dimen name="marginDishInfosButton">5dp</dimen>
     <dimen name="spaceBetweenDiv">5dp</dimen>
     <dimen name="marginTitrePlats">15dp</dimen>
@@ -40,6 +41,14 @@
     <dimen name="marginIngredientsL">20dp</dimen>
     <dimen name="paddingNameIngredientsH">10dp</dimen>
     <dimen name="paddingListeIngredientsH">10dp</dimen>
+
+    <!--Menu-->
+    <dimen name="marginMenusH">20dp</dimen>
+    <dimen name="marginTitreMenus">20dp</dimen>
+    <dimen name="spaceBetweenItemsMenus">5dp</dimen>
+    <dimen name="marginMenusItemL">10dp</dimen>
+    <dimen name="marginPrixMenuT">30dp</dimen>
+    <dimen name="marginPrixMenuB">10dp</dimen>
 
 
 </resources>

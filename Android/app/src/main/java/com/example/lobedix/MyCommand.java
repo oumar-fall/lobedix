@@ -124,4 +124,9 @@ public class MyCommand extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
+
+    public void retour(View view){
+        Intent menus = new Intent(MyCommand.this, commandType.class);
+        startActivity(menus);
+    }
 }

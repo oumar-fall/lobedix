@@ -139,7 +139,8 @@
                                 android:text="@string/ingredients"
                                 android:textSize="@dimen/txtIngredientsButton"
                                 android:background="@drawable/button1"
-                                android:padding="@dimen/paddingDishInfosButton"
+                                android:paddingHorizontal="@dimen/paddingDishInfosButtonH"
+                                android:paddingVertical="@dimen/paddingDishInfosButtonV"
                                 android:layout_margin="@dimen/marginDishInfosButton"
                                 android:onClick="ingredients"/>
 
@@ -151,7 +152,8 @@
                                 android:text="@string/ajouterCommande"
                                 android:textSize="@dimen/txtAddCommandButton"
                                 android:background="@drawable/button1"
-                                android:padding="@dimen/paddingDishInfosButton"
+                                android:paddingHorizontal="@dimen/paddingDishInfosButtonH"
+                                android:paddingVertical="@dimen/paddingDishInfosButtonV"
                                 android:layout_margin="@dimen/marginDishInfosButton"
                                 android:onClick="addCreme"/>
 
