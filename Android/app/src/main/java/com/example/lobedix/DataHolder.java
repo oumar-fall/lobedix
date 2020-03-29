@@ -223,10 +223,10 @@ public class DataHolder {
     }
 
     public int getNbBoissonRatatouille(){
-        return(nbRatatouille);
+        return(nbBoissonRatatouille);
     }
-    public void setNbBoissonRatatouille(int nbRatatouille){
-        this.nbRatatouille = nbRatatouille;
+    public void setNbBoissonRatatouille(int nbBoissonRatatouille){
+        this.nbBoissonRatatouille = nbBoissonRatatouille;
     }
 
 
