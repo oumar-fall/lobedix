@@ -122,7 +122,8 @@
                         android:layout_width="@dimen/assiettes"
                         android:layout_height="@dimen/assiettes"
                         android:layout_gravity="bottom"
-                        android:background="@drawable/assiette"/>
+                        android:background="@drawable/assiette"
+                        android:onClick="menus"/>
 
                     <TextView
                         android:layout_width="match_parent"

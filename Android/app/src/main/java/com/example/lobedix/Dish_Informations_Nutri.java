@@ -62,13 +62,16 @@ public class Dish_Informations_Nutri extends AppCompatActivity {
                     startActivity(new Intent(Dish_Informations_Nutri.this, listePlats.class));}
 
                 if (title.equals("desserts")){ // Nos desserts
-                    startActivity(new Intent(Dish_Informations_Nutri.this, commandType.class));}
+                    startActivity(new Intent(Dish_Informations_Nutri.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){ // Coup de pouce
                     startActivity(new Intent(Dish_Informations_Nutri.this, commandType.class));}
 
                 if (title.equals("quitter")){ // Quitter
                     startActivity(new Intent(Dish_Informations_Nutri.this, MainActivity.class));}
+
+                if (title.equals("menus")){
+                    startActivity(new Intent(Dish_Informations_Nutri.this, Menus.class));}
 
                 drawer.closeDrawers();
                 return true;

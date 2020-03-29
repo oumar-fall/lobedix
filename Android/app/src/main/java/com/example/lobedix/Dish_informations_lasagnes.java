@@ -88,6 +88,9 @@ public class Dish_informations_lasagnes extends AppCompatActivity {
                 if (title.equals("quitter")){ // Quitter
                         startActivity(new Intent(Dish_informations_lasagnes.this, MainActivity.class));}
 
+                if (title.equals("menus")){
+                    startActivity(new Intent(Dish_informations_lasagnes.this, Menus.class));}
+
                 drawer.closeDrawers();
                 return true;
 

@@ -71,6 +71,8 @@ public class commandType extends AppCompatActivity {
 
                 if (title.equals("quitter")){
                     startActivity(new Intent(commandType.this, MainActivity.class));}
+                if (title.equals("menus")){
+                    startActivity(new Intent(commandType.this, Menus.class));}
 
                 drawer.closeDrawers();
                 return true;
@@ -91,5 +93,11 @@ public class commandType extends AppCompatActivity {
     public void retour(View view){
         Intent entrees = new Intent(commandType.this, Apero.class);
         startActivity(entrees);
+    }
+
+    public void menus(View view){
+        Intent menus = new Intent(commandType.this, Menus.class);
+        startActivity(menus);
+
     }
 }

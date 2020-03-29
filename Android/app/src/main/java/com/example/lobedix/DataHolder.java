@@ -8,15 +8,20 @@ public class DataHolder {
     private static Hashtable<String,Integer> entree = new Hashtable<String,Integer>();
     private static Hashtable<String,Integer> plat = new Hashtable<String,Integer>();
     private static Hashtable<String,Integer> dessert = new Hashtable<String,Integer>();
+    private static Hashtable<String,Integer> menu = new Hashtable<String,Integer>();
+
 
     private static final DataHolder holder = new DataHolder();
+
     private  static ArrayList<String> listeEntree = new ArrayList<String>();
     private  static ArrayList<String> listePlat = new ArrayList<String>();
     private  static ArrayList<String> listeDessert = new ArrayList<String>();
+    private  static ArrayList<String> listeMenus = new ArrayList<String>();
 
     private static ArrayList<String> belleListePlat = new ArrayList<String>(); //pour garder les noms entiers des plats et pas juste la clé
     private  static ArrayList<String> belleListeEntree = new ArrayList<String>();
     private  static ArrayList<String> belleListeDessert= new ArrayList<String>();
+    private  static ArrayList<String> belleListeMenu= new ArrayList<String>();
 
     private static Hashtable<String,Integer> prix = new Hashtable<String,Integer>();
 
@@ -34,6 +39,10 @@ public class DataHolder {
     private static int nbSalade;
     private static int nbMousse;
     private static int nbGlace;
+
+    private static int nbSimple;
+    private static int nbJour;
+    private static int nbVege;
 
 
 
@@ -54,6 +63,10 @@ public class DataHolder {
         nbSalade=0;
         nbMousse=0;
         nbGlace=0;
+
+        nbJour=0;
+        nbSimple=0;
+        nbVege=0;
     }
 
     public int getNbSpaghetti(){
@@ -142,6 +155,18 @@ public class DataHolder {
         this.nbGlace = nbGlace;
     }
 
+
+
+    public int getNbSimple() { return(nbSimple); }
+    public void setNbSimple(Integer nbSimple) { this.nbSimple = nbSimple;}
+
+    public int getNbJour() { return(nbJour);}
+    public void setNbJour(Integer nbJour) { this.nbJour = nbJour;}
+
+
+    public int getNbVege() { return (nbVege); }
+    public void setNbVege(Integer nbVege) { this.nbVege = nbVege;}
+
     public void setPrix(){
         prix.put("Taboule",6);
         prix.put("Soupe",5);
@@ -155,6 +180,9 @@ public class DataHolder {
         prix.put("Salade", 6);
         prix.put("Mousse", 7);
         prix.put("Glace", 4);
+        prix.put("Jour", 24);
+        prix.put("Simple", 18);
+        prix.put("Vege", 22);
     }
     public void setInitialEntree(){
         entree.put("Taboule",0);
@@ -227,6 +255,27 @@ public class DataHolder {
 
 
 
+    public void setBelleListeMenus(){
+        belleListeMenu.add("Menu du jour");
+        belleListeMenu.add("Formule Simple");
+        belleListeMenu.add("Menu végétarien");
+    }
+
+    public void setInitialMenus(){
+        menu.put("Jour",0);
+        menu.put("Simple",0);
+        menu.put("Vege",0);
+
+    }
+
+    public void setListeMenus(){
+        listeMenus.add("Jour");
+        listeMenus.add("Simple");
+        listeMenus.add("Vege");
+    }
+
+
+
     public static DataHolder getInstance() {
         return holder;
     }
@@ -254,6 +303,11 @@ public class DataHolder {
         this.dessert = dessert;
     }
 
+    public Hashtable<String, Integer> getMenu() { return menu;}
+    public void setMenu(Hashtable<String,Integer> menu) {
+        this.dessert = menu;
+    }
+
     public ArrayList<String> getListeEntree(){
         return(listeEntree);
     }
@@ -263,6 +317,7 @@ public class DataHolder {
     public ArrayList<String> getListeDessert(){
         return(listeDessert);
     }
+    public ArrayList<String> getListeMenus(){ return(listeMenus); }
 
     public String textCommande() {
         String c = "";
@@ -298,7 +353,19 @@ public class DataHolder {
                 c = c + k.toString() + " " + p + "\n";
             }
         }
+
+        for (int i = 0; i < listeMenus.size(); i++) {
+            String p1 = listeMenus.get(i);
+            Integer k = menu.get(p1);
+            String p = belleListeMenu.get(i);
+            Integer pr = prix.get(p1); //prix du plat en question
+            prixfinal = prixfinal + k*pr;
+            if (k != 0) {
+                c = c + k.toString() + " " + p + "\n";
+            }
+        }
         c = c+ "\n" + "TOTAL : " + prixfinal.toString() +"€";
         return(c);
     }
+
 }

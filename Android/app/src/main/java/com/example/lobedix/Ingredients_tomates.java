@@ -69,6 +69,9 @@ public class Ingredients_tomates extends AppCompatActivity {
                 if (title.equals("quitter")){ // Quitter
                     startActivity(new Intent(Ingredients_tomates.this, MainActivity.class));}
 
+                if (title.equals("menus")){
+                    startActivity(new Intent(Ingredients_tomates.this, Menus.class));}
+
                 drawer.closeDrawers();
                 return true;
 

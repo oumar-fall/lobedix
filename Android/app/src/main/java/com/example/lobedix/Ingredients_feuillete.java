@@ -69,6 +69,9 @@ public class Ingredients_feuillete extends AppCompatActivity {
                 if (title.equals("quitter")){ // Quitter
                     startActivity(new Intent(Ingredients_feuillete.this, MainActivity.class));}
 
+                if (title.equals("menus")){
+                    startActivity(new Intent(Ingredients_feuillete.this, Menus.class));}
+
                 drawer.closeDrawers();
                 return true;
 

@@ -90,6 +90,9 @@ public class Dish_informations_tomates extends AppCompatActivity {
                 if (title.equals("quitter")){
                     startActivity(new Intent(Dish_informations_tomates.this, MainActivity.class));}
 
+                if (title.equals("menus")){
+                    startActivity(new Intent(Dish_informations_tomates.this, Menus.class));}
+
                 drawer.closeDrawers();
                 return true;
 

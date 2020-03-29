@@ -77,4 +77,7 @@
     <string name="valGraissesLasagnes">3,5g</string>
     <string name="txtSucreLasagnes">SUCRE : Faible impact</string>
     <string name="valSucreLasagnes">0,7g</string>
+    <string name="menu_jour">Menu du jour</string>
+    <string name="menu_simple">Formule simple</string>
+    <string name="menu_vege">Menu végétarien</string>
 </resources>

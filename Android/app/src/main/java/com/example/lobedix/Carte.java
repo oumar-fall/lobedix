@@ -80,6 +80,9 @@ public class Carte extends AppCompatActivity {
                     startActivity(new Intent(Carte.this, MainActivity.class));
                 }
 
+                if (title.equals("menus")){
+                    startActivity(new Intent(Carte.this, Menus.class));}
+
                 drawer.closeDrawers();
                 return true;
 

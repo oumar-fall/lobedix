@@ -69,6 +69,9 @@ public class Ingredients_ratatouille extends AppCompatActivity {
                 if (title.equals("quitter")){ // Quitter
                     startActivity(new Intent(Ingredients_ratatouille.this, MainActivity.class));}
 
+                if (title.equals("menus")){
+                    startActivity(new Intent(Ingredients_ratatouille.this, Menus.class));}
+
                 drawer.closeDrawers();
                 return true;
 

@@ -88,6 +88,9 @@ public class Dish_informations_curry extends AppCompatActivity {
                 if (title.equals("quitter")){
                     startActivity(new Intent(Dish_informations_curry.this, MainActivity.class));}
 
+                if (title.equals("menus")){
+                    startActivity(new Intent(Dish_informations_curry.this, Menus.class));}
+
                 drawer.closeDrawers();
                 return true;
 
@@ -108,10 +111,10 @@ public class Dish_informations_curry extends AppCompatActivity {
         startActivity(ingredient);
     }
 
-    public void addLasagnes(View view){
+    public void addCurry(View view){
         Integer nbCurry = DataHolder.getInstance().getNbCurry() +1;
         Hashtable<String,Integer> d = DataHolder.getInstance().getPlat();
-        d.put("Curru",nbCurry);
+        d.put("Curry",nbCurry);
         DataHolder.getInstance().setNbCurry(nbCurry);
         Toast.makeText(this, "Vous venez de commander un plat de poulet au curry supplémentaire", Toast.LENGTH_SHORT).show();
     }

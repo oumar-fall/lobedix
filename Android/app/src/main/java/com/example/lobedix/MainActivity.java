@@ -18,14 +18,17 @@ public class MainActivity extends AppCompatActivity {
         DataHolder.getInstance().setInitialEntree();
         DataHolder.getInstance().setInitialPlat();
         DataHolder.getInstance().setInitialDessert();
+        DataHolder.getInstance().setInitialMenus();
 
         DataHolder.getInstance().setListeEntree();
         DataHolder.getInstance().setListePlat();
         DataHolder.getInstance().setListeDessert();
+        DataHolder.getInstance().setListeMenus();
 
         DataHolder.getInstance().setBelleListeEntree();
         DataHolder.getInstance().setBelleListePlat();
         DataHolder.getInstance().setBelleListeDessert();
+        DataHolder.getInstance().setBelleListeMenus();
 
         DataHolder.getInstance().initNb();
         DataHolder.getInstance().setPrix();

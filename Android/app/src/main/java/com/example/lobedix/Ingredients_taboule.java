@@ -69,6 +69,9 @@ public class Ingredients_taboule extends AppCompatActivity {
                 if (title.equals("quitter")){ // Quitter
                     startActivity(new Intent(Ingredients_taboule.this, MainActivity.class));}
 
+                if (title.equals("menus")){
+                    startActivity(new Intent(Ingredients_taboule.this, Menus.class));}
+
                 drawer.closeDrawers();
                 return true;
 

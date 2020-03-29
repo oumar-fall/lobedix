@@ -89,6 +89,9 @@ public class Dish_informations_ratatouille extends AppCompatActivity {
                 if (title.equals("quitter")){
                     startActivity(new Intent(Dish_informations_ratatouille.this, MainActivity.class));}
 
+                if (title.equals("menus")){
+                    startActivity(new Intent(Dish_informations_ratatouille.this, Menus.class));}
+
                 drawer.closeDrawers();
                 return true;
 

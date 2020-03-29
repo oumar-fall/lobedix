@@ -69,6 +69,9 @@ public class Ingredients_spaghetti extends AppCompatActivity {
                 if (title.equals("quitter")){ // Quitter
                     startActivity(new Intent(Ingredients_spaghetti.this, MainActivity.class));}
 
+                if (title.equals("menus")){
+                    startActivity(new Intent(Ingredients_spaghetti.this, Menus.class));}
+
                 drawer.closeDrawers();
                 return true;
 

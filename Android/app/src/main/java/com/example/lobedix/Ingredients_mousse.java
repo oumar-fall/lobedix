@@ -69,6 +69,9 @@ public class Ingredients_mousse extends AppCompatActivity {
                 if (title.equals("quitter")){ // Quitter
                     startActivity(new Intent(Ingredients_mousse.this, MainActivity.class));}
 
+                if (title.equals("menus")){
+                    startActivity(new Intent(Ingredients_mousse.this, Menus.class));}
+
                 drawer.closeDrawers();
                 return true;
 

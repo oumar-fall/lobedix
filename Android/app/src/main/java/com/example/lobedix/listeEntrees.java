@@ -89,6 +89,9 @@ public class listeEntrees extends AppCompatActivity {
                 if (title.equals("quitter")){
                     startActivity(new Intent(listeEntrees.this, MainActivity.class));}
 
+                if (title.equals("menus")){
+                    startActivity(new Intent(listeEntrees.this, Menus.class));}
+
                 drawer.closeDrawers();
                 return true;
 

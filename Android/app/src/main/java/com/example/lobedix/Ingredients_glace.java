@@ -69,6 +69,8 @@ public class Ingredients_glace extends AppCompatActivity {
                 if (title.equals("quitter")){ // Quitter
                     startActivity(new Intent(Ingredients_glace.this, MainActivity.class));}
 
+                if (title.equals("menus")){
+                    startActivity(new Intent(Ingredients_glace.this, Menus.class));}
                 drawer.closeDrawers();
                 return true;
 

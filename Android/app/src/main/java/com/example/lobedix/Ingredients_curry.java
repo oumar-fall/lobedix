@@ -69,6 +69,9 @@ public class Ingredients_curry extends AppCompatActivity {
                 if (title.equals("quitter")){ // Quitter
                     startActivity(new Intent(Ingredients_curry.this, MainActivity.class));}
 
+                if (title.equals("menus")){
+                    startActivity(new Intent(Ingredients_curry.this, Menus.class));}
+
                 drawer.closeDrawers();
                 return true;
 
