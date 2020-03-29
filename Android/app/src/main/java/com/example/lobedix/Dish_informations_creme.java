@@ -104,7 +104,7 @@ public class Dish_informations_creme extends AppCompatActivity {
 
     public void nutriscore(View view){
 
-        Intent nutri = new Intent(Dish_informations_creme.this, Dish_Informations_Nutri.class);
+        Intent nutri = new Intent(Dish_informations_creme.this, Dish_information_Nutri_creme.class);
         startActivity(nutri);
     }
 

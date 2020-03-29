@@ -68,15 +68,33 @@
     <string name="txtCaloriesLasagnes">CALORIES : un peu trop calorique</string>
     <string name="valCaloriesLasagnes">451 kCal</string>
     <string name="txtLegumesLasagnes">LEGUMES : un peu de légumes</string>
+    <string name="txtpasLegumes">LEGUMES : pas de légumes </string>
+    <string name="valPasLegumes">0%</string>
     <string name="valLegumesLasagnes">41%</string>
     <string name="txtSelLasagnes">SEL : peu de sel</string>
     <string name="valSelLasagnes">0,5g</string>
     <string name="txtGraissesLasagnes">GRAISSES SATUREES : Faible impact</string>
     <string name="valGraissesLasagnes">3,5g</string>
+    <string name="txtBcpLegumes">LEGUMES : Parfait</string>
+    <string name="valBcpLegumes">95%</string>
+    <string name="txtSelOrange">SEl : Un peu trop salé</string>
+    <string name="valSelOrange">1.5g</string>
+    <string name="txtBcpSucre">SUCRE : Trop sucré</string>
+    <string name="valSucretrop">30g</string>
+    <string name="txtCaloriesParfait">CALORIES : Parfait</string>
+    <string name="txtlegumesOrange">LEGUMES : très peu de légumes</string>
+    <string name="vallegumesOrange">15%</string>
+    <string name="valCaloriesParfait">350 kCal</string>
     <string name="txtSucreLasagnes">SUCRE : Faible impact</string>
     <string name="valSucreLasagnes">0,7g</string>
     <string name="menu_jour">Menu du jour</string>
     <string name="menu_simple">Formule simple</string>
+    <string name="txtBcpFruits">FRUITS : Parfait</string>
+    <string name="txtPeuCalorique">CALORIES : peu calorique</string>
+    <string name="valPeuCalorique">140 kCal</string>
+    <string name="txtLegumesOrange">LEGUMES : très peu de légumes</string>
+    <string name="valLegumesOrange">10%</string>
+
     <string name="menu_vege">Menu végétarien</string>
 
     <string name="ajouterCommande">Ajouter à la commande</string>
