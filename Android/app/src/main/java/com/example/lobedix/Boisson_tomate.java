@@ -90,7 +90,7 @@ public class Boisson_tomate extends AppCompatActivity {
 
         Integer nbBoisson = DataHolder.getInstance().getNbBoissonTomates() +1;
         Hashtable<String,Integer> d = DataHolder.getInstance().getBoisson();
-        d.put("Boisson tomates",nbBoisson);
+        d.put("Boisson tomate",nbBoisson);
         DataHolder.getInstance().setNbBoissonTomates(nbBoisson);
         Toast.makeText(this, "Vous venez de commander un verre de Beaujolais Villages Rouge supplémentaire", Toast.LENGTH_SHORT).show();
 
