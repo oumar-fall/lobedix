@@ -124,4 +124,9 @@ public class Dish_informations_lasagnes extends AppCompatActivity {
         Intent entrees = new Intent(Dish_informations_lasagnes.this, listePlats.class);
         startActivity(entrees);
     }
+
+    public void boisson(View view){
+        Intent boisson = new Intent(Dish_informations_lasagnes.this, Boisson_lasagnes.class);
+        startActivity(boisson);
+    }
 }

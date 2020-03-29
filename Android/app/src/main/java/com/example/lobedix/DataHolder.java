@@ -9,6 +9,7 @@ public class DataHolder {
     private static Hashtable<String,Integer> plat = new Hashtable<String,Integer>();
     private static Hashtable<String,Integer> dessert = new Hashtable<String,Integer>();
     private static Hashtable<String,Integer> menu = new Hashtable<String,Integer>();
+    private static Hashtable<String,Integer> boisson = new Hashtable<String,Integer>();
 
 
     private static final DataHolder holder = new DataHolder();
@@ -17,11 +18,13 @@ public class DataHolder {
     private  static ArrayList<String> listePlat = new ArrayList<String>();
     private  static ArrayList<String> listeDessert = new ArrayList<String>();
     private  static ArrayList<String> listeMenus = new ArrayList<String>();
+    private  static ArrayList<String> listeBoissons = new ArrayList<String>();
 
     private static ArrayList<String> belleListePlat = new ArrayList<String>(); //pour garder les noms entiers des plats et pas juste la clé
     private  static ArrayList<String> belleListeEntree = new ArrayList<String>();
     private  static ArrayList<String> belleListeDessert= new ArrayList<String>();
     private  static ArrayList<String> belleListeMenu= new ArrayList<String>();
+    private  static ArrayList<String> belleListeBoisson= new ArrayList<String>();
 
     private static Hashtable<String,Integer> prix = new Hashtable<String,Integer>();
 
@@ -45,6 +48,21 @@ public class DataHolder {
     private static int nbVege;
 
 
+    private static int nbBoissonSoupe;
+    private static int nbBoissonTaboule;
+    private static int nbBoissonTomates;
+    private static int nbBoissonFeuillete;
+
+    private static int nbBoissonSpaghetti;
+    private static int nbBoissonLasagnes;
+    private static int nbBoissonCurry;
+    private static int nbBoissonRatatouille;
+
+    private static int nbBoissonCreme;
+    private static int nbBoissonSalade;
+    private static int nbBoissonMousse;
+    private static int nbBoissonGlace;
+
 
 
 
@@ -67,6 +85,21 @@ public class DataHolder {
         nbJour=0;
         nbSimple=0;
         nbVege=0;
+
+        nbBoissonSoupe =0;
+        nbBoissonTaboule =0;
+        nbBoissonTomates=0;
+        nbBoissonFeuillete=0;
+
+        nbBoissonSpaghetti=0;
+        nbBoissonLasagnes=0;
+        nbBoissonCurry=0;
+        nbBoissonRatatouille=0;
+
+        nbBoissonCreme=0;
+        nbBoissonSalade=0;
+        nbBoissonMousse=0;
+        nbBoissonGlace=0;
 
     }
 
@@ -168,6 +201,92 @@ public class DataHolder {
     public int getNbVege() { return (nbVege); }
     public void setNbVege(Integer nbVege) { this.nbVege = nbVege;}
 
+    public int getNbBoissonSpaghetti(){
+        return(nbSpaghetti);
+    }
+    public void setNbBoissonSpaghetti(int nbSpaghetti){
+        this.nbSpaghetti = nbSpaghetti;
+    }
+
+    public int getNbBoissonLasagnes(){
+        return(nbLasagnes);
+    }
+    public void setNbBoissonLasagnes(int nbLasagnes){
+        this.nbLasagnes= nbLasagnes;
+    }
+
+    public int getNbBoissonCurry(){
+        return(nbCurry);
+    }
+    public void setNbBoissonCurry(int nbCurry){
+        this.nbCurry = nbCurry;
+    }
+
+    public int getNbBoissonRatatouille(){
+        return(nbRatatouille);
+    }
+    public void setNbBoissonRatatouille(int nbRatatouille){
+        this.nbRatatouille = nbRatatouille;
+    }
+
+
+
+    public int getNbBoissonSoupe(){
+        return(nbSoupe);
+    }
+    public void setNbBoissonSoupe(int nbSoupe){
+        this.nbSoupe = nbSoupe;
+    }
+
+    public int getNbBoissonTaboule(){
+        return(nbTaboule);
+    }
+    public void setNbBoissonTaboule(int nbTaboule){
+        this.nbTaboule = nbTaboule;
+    }
+
+    public int getNbBoissonTomates(){
+        return(nbTomates);
+    }
+    public void setNbBoissonTomates(int nbTomates){
+        this.nbTomates = nbTomates;
+    }
+
+    public int getNbBoissonFeuillete(){
+        return(nbFeuillete);
+    }
+    public void setNbBoissonFeuillete(int nbFeuillete){
+        this.nbFeuillete = nbFeuillete;
+    }
+
+
+
+    public int getNbBoissonCreme(){
+        return(nbCreme);
+    }
+    public void setNbBoissonCreme(int nbCreme){
+        this.nbCreme = nbCreme;
+    }
+
+    public int getNbBoissonSalade(){ return(nbSalade); }
+    public void setNbBoissonSalade(int nbSalade){
+        this.nbSalade= nbSalade;
+    }
+
+    public int getNbBoissonMousse(){
+        return(nbMousse);
+    }
+    public void setNbBoissonMousse(int nbMousse){
+        this.nbMousse = nbMousse;
+    }
+
+    public int getNbBoissonGlace(){
+        return(nbGlace);
+    }
+    public void setNbBoissonGlace(int nbGlace){
+        this.nbGlace = nbGlace;
+    }
+
     public void setPrix(){
         prix.put("Taboule",6);
         prix.put("Soupe",5);
@@ -184,6 +303,19 @@ public class DataHolder {
         prix.put("Jour", 24);
         prix.put("Simple", 18);
         prix.put("Vege", 22);
+
+        prix.put("Boisson Taboule",3);
+        prix.put("Boisson Soupe",4);
+        prix.put("Boisson Tomate",3);
+        prix.put("Boisson Fromage",6);
+        prix.put("Boisson Spaghetti",8);
+        prix.put("Boisson Lasagnes",3);
+        prix.put("Boisson Curry",5);
+        prix.put("Boisson Ratatouille",6);
+        prix.put("Boisson Creme", 3);
+        prix.put("Boisson Salade", 5);
+        prix.put("Boisson Mousse", 6);
+        prix.put("Boisson Glace", 3);
     }
     public void setInitialEntree(){
         entree.put("Taboule",0);
@@ -275,6 +407,60 @@ public class DataHolder {
         listeMenus.add("Vege");
     }
 
+    public void setListeBoisson(){
+        listeBoissons.add("Boisson curry");
+        listeBoissons.add("Boisson spaghetti");
+        listeBoissons.add("Boisson ratatouille");
+        listeBoissons.add("Boisson lasagnes");
+
+        listeBoissons.add("Boisson feuillete");
+        listeBoissons.add("Boisson soupe");
+        listeBoissons.add("Boisson tomates");
+        listeBoissons.add("Boisson taboule");
+
+        listeBoissons.add("Boisson creme");
+        listeBoissons.add("Boisson mousse");
+        listeBoissons.add("Boisson glace");
+        listeBoissons.add("Boisson salade");
+
+    }
+
+
+    public void setBelleListeBoissons(){
+        belleListeBoisson.add("Crozes-Hermitage");
+        belleListeBoisson.add("Vin rouge Gevrey Chambertin Jean Bouchard");
+        belleListeBoisson.add("BANDOL ROUGE - DOMAINE LA BASTIDE BLANCHE");
+        belleListeBoisson.add("Vin rosé Coteaux d'Aix en Provence Château Virant");
+
+        belleListeBoisson.add("Vin rouge Haut Médoc Cru Bourgeois Château Clément-Pichon");
+        belleListeBoisson.add("Vin Rosé Côtes de Provence Cru Classé Château Roubine Réserve");
+        belleListeBoisson.add("Beaujolais Villages Rouge");
+        belleListeBoisson.add("Vin Rosé Tavel La Cave d'Augustin Florent");
+
+        belleListeBoisson.add("Vin Blanc Moeulleux Monbazillac");
+        belleListeBoisson.add("Domaine Madeloc Cirera - Rouge");
+        belleListeBoisson.add("Muscat Petit Grain Saint Jean de Minervois");
+        belleListeBoisson.add("Goose Island Sofie");
+    }
+
+    public void setInitialBoissons(){
+        boisson.put("Boisson curry",0);
+        boisson.put("Boisson spaghetti",0);
+        boisson.put("Boisson ratatouille",0);
+        boisson.put("Boisson lasagnes",0);
+
+        boisson.put("Boisson feuillete",0);
+        boisson.put("Boisson soupe",0);
+        boisson.put("Boisson tomates",0);
+        boisson.put("Boisson taboule",0);
+
+        boisson.put("Boisson creme",0);
+        boisson.put("Boisson mousse",0);
+        boisson.put("Boisson glace",0);
+        boisson.put("Boisson salade",0);
+
+    }
+
 
 
     public static DataHolder getInstance() {
@@ -309,6 +495,11 @@ public class DataHolder {
         this.menu = menu;
     }
 
+    public Hashtable<String, Integer> getBoisson() { return boisson;}
+    public void setBoisson(Hashtable<String,Integer> boisson) {
+        this.boisson = boisson;
+    }
+
     public ArrayList<String> getListeEntree(){
         return(listeEntree);
     }
@@ -319,6 +510,7 @@ public class DataHolder {
         return(listeDessert);
     }
     public ArrayList<String> getListeMenus(){ return(listeMenus); }
+    public ArrayList<String> getListeBoissons(){ return(listeBoissons); }
 
     public void cleanListeEntree(){
         listeEntree = new ArrayList<String>();
@@ -342,6 +534,12 @@ public class DataHolder {
         listeMenus = new ArrayList<String>();
         menu = new Hashtable<String,Integer>();
         belleListeMenu = new ArrayList<String>();
+    }
+
+    public void cleanListeBoisson(){
+        listeBoissons = new ArrayList<String>();
+        boisson = new Hashtable<String,Integer>();
+        belleListeBoisson = new ArrayList<String>();
     }
 
     public String textCommande() {
@@ -383,6 +581,17 @@ public class DataHolder {
             String p1 = listeMenus.get(i);
             Integer k = menu.get(p1);
             String p = belleListeMenu.get(i);
+            Integer pr = prix.get(p1); //prix du plat en question
+            prixfinal = prixfinal + k*pr;
+            if (k != 0) {
+                c = c + k.toString() + " " + p + "\n";
+            }
+        }
+
+        for (int i = 0; i < listeBoissons.size(); i++) {
+            String p1 = listeBoissons.get(i);
+            Integer k = boisson.get(p1);
+            String p = belleListeBoisson.get(i);
             Integer pr = prix.get(p1); //prix du plat en question
             prixfinal = prixfinal + k*pr;
             if (k != 0) {
