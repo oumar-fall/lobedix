@@ -126,5 +126,10 @@ public class Dish_informations_feuillete extends AppCompatActivity {
         startActivity(entrees);
     }
 
+    public void boisson(View view){
+        Intent boisson = new Intent(Dish_informations_feuillete.this, Boisson_feuillete.class);
+        startActivity(boisson);
+    }
+
 
 }

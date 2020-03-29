@@ -233,6 +233,7 @@
                             android:scaleType="fitCenter"
                             android:background="@android:color/transparent"
                             android:layout_gravity="center"
+                            android:onClick="boisson"
                             android:src="@drawable/conseil_boisson" />
 
                         <ImageButton

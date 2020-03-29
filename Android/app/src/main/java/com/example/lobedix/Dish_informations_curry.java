@@ -124,4 +124,9 @@ public class Dish_informations_curry extends AppCompatActivity {
         startActivity(entrees);
     }
 
+    public void boisson(View view){
+        Intent boisson = new Intent(Dish_informations_curry.this, Boisson_curry.class);
+        startActivity(boisson);
+    }
+
 }

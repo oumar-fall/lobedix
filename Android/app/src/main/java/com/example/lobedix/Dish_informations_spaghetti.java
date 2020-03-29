@@ -126,5 +126,10 @@ public class Dish_informations_spaghetti extends AppCompatActivity {
         startActivity(entrees);
     }
 
+    public void boisson(View view){
+        Intent boisson = new Intent(Dish_informations_spaghetti.this, Boisson_spaghetti.class);
+        startActivity(boisson);
+    }
+
 
 }

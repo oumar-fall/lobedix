@@ -125,4 +125,8 @@ public class Dish_informations_ratatouille extends AppCompatActivity {
         startActivity(entrees);
     }
 
+    public void boisson(View view){
+        Intent boisson = new Intent(Dish_informations_ratatouille.this, Boisson_ratatouille.class);
+        startActivity(boisson);
+    }
 }

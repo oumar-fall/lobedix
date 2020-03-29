@@ -126,5 +126,10 @@ public class Dish_informations_taboule extends AppCompatActivity {
         startActivity(entrees);
     }
 
+    public void boisson(View view){
+        Intent boisson = new Intent(Dish_informations_taboule.this, Boisson_taboulet.class);
+        startActivity(boisson);
+    }
+
 
 }
