@@ -29,7 +29,7 @@ public class Boisson_curry extends AppCompatActivity {
 
         menu_button=(ImageButton)findViewById(R.id.menu_button);
 
-
+        drawer=(DrawerLayout)findViewById(R.id.drawer_layout);
         menu_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
