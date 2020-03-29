@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".Dish_Informations_Nutri_Tomates"></activity>
         <activity android:name=".Dish_Informations_Nutri_Taboule" />
         <activity android:name=".Dish_Informations_Nutri_Spaghetti" />
@@ -20,6 +21,9 @@
         <activity android:name=".Dish_Informations_Nutri_Feuillete" />
         <activity android:name=".Dish_Informations_Nutri_Curry" />
         <activity android:name=".Dish_information_Nutri_creme" />
+
+        <activity android:name=".Espace_Enfant2"/>
+
         <activity android:name=".MyCommandeEnfant" />
         <activity android:name=".MenuEnfant" />
         <activity android:name=".Ingredients_tomates" />
