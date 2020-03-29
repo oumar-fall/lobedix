@@ -119,24 +119,19 @@
                     android:layout_marginTop="@dimen/marginCommandeV"
                     android:gravity="center"
                     android:text="Vous n'avez rien commandé pour l'instant"
-<<<<<<< ours
-                    android:textSize="20sp"></TextView>
-=======
-                    android:textSize="35sp"/>
->>>>>>> theirs
+                    android:textSize="20sp">
+
+            </TextView>
 
                 <Button
                     android:id="@+id/valider"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Valider"
-<<<<<<< ours
                     android:layout_gravity="center"
-                    android:onClick="confirm"
-                   ></Button>
-=======
-                    android:layout_gravity="center"/>
->>>>>>> theirs
+                    android:onClick="confirm">
+
+                </Button>
 
             </LinearLayout>
 
