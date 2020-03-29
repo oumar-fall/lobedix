@@ -19,13 +19,16 @@
     <dimen name="txtInfosNut">33sp</dimen>
     <dimen name="txtTitreMenu">33sp</dimen>
     <dimen name="txtMenusItem">20sp</dimen>
+    <dimen name="txtNoResults">22sp</dimen>
 
 <!-- Autre -->
     <dimen name="hauteurBarreHaut">50dp</dimen>
     <dimen name="burgerMenu">30dp</dimen>
+    <dimen name="searchBarH">35dp</dimen>
 
 <!--Listes-->
     <dimen name="plusMoins">30dp</dimen>
+    <dimen name="paddingNoResults">20dp</dimen>
 
 <!--Carte-->
     <dimen name="assiettes">170dp</dimen>

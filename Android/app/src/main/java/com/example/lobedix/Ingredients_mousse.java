@@ -4,19 +4,26 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.google.android.material.navigation.NavigationView;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 public class Ingredients_mousse extends AppCompatActivity {
 
     DrawerLayout drawer;
     NavigationView view;
     ImageButton menu_button;
+    boolean inFrench;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +32,7 @@ public class Ingredients_mousse extends AppCompatActivity {
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         menu_button=(ImageButton)findViewById(R.id.menu_button);
+        inFrench = true;
 
         menu_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,5 +94,15 @@ public class Ingredients_mousse extends AppCompatActivity {
         startActivity(entrees);
     }
 
-
+    public void changeLanguage(View view){
+        if (inFrench) {
+            ImageView icon = (ImageView) findViewById(R.id.imageView2);
+            icon.setImageDrawable(getResources().getDrawable(R.drawable.english));
+        }
+        else {
+            ImageView icon = (ImageView) findViewById(R.id.imageView2);
+            icon.setImageDrawable(getResources().getDrawable(R.drawable.france));
+        }
+        inFrench = !inFrench;
+    }
 }

@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
@@ -29,6 +31,15 @@ public class listePlats extends AppCompatActivity {
     private DrawerLayout drawer;
     private ImageButton menu_button;
     private NavigationView view;
+    private SearchView searchView;
+    private LinearLayout layoutLasagnes;
+    private LinearLayout layoutCurry;
+    private LinearLayout layoutSpaghetti;
+    private LinearLayout layoutRatatouille;
+    private TextView noResults;
+    private LinearLayout[] layouts;
+    private String[] nom_plats;
+    private int nombre_plats = 4;
 
     /*private  TextView spaghetti = findViewById(R.id.spaghetti);
     private TextView ratatouille = findViewById(R.id.ratatouille);
@@ -44,6 +55,14 @@ public class listePlats extends AppCompatActivity {
         curry = findViewById(R.id.curry);
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         menu_button=(ImageButton)findViewById(R.id.menu_button);
+        searchView = findViewById(R.id.search_bar);
+        layoutLasagnes = findViewById(R.id.layout_lasagnes);
+        layoutSpaghetti = findViewById(R.id.layout_spaghetti);
+        layoutRatatouille = findViewById(R.id.layout_ratatouille);
+        layoutCurry = findViewById(R.id.layout_curry);
+        layouts = new LinearLayout[] {layoutSpaghetti, layoutLasagnes, layoutRatatouille, layoutCurry};
+        nom_plats = new String[] {getResources().getString(R.string.spaghetti), getResources().getString(R.string.lasagnes), getResources().getString(R.string.ratatouille), getResources().getString(R.string.pouletCurry)};
+        noResults = findViewById(R.id.noResults);
 
         menu_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,6 +119,38 @@ public class listePlats extends AppCompatActivity {
 
             }
 
+        });
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                System.out.println(newText);
+                int compteur = 0;
+                for (int i = 0; i < nombre_plats; i++){
+                    LinearLayout.LayoutParams lparams = (LinearLayout.LayoutParams) layouts[i].getLayoutParams();
+
+                    if (!nom_plats[i].toLowerCase().contains(newText.toLowerCase())){
+                        lparams.height = 0;
+                        compteur++;
+                    }
+                    else {
+                        lparams.height = -2;
+                    }
+                }
+
+                if (compteur==4){
+                    noResults.setText(getResources().getString(R.string.noResults));
+                }
+                else {
+                    noResults.setText("");
+                }
+                return true;
+            }
         });
 
     }
