@@ -125,7 +125,7 @@ tools:context=".ChoixApero">
                 android:queryHint="Vous cherchez un plat en particulier?"/>
 
             <LinearLayout
-                android:id="@+id/layout_taboule"
+                android:id="@+id/layout_vinRouge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -163,7 +163,7 @@ tools:context=".ChoixApero">
                         android:layout_height="wrap_content"
                         android:paddingVertical="@dimen/paddingTxtListePlatsV"
                         android:paddingLeft="@dimen/paddingTxtListePlatsL"
-                        android:text="5€ vin rouge"
+                        android:text="@string/vinRouge"
                         android:textSize="@dimen/txtListePlats" />
 
                 </LinearLayout>
@@ -173,7 +173,7 @@ tools:context=".ChoixApero">
 
 
             <LinearLayout
-                android:id="@+id/layout_soupe"
+                android:id="@+id/layout_vinBlanc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -215,7 +215,7 @@ tools:context=".ChoixApero">
                         android:layout_height="wrap_content"
                         android:paddingVertical="@dimen/paddingTxtListePlatsV"
                         android:paddingLeft="@dimen/paddingTxtListePlatsL"
-                        android:text="4€ vin blanc"
+                        android:text="@string/vinBlanc"
                         android:textSize="@dimen/txtListePlats" />
 
                 </LinearLayout>
@@ -223,7 +223,7 @@ tools:context=".ChoixApero">
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/layout_tomates"
+                android:id="@+id/layout_biere"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -265,7 +265,7 @@ tools:context=".ChoixApero">
                         android:layout_height="wrap_content"
                         android:paddingVertical="@dimen/paddingTxtListePlatsV"
                         android:paddingLeft="@dimen/paddingTxtListePlatsL"
-                        android:text="5€ bière"
+                        android:text="@string/biere"
                         android:textSize="@dimen/txtListePlats" />
 
                 </LinearLayout>
@@ -273,7 +273,7 @@ tools:context=".ChoixApero">
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/layout_feuillete"
+                android:id="@+id/layout_eauPetillante"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -317,7 +317,7 @@ tools:context=".ChoixApero">
                         android:layout_height="wrap_content"
                         android:paddingVertical="@dimen/paddingTxtListePlatsV"
                         android:paddingLeft="@dimen/paddingTxtListePlatsL"
-                        android:text="3.5€ eau pétillante"
+                        android:text="@string/eauPetillante"
                         android:textSize="@dimen/txtListePlats" />
 
                 </LinearLayout>

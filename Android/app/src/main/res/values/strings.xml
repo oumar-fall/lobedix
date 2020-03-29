@@ -164,4 +164,9 @@
 
     <string name="Boisson_soupe">4€ Vin Rosé Côtes de Provence Cru Classé Château Roubine "Réserve"</string>
     <string name="Description_boisson_soupe">Un rosé provençal typique de son cru. Il se dévoile avec des nunces joliment épicées et une élégance de texture en bouche. Harmonieux et fin (prix au verre).</string>
+
+    <string name="vinRouge">5€ vin rouge</string>
+    <string name="vinBlanc">4€ vin blanc</string>
+    <string name="biere">5€ bière</string>
+    <string name="eauPetillante">3.5€ eau pétillante</string>
 </resources>

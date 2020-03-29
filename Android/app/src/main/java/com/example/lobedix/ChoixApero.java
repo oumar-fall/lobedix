@@ -9,6 +9,9 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.SearchView;
+import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -16,12 +19,29 @@ public class ChoixApero extends AppCompatActivity {
     private DrawerLayout drawer;
     private ImageButton menu_button;
     private NavigationView view;
+    private SearchView searchView;
+    private LinearLayout layoutVinRouge;
+    private LinearLayout layoutVinBlanc;
+    private LinearLayout layoutBiere;
+    private LinearLayout layoutEauPetillante;
+    private TextView noResults;
+    private LinearLayout[] layouts;
+    private String[] nom_plats;
+    private int nombre_plats = 4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choix_apero);
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         menu_button = (ImageButton) findViewById(R.id.menu_button);
+        searchView = findViewById(R.id.search_bar);
+        layoutVinRouge = findViewById(R.id.layout_vinRouge);
+        layoutEauPetillante = findViewById(R.id.layout_eauPetillante);
+        layoutBiere = findViewById(R.id.layout_biere);
+        layoutVinBlanc = findViewById(R.id.layout_vinBlanc);
+        layouts = new LinearLayout[] {layoutEauPetillante, layoutVinRouge, layoutBiere, layoutVinBlanc};
+        nom_plats = new String[] {getResources().getString(R.string.eauPetillante), getResources().getString(R.string.vinRouge), getResources().getString(R.string.biere), getResources().getString(R.string.vinBlanc)};
+        noResults = findViewById(R.id.noResults);
 
         menu_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +105,38 @@ public class ChoixApero extends AppCompatActivity {
 
             }
 
+        });
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                System.out.println(newText);
+                int compteur = 0;
+                for (int i = 0; i < nombre_plats; i++){
+                    LinearLayout.LayoutParams lparams = (LinearLayout.LayoutParams) layouts[i].getLayoutParams();
+
+                    if (!nom_plats[i].toLowerCase().contains(newText.toLowerCase())){
+                        lparams.height = 0;
+                        compteur++;
+                    }
+                    else {
+                        lparams.height = -2;
+                    }
+                }
+
+                if (compteur==4){
+                    noResults.setText(getResources().getString(R.string.noResults));
+                }
+                else {
+                    noResults.setText("");
+                }
+                return true;
+            }
         });
     }
 
