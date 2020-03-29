@@ -17,6 +17,8 @@
     <dimen name="txtNameIngredients">18sp</dimen>
     <dimen name="txtListeIngredients">25sp</dimen>
     <dimen name="txtInfosNut">33sp</dimen>
+    <dimen name="txtTitreMenu">33sp</dimen>
+    <dimen name="txtMenusItem">20sp</dimen>
 
 <!-- Autre -->
     <dimen name="hauteurBarreHaut">50dp</dimen>
@@ -28,10 +30,10 @@
 <!--Carte-->
     <dimen name="assiettes">170dp</dimen>
 
-
+<!--Menu enfant-->
     <dimen name="tailleImgPuzzle">300px</dimen>
 
-<!--DishInfos-->
+    <!--DishInfos-->
     <dimen name="imgDishInformations">400dp</dimen>
     <dimen name="hauteurBarreVinEtScore">70dp</dimen>
     <dimen name="imgCommentsW">38dp</dimen>
@@ -42,7 +44,11 @@
     <dimen name="imgInformationsNutritionellesW">220dp</dimen>
 
 
-    <!--Ingrédients-->
+<!--Ingrédients-->
     <dimen name="imgIngredients">240dp</dimen>
+
+<!--Menus-->
+    <dimen name="imgMenusH">100dp</dimen>
+    <dimen name="imgMenusW">150dp</dimen>
 
 </resources>

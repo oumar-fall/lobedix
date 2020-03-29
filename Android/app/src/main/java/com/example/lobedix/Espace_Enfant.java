@@ -42,6 +42,7 @@ public class Espace_Enfant extends AppCompatActivity {
         setContentView(R.layout.activity_espace__enfant);
 
         salade = findViewById(R.id.salade);
+        System.out.println("SALADE : " + salade);
         carottes = findViewById(R.id.carottes);
         steak = findViewById(R.id.steak);
         pates = findViewById(R.id.pates);

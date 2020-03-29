@@ -112,7 +112,6 @@
                 android:layout_marginTop="@dimen/marginGlobalV"
                 android:gravity="top">
 
-
             </LinearLayout>
 
         </FrameLayout>

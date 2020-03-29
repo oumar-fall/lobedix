@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Espace_Enfant2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hauteurBarreHaut"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5" />
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/back"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/back"
+                        android:onClick="retour"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/restaurant_name"
+                        android:textSize="@dimen/txtTitrePrincipal" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/france" />
+                </FrameLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5" />
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/paramsvg"/>
+                </FrameLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+
+            <FrameLayout
+                android:id="@+id/global_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/menu_button"
+                    android:layout_width="@dimen/burgerMenu"
+                    android:layout_height="@dimen/burgerMenu"
+                    android:layout_margin="@dimen/marginBurgerMenu"
+                    android:background = "@drawable/menu_icon"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingTop="140dp"
+                    android:layout_marginBottom="20dp">
+
+                    <FrameLayout
+                        android:id="@+id/positions_puzzle"
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"
+                        android:layout_gravity="center">
+
+
+
+                        <ImageView
+                            android:id="@+id/puzzle_entree"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_gravity="top|start"
+                            android:src="@drawable/puzzle_back"
+                            android:scaleType="fitCenter"
+                            android:rotation="90"/>
+                        <ImageView
+                            android:id="@+id/puzzle_plat"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_gravity="top|end"
+                            android:src="@drawable/puzzle_back"
+                            android:scaleType="fitCenter"
+                            android:rotation="180"/>
+                        <ImageView
+                            android:id="@+id/puzzle_boisson"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_gravity="bottom|end"
+                            android:src="@drawable/puzzle_back"
+                            android:scaleType="fitCenter"
+                            android:rotation="270"/>
+                        <ImageView
+                            android:id="@+id/puzzle_dessert"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_gravity="bottom|start"
+                            android:src="@drawable/puzzle_back"
+                            android:scaleType="fitCenter"
+                            android:rotation="0"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Déplace les plats que tu veux manger dans la case corresondante"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="20dp"
+                        android:layout_marginHorizontal="20dp"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Valider"
+                        android:background="@drawable/button1"
+                        android:paddingHorizontal="@dimen/paddingDishInfosButtonH"
+                        android:paddingVertical="@dimen/paddingDishInfosButtonV"
+                        android:layout_gravity="center"
+                        android:onClick="commander"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/carottes"
+                        android:layout_width="197dp"
+                        android:layout_height="197dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/carottes_puzzle"
+                        android:elevation="1dp"/>
+                    <ImageView
+                        android:layout_marginLeft="180dp"
+                        android:id="@+id/pates"
+                        android:layout_width="197dp"
+                        android:layout_height="197dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/pates_puzzle"
+                        android:elevation="1dp"/>
+                    <ImageView
+                        android:layout_marginTop="100dp"
+                        android:layout_marginLeft="200dp"
+                        android:id="@+id/glace"
+                        android:layout_width="197dp"
+                        android:layout_height="197dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/glace_puzzle"
+                        android:elevation="1dp"/>
+                    <ImageView
+                        android:layout_marginTop="140dp"
+                        android:id="@+id/coca"
+                        android:layout_width="197dp"
+                        android:layout_height="197dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/coca_puzzle"
+                        android:elevation="1dp"/>
+                    <ImageView
+                        android:layout_marginTop="70dp"
+                        android:layout_marginLeft="80dp"
+                        android:id="@+id/salade"
+                        android:layout_width="197dp"
+                        android:layout_height="197dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/salade_enfant_puzzle"
+                        android:elevation="1dp"/>
+                    <ImageView
+                        android:layout_marginLeft="80dp"
+                        android:id="@+id/steak"
+                        android:layout_width="197dp"
+                        android:layout_height="197dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/steak_puzzle"
+                        android:elevation="1dp"/>
+                    <ImageView
+                        android:layout_marginLeft="90dp"
+                        android:id="@+id/crepe"
+                        android:layout_width="197dp"
+                        android:layout_height="197dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/crepe_puzzle"
+                        android:elevation="1dp"/>
+                    <ImageView
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/orange"
+                        android:layout_width="197dp"
+                        android:layout_height="197dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/orange_puzzle"
+                        android:elevation="1dp"/>
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

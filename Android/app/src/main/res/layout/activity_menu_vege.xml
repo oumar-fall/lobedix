@@ -110,94 +110,103 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_marginHorizontal="@dimen/marginGlobalH"
+                android:layout_marginHorizontal="@dimen/marginMenusH"
                 android:layout_marginTop="@dimen/marginGlobalV"
-                android:gravity="top">
+                android:gravity="top|center_horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text ="Menu végétarien"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="10dp"
-                    android:textSize="30dp"
+                    android:text ="@string/menuVege"
+                    android:layout_margin="@dimen/marginTitreMenus"
+                    android:textSize="@dimen/txtTitreMenu"
                     android:typeface="serif"
                     android:layout_gravity="center"/>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginHorizontal="@dimen/marginGlobalH"
-                android:layout_marginTop="@dimen/marginGlobalV"
-                android:gravity="top">
-
-                <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="100dp"
-                    android:background="@drawable/taboule"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text ="Taboulé oriental"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="20dp"
-                    android:layout_gravity="center"/>
-
-            </LinearLayout>
-
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginHorizontal="@dimen/marginGlobalH"
-                    android:layout_marginTop="@dimen/marginGlobalV"
-                    android:gravity="top">
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/lasagnes"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text ="Lasagnes végétariennes"
-                        android:textSize="20dp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="10dp"/>
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginVertical="@dimen/spaceBetweenItemsMenus">
+
+                        <ImageView
+                            android:layout_width="@dimen/imgMenusW"
+                            android:layout_height="@dimen/imgMenusH"
+                            android:src="@drawable/taboule"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text ="@string/tabouleMenu"
+                            android:layout_marginLeft="@dimen/marginMenusItemL"
+                            android:layout_marginStart="@dimen/marginMenusItemL"
+                            android:textSize="@dimen/txtMenusItem"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginVertical="@dimen/spaceBetweenItemsMenus">
+
+                        <ImageView
+                            android:layout_width="@dimen/imgMenusW"
+                            android:layout_height="@dimen/imgMenusH"
+                            android:src="@drawable/lasagnes"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text ="@string/lasagnesMenu"
+                            android:textSize="@dimen/txtMenusItem"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/marginMenusItemL"
+                            android:layout_marginStart="@dimen/marginMenusItemL"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginVertical="@dimen/spaceBetweenItemsMenus"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="@dimen/imgMenusW"
+                            android:layout_height="@dimen/imgMenusH"
+                            android:src="@drawable/creme"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text ="@string/cremeMenu"
+                            android:textSize="@dimen/txtMenusItem"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/marginMenusItemL"
+                            android:layout_marginStart="@dimen/marginMenusItemL"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginHorizontal="@dimen/marginGlobalH"
-                    android:layout_marginTop="@dimen/marginGlobalV"
-                    android:gravity="top">
 
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/creme"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text ="Crème brûlée"
-                        android:textSize="20dp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="10dp"/>
-
-                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_gravity="center"
                     android:orientation="vertical">
 
@@ -205,24 +214,21 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom|center"
-                        android:text="Prix du menu: 22€"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginBottom="10dp"
-                        android:textSize="20dp" />
+                        android:text="@string/prixMenuVege"
+                        android:layout_marginTop="@dimen/marginPrixMenuT"
+                        android:layout_marginBottom="@dimen/marginPrixMenuB"
+                        android:textSize="@dimen/txtMenusItem" />
 
                     <Button
                         android:id="@+id/Ajouter"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Ajouter à la commande"
-                        android:textSize="15dp"
-                        android:background="#a4accf"
-                        android:paddingLeft="25dp"
-                        android:paddingRight="25dp"
-                        android:paddingBottom="5dp"
-                        android:paddingTop="5dp"
-                        android:layout_gravity="bottom"
-                        android:onClick="addSimple"/>
+                        android:text="@string/ajouterCommande"
+                        android:textSize="@dimen/txtAddCommandButton"
+                        android:background="@drawable/button1"
+                        android:paddingHorizontal="@dimen/paddingDishInfosButtonH"
+                        android:paddingVertical="@dimen/paddingDishInfosButtonV"
+                        android:onClick="addVege"/>
 
                 </LinearLayout>
 

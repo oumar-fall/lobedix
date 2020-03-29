@@ -75,9 +75,22 @@
     <string name="valGraissesLasagnes">3,5g</string>
     <string name="txtSucreLasagnes">SUCRE : Faible impact</string>
     <string name="valSucreLasagnes">0,7g</string>
-    <string name="menu_jour">Menu du jour</string>
-    <string name="menu_simple">Formule simple</string>
-    <string name="menu_vege">Menu végétarien</string>
+    <string name="menuJour">Menu du jour</string>
+    <string name="menuSimple">Formule simple</string>
+    <string name="menuVege">Menu végétarien</string>
 
     <string name="ajouterCommande">Ajouter à la commande</string>
+    <string name="feuilleteMenu">Feuilleté au fromage</string>
+    <string name="spaghettiMenu">Spaghetti Bolognaise</string>
+    <string name="mousseMenu">Mousse au chocolat</string>
+    <string name="prixMenuJour">Prix du menu: 24€</string>
+
+    <string name="curryMenu">Poulet au Curry</string>
+    <string name="saladeMenu">Salade de Fruits</string>
+    <string name="prixFormuleSimple">Prix du menu: 18€</string>
+
+    <string name="tabouleMenu">Taboulé oriental</string>
+    <string name="lasagnesMenu">Lasagnes végétariennes</string>
+    <string name="cremeMenu">Crème brûlée</string>
+    <string name="prixMenuVege">Prix du menu: 22€</string>
 </resources>
