@@ -119,9 +119,9 @@
                     android:layout_height="wrap_content"
                     android:text ="Menu du jour"
                     android:layout_marginLeft="30dp"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginBottom="30dp"
-                    android:textSize="60dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="30dp"
                     android:typeface="serif"
                     android:layout_gravity="center"/>
 
@@ -134,16 +134,16 @@
                     android:gravity="top">
 
                     <ImageView
-                        android:layout_width="240dp"
-                        android:layout_height="240dp"
-                        android:src="@drawable/feuillete"/>
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/feuillete"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text ="Feuilleté au fromage"
-                        android:layout_marginLeft="30dp"
-                        android:textSize="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="20dp"
                         android:layout_gravity="center"/>
 
                 </LinearLayout>
@@ -157,17 +157,17 @@
                     android:gravity="top">
 
                     <ImageView
-                        android:layout_width="240dp"
-                        android:layout_height="240dp"
-                        android:src="@drawable/spaghetti"/>
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/spaghetti"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text ="Spaghetti bolognaise"
-                        android:textSize="40dp"
+                        android:textSize="20dp"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="30dp"/>
+                        android:layout_marginLeft="10dp"/>
 
                 </LinearLayout>
 
@@ -180,17 +180,17 @@
                     android:gravity="top">
 
                     <ImageView
-                        android:layout_width="240dp"
-                        android:layout_height="240dp"
-                        android:src="@drawable/mousse"/>
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/mousse"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text ="Mousse au chocolat"
-                        android:textSize="40dp"
+                        android:textSize="20dp"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="30dp"/>
+                        android:layout_marginLeft="10dp"/>
 
                 </LinearLayout>
 
@@ -208,19 +208,19 @@
                         android:text="Prix du menu: 24€"
                         android:layout_marginTop="30dp"
                         android:layout_marginBottom="10dp"
-                        android:textSize="40dp" />
+                        android:textSize="20dp" />
 
                     <Button
                         android:id="@+id/Ajouter"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Ajouter à la commande"
-                        android:textSize="30sp"
+                        android:textSize="15dp"
                         android:background="#a4accf"
                         android:paddingLeft="25dp"
                         android:paddingRight="25dp"
-                        android:paddingBottom="15dp"
-                        android:paddingTop="15dp"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
                         android:layout_gravity="bottom"
                         android:onClick="addJour"/>
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="menu_jour">170dp</dimen>
-    <dimen name="txt_menu_jour">40dp</dimen>
+    <dimen name="menu_jour">120dp</dimen>
+    <dimen name="txt_menu_jour">20dp</dimen>
     <dimen name="menu_vege" />
 </resources>

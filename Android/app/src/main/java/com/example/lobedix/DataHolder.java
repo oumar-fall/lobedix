@@ -67,6 +67,7 @@ public class DataHolder {
         nbJour=0;
         nbSimple=0;
         nbVege=0;
+
     }
 
     public int getNbSpaghetti(){
@@ -305,7 +306,7 @@ public class DataHolder {
 
     public Hashtable<String, Integer> getMenu() { return menu;}
     public void setMenu(Hashtable<String,Integer> menu) {
-        this.dessert = menu;
+        this.menu = menu;
     }
 
     public ArrayList<String> getListeEntree(){
@@ -318,6 +319,30 @@ public class DataHolder {
         return(listeDessert);
     }
     public ArrayList<String> getListeMenus(){ return(listeMenus); }
+
+    public void cleanListeEntree(){
+        listeEntree = new ArrayList<String>();
+        entree = new Hashtable<String,Integer>();
+        belleListePlat = new ArrayList<String>();
+    }
+
+    public void cleanListePlat(){
+        listePlat = new ArrayList<String>();
+        plat = new Hashtable<String,Integer>();
+        belleListePlat = new ArrayList<String>();
+    }
+
+    public void cleanListeDessert(){
+        listeDessert = new ArrayList<String>();
+        dessert = new Hashtable<String,Integer>();
+        belleListeDessert = new ArrayList<String>();
+    }
+
+    public void cleanListeMenu(){
+        listeMenus = new ArrayList<String>();
+        menu = new Hashtable<String,Integer>();
+        belleListeMenu = new ArrayList<String>();
+    }
 
     public String textCommande() {
         String c = "";

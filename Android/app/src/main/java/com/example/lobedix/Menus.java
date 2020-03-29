@@ -72,8 +72,8 @@ public class Menus extends AppCompatActivity {
                 if (title.equals("commande")){ // Ma commande
                     startActivity(new Intent(Menus.this, MyCommand.class));}
 
-                if (title.equals("entrees")){
-                    startActivity(new Intent(Menus.this, listeEntrees.class));}
+                if (title.equals("menus")){
+                    startActivity(new Intent(Menus.this, Menus.class));}
 
                 if (title.equals("plats")){
                     startActivity(new Intent(Menus.this, listePlats.class));}
@@ -121,20 +121,20 @@ public class Menus extends AppCompatActivity {
     public void addVege(View view) {
         nbVege = nbVege +1;
         vege.setText(Integer.toString(nbVege));
-        Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
+        Hashtable<String,Integer> d = DataHolder.getInstance().getMenu();
         d.put("Vege",nbVege);
         DataHolder.getInstance().setNbVege(nbVege);
-        DataHolder.getInstance().setEntree(d);
+        DataHolder.getInstance().setMenu(d);
 
     }
     public void removeVege(View view){
         if(nbVege>0){
             nbVege = nbVege -1;
             vege.setText(Integer.toString(nbVege));
-            Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
+            Hashtable<String,Integer> d = DataHolder.getInstance().getMenu();
             DataHolder.getInstance().setNbVege(nbVege);
             d.put("Vege",nbVege);
-            DataHolder.getInstance().setEntree(d);
+            DataHolder.getInstance().setMenu(d);
         }
     }
 
@@ -146,20 +146,20 @@ public class Menus extends AppCompatActivity {
     public void addJour(View view) {
         nbJour = nbJour +1;
         jour.setText(Integer.toString(nbJour));
-        Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
+        Hashtable<String,Integer> d = DataHolder.getInstance().getMenu();
         d.put("Jour",nbJour);
         DataHolder.getInstance().setNbJour(nbJour);
-        DataHolder.getInstance().setEntree(d);
+        DataHolder.getInstance().setMenu(d);
 
     }
     public void removeJour(View view){
         if(nbJour>0){
             nbJour = nbJour -1;
             jour.setText(Integer.toString(nbJour));
-            Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
+            Hashtable<String,Integer> d = DataHolder.getInstance().getMenu();
             d.put("Jour",nbJour);
             DataHolder.getInstance().setNbJour(nbJour);
-            DataHolder.getInstance().setEntree(d);
+            DataHolder.getInstance().setMenu(d);
         }
     }
 
@@ -171,20 +171,20 @@ public class Menus extends AppCompatActivity {
     public void addSimple(View view) {
         nbSimple = nbSimple +1;
         simple.setText(Integer.toString(nbSimple));
-        Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
-        d.put("Tomate",nbSimple);
+        Hashtable<String,Integer> d = DataHolder.getInstance().getMenu();
+        d.put("Simple",nbSimple);
         DataHolder.getInstance().setNbSimple(nbSimple);
-        DataHolder.getInstance().setEntree(d);
+        DataHolder.getInstance().setMenu(d);
 
     }
     public void removeSimple(View view){
         if(nbSimple>0){
             nbSimple = nbSimple -1;
             simple.setText(Integer.toString(nbSimple));
-            Hashtable<String,Integer> d = DataHolder.getInstance().getEntree();
-            d.put("Tomate",nbSimple);
+            Hashtable<String,Integer> d = DataHolder.getInstance().getMenu();
+            d.put("Simple",nbSimple);
             DataHolder.getInstance().setNbSimple(nbSimple);
-            DataHolder.getInstance().setEntree(d);
+            DataHolder.getInstance().setMenu(d);
         }
     }
 
@@ -211,8 +211,8 @@ public class Menus extends AppCompatActivity {
 
 
     public void retour(View view){
-        Intent entrees = new Intent(Menus.this, Carte.class);
-        startActivity(entrees);
+        Intent menus = new Intent(Menus.this, Carte.class);
+        startActivity(menus);
     }
 
 }

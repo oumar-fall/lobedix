@@ -107,6 +107,10 @@ public class MyCommand extends AppCompatActivity {
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         Toast.makeText(MyCommand.this, "Votre commande est en cours de préparation.", Toast.LENGTH_SHORT).show();
+                        DataHolder.getInstance().cleanListeDessert();
+                        DataHolder.getInstance().cleanListeEntree();
+                        DataHolder.getInstance().cleanListeMenu();
+                        DataHolder.getInstance().cleanListePlat();
                         startActivity(new Intent(MyCommand.this, MainActivity.class));
                     }
                 });
