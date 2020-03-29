@@ -9,6 +9,7 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -17,6 +18,7 @@ public class Ingredients_feuillete extends AppCompatActivity {
     DrawerLayout drawer;
     NavigationView view;
     ImageButton menu_button;
+    boolean r;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,8 @@ public class Ingredients_feuillete extends AppCompatActivity {
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         menu_button=(ImageButton)findViewById(R.id.menu_button);
+
+        r = true;
 
         menu_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,6 +88,18 @@ public class Ingredients_feuillete extends AppCompatActivity {
     public void retour(View view){
         Intent entrees = new Intent(Ingredients_feuillete.this, Dish_informations_feuillete.class);
         startActivity(entrees);
+    }
+
+    public void changeRotation(View view){
+        if (r) {
+            ImageView icon = (ImageView) findViewById(R.id.imageView3);
+            icon.setImageDrawable(getResources().getDrawable(R.drawable.paramsvg2));
+        }
+        else {
+            ImageView icon = (ImageView) findViewById(R.id.imageView3);
+            icon.setImageDrawable(getResources().getDrawable(R.drawable.paramsvg));
+        }
+        r = !r;
     }
 
 }
