@@ -114,7 +114,18 @@
                 android:layout_marginTop="@dimen/marginListePlatsT"
                 android:gravity="top">
 
+                <SearchView
+                    android:id="@+id/search_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/searchBarH"
+                    android:background="@drawable/rect"
+                    android:layout_marginHorizontal="@dimen/marginSearchH"
+                    android:layout_marginBottom="@dimen/marginSearchB"
+                    android:inputType="text"
+                    android:queryHint="Vous cherchez un plat en particulier?"/>
+
                 <LinearLayout
+                    android:id="@+id/layout_taboule"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -168,6 +179,7 @@
 
 
                 <LinearLayout
+                    android:id="@+id/layout_soupe"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -219,6 +231,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/layout_tomates"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -270,6 +283,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/layout_feuillete"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -318,6 +332,16 @@
 
                     </LinearLayout>
                 </LinearLayout>
+
+                <TextView
+                    android:id="@+id/noResults"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/txtNoResults"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:paddingHorizontal="@dimen/paddingNoResults"/>
 
 
             </LinearLayout>

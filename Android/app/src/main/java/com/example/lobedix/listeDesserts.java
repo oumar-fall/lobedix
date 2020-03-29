@@ -12,10 +12,13 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.ArrayList;
 import java.util.Hashtable;
 
 public class listeDesserts extends AppCompatActivity {
@@ -31,6 +34,16 @@ public class listeDesserts extends AppCompatActivity {
     private DrawerLayout drawer;
     private ImageButton menu_button;
     private NavigationView view;
+    private SearchView searchView;
+    private LinearLayout layoutCreme;
+    private LinearLayout layoutSalade;
+    private LinearLayout layoutMousse;
+    private LinearLayout layoutGlace;
+    private TextView noResults;
+    private LinearLayout[] layouts;
+    private String[] nom_plats;
+    private int nombre_plats = 4;
+
 
     /*private  TextView Salade = findViewById(R.id.Salade);
     private TextView Glace = findViewById(R.id.Glace);
@@ -45,7 +58,15 @@ public class listeDesserts extends AppCompatActivity {
         glace = findViewById(R.id.glace);
         creme = findViewById(R.id.creme);
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        menu_button=(ImageButton)findViewById(R.id.menu_button);
+        menu_button = (ImageButton) findViewById(R.id.menu_button);
+        searchView = findViewById(R.id.search_bar);
+        layoutCreme = findViewById(R.id.layout_creme);
+        layoutGlace = findViewById(R.id.layout_glace);
+        layoutMousse = findViewById(R.id.layout_mousse);
+        layoutSalade = findViewById(R.id.layout_salade);
+        layouts = new LinearLayout[] {layoutGlace, layoutCreme, layoutMousse, layoutSalade};
+        nom_plats = new String[] {getResources().getString(R.string.glace), getResources().getString(R.string.creme), getResources().getString(R.string.mousse), getResources().getString(R.string.salade)};
+        noResults = findViewById(R.id.noResults);
 
         menu_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,7 +75,7 @@ public class listeDesserts extends AppCompatActivity {
             }
         });
 
-        view=(NavigationView)findViewById(R.id.nav_view);
+        view = (NavigationView) findViewById(R.id.nav_view);
 
         view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
 
@@ -66,32 +87,41 @@ public class listeDesserts extends AppCompatActivity {
 
                 CharSequence title = menuItem.getTitleCondensed();
 
-                if(title.equals("aperitif")){ // Choix apéro
-                    startActivity(new Intent(listeDesserts.this, ChoixApero.class));}
+                if (title.equals("aperitif")) { // Choix apéro
+                    startActivity(new Intent(listeDesserts.this, ChoixApero.class));
+                }
 
-                if (title.equals("espace")){ // Changer d'espace
-                    startActivity(new Intent(listeDesserts.this, Enfant_Adulte.class));}
+                if (title.equals("espace")) { // Changer d'espace
+                    startActivity(new Intent(listeDesserts.this, Enfant_Adulte.class));
+                }
 
-                if (title.equals("commande")){ // Ma commande
-                    startActivity(new Intent(listeDesserts.this, MyCommand.class));}
+                if (title.equals("commande")) { // Ma commande
+                    startActivity(new Intent(listeDesserts.this, MyCommand.class));
+                }
 
-                if (title.equals("entrees")){
-                    startActivity(new Intent(listeDesserts.this, listeEntrees.class));}
+                if (title.equals("entrees")) {
+                    startActivity(new Intent(listeDesserts.this, listeEntrees.class));
+                }
 
-                if (title.equals("plats")){
-                    startActivity(new Intent(listeDesserts.this, listePlats.class));}
+                if (title.equals("plats")) {
+                    startActivity(new Intent(listeDesserts.this, listePlats.class));
+                }
 
-                if (title.equals("desserts")){
-                    startActivity(new Intent(listeDesserts.this, listeDesserts.class));}
+                if (title.equals("desserts")) {
+                    startActivity(new Intent(listeDesserts.this, listeDesserts.class));
+                }
 
-                if (title.equals("coupdepouce")){
-                    startActivity(new Intent(listeDesserts.this, commandType.class));}
+                if (title.equals("coupdepouce")) {
+                    startActivity(new Intent(listeDesserts.this, commandType.class));
+                }
 
-                if (title.equals("quitter")){
-                    startActivity(new Intent(listeDesserts.this, MainActivity.class));}
+                if (title.equals("quitter")) {
+                    startActivity(new Intent(listeDesserts.this, MainActivity.class));
+                }
 
-                if (title.equals("menus")){
-                    startActivity(new Intent(listeDesserts.this, Menus.class));}
+                if (title.equals("menus")) {
+                    startActivity(new Intent(listeDesserts.this, Menus.class));
+                }
 
                 drawer.closeDrawers();
                 return true;
@@ -101,6 +131,37 @@ public class listeDesserts extends AppCompatActivity {
 
         });
 
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                System.out.println(newText);
+                int compteur = 0;
+                for (int i = 0; i < nombre_plats; i++){
+                    LinearLayout.LayoutParams lparams = (LinearLayout.LayoutParams) layouts[i].getLayoutParams();
+
+                    if (!nom_plats[i].toLowerCase().contains(newText.toLowerCase())){
+                        lparams.height = 0;
+                        compteur++;
+                    }
+                    else {
+                        lparams.height = -2;
+                    }
+                }
+
+                if (compteur==4){
+                    noResults.setText(getResources().getString(R.string.noResults));
+                }
+                else {
+                    noResults.setText("");
+                }
+                return true;
+            }
+        });
     }
 
     public void infosMousse(View view) {
@@ -251,6 +312,10 @@ public class listeDesserts extends AppCompatActivity {
         Intent entrees = new Intent(listeDesserts.this, Carte.class);
         startActivity(entrees);
     }
+
+
+
+
 
 
 }

@@ -4,6 +4,7 @@
     <string name="settings">Settings</string>
     <string name="language_french">French</string>
     <string name="ingredients">Ingrédients</string>
+    <string name="noResults">Nous ne proposons malheureusement pas le plat que vous avez recherché. N\'hésitez pas à le proposer dans le livre d\'or!</string>
 
 
     <string name="ingredient_lasagnes">Tomates, courgettes, poivre, sel, basilic, herbes de provence, lasagnes, coulis de tomate, oignons, béchamel</string>

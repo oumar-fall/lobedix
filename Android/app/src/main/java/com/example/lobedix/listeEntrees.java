@@ -11,6 +11,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
@@ -30,6 +32,15 @@ public class listeEntrees extends AppCompatActivity {
     private DrawerLayout drawer;
     private ImageButton menu_button;
     private NavigationView view;
+    private SearchView searchView;
+    private LinearLayout layoutTaboule;
+    private LinearLayout layoutSoupe;
+    private LinearLayout layoutTomates;
+    private LinearLayout layoutFeuillete;
+    private TextView noResults;
+    private LinearLayout[] layouts;
+    private String[] nom_plats;
+    private int nombre_plats = 4;
 
     /*private  TextView Soupe = findViewById(R.id.Soupe);
     private TextView Feuillete = findViewById(R.id.Feuillete);
@@ -45,6 +56,14 @@ public class listeEntrees extends AppCompatActivity {
         tomates = findViewById(R.id.tomates);
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         menu_button=(ImageButton)findViewById(R.id.menu_button);
+        searchView = findViewById(R.id.search_bar);
+        layoutTaboule = findViewById(R.id.layout_taboule);
+        layoutTomates = findViewById(R.id.layout_tomates);
+        layoutFeuillete = findViewById(R.id.layout_feuillete);
+        layoutSoupe = findViewById(R.id.layout_soupe);
+        layouts = new LinearLayout[] {layoutTomates, layoutTaboule, layoutFeuillete, layoutSoupe};
+        nom_plats = new String[] {getResources().getString(R.string.tomates), getResources().getString(R.string.taboule), getResources().getString(R.string.feuillete), getResources().getString(R.string.soupe)};
+        noResults = findViewById(R.id.noResults);
 
         menu_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,6 +117,38 @@ public class listeEntrees extends AppCompatActivity {
 
             }
 
+        });
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                System.out.println(newText);
+                int compteur = 0;
+                for (int i = 0; i < nombre_plats; i++){
+                    LinearLayout.LayoutParams lparams = (LinearLayout.LayoutParams) layouts[i].getLayoutParams();
+
+                    if (!nom_plats[i].toLowerCase().contains(newText.toLowerCase())){
+                        lparams.height = 0;
+                        compteur++;
+                    }
+                    else {
+                        lparams.height = -2;
+                    }
+                }
+
+                if (compteur==4){
+                    noResults.setText(getResources().getString(R.string.noResults));
+                }
+                else {
+                    noResults.setText("");
+                }
+                return true;
+            }
         });
 
     }
