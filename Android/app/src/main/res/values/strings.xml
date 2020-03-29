@@ -80,4 +80,13 @@
     <string name="menu_vege">Menu végétarien</string>
 
     <string name="ajouterCommande">Ajouter à la commande</string>
+
+    <string name="sucre_sale">Sucré ou salé ?</string>
+    <string name="chaud_froid">Chaud ou Froid ?</string>
+    <string name="healthy">D\'humeur healthy ?</string>
+    <string name="exotique">Envie d\'ailleurs ?</string>
+    <string name="vegetarien">Végétarien ?</string>
+    <string name="petite_glace">Une petite glace ?</string>
+    <string name="chocolat">Passion chocolat ?</string>
+    <string name="petite_soupe">Une petite soupe ?</string>
 </resources>

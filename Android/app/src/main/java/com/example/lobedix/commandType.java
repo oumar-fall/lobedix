@@ -100,4 +100,9 @@ public class commandType extends AppCompatActivity {
         startActivity(menus);
 
     }
+
+    public void coup_de_pouce(View view){
+        Intent pouce = new Intent(commandType.this, Pouce_sucre_sale.class);
+        startActivity(pouce);
+    }
 }

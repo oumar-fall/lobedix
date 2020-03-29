@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class Enfant_Adulte extends AppCompatActivity {
 
-    private SwipeGestureEADetector swipeDetector;
+    private SwipeGestureDetector swipeDetector;
     private ImageView image = null;
     private TextView txt = null;
 
@@ -22,7 +22,7 @@ public class Enfant_Adulte extends AppCompatActivity {
         setContentView(R.layout.activity_enfant__adulte);
         image = (ImageView) findViewById(R.id.enf_ad);
         txt = (TextView) findViewById(R.id.enf_ad_txt);
-        swipeDetector = new SwipeGestureEADetector(this);
+        swipeDetector = new SwipeGestureDetector(this);
         image.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
                 swipeDetector.onTouchEvent(event);
@@ -50,7 +50,7 @@ public class Enfant_Adulte extends AppCompatActivity {
         startActivity(enfant);
     }
 
-    public void onSwipe(SwipeGestureEADetector.Swipe_Direction direction){
+    public void onSwipe(SwipeGestureDetector.Swipe_Direction direction){
         Intent here = new Intent(Enfant_Adulte.this, Enfant_Adulte.class);
         startActivity(here);
         String message = "";
