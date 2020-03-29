@@ -15,11 +15,11 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/hauteurBarreHaut"
             android:orientation="horizontal">
 
             <Space
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".5" />
 
@@ -30,8 +30,8 @@
 
                 <ImageView
                     android:id="@+id/back"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:src="@drawable/back"
                     android:onClick="retour"/>
 
@@ -45,10 +45,10 @@
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="@string/restaurant_name"
-                    android:textSize="30sp" />
+                    android:textSize="@dimen/txtTitrePrincipal" />
 
             </FrameLayout>
 
@@ -94,355 +94,364 @@
             android:layout_height="1dp"
             android:background="@android:color/darker_gray" />
 
-        <LinearLayout
+
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
 
+            <ImageButton
+                android:id="@+id/menu_button"
+                android:layout_width="@dimen/burgerMenu"
+                android:layout_height="@dimen/burgerMenu"
+                android:layout_margin="@dimen/marginBurgerMenu"
+                android:background = "@drawable/menu_icon"/>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <ScrollView
+                android:id="@+id/scroll"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_marginRight="@dimen/marginGlobalH"
+                android:layout_marginEnd="@dimen/marginGlobalH"
+                android:layout_marginLeft="@dimen/marginDishInfosL"
+                android:layout_marginStart="@dimen/marginDishInfosL"
+                android:layout_marginTop="@dimen/marginGlobalV">
 
-
-                <ImageButton
-                    android:id="@+id/menu_button"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:background="@drawable/menu_icon" />
-
-                <ScrollView
-                    android:id="@+id/scroll"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/imgDishInformations">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ratatouille"/>
+
+                        <Button
+                            android:id="@+id/Ingrédients"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|start"
+                            android:text="@string/ingredients"
+                            android:textSize="@dimen/txtIngredientsButton"
+                            android:background="@drawable/button1"
+                            android:padding="@dimen/paddingDishInfosButton"
+                            android:layout_margin="@dimen/marginDishInfosButton"
+                            android:onClick="ingredients"/>
+
+                        <Button
+                            android:id="@+id/Ajouter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|end"
+                            android:text="@string/ajouterCommande"
+                            android:textSize="@dimen/txtAddCommandButton"
+                            android:background="@drawable/button1"
+                            android:padding="@dimen/paddingDishInfosButton"
+                            android:layout_margin="@dimen/marginDishInfosButton"
+                            android:onClick="addRatatouille"/>
+
+
+                    </FrameLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="5dp"
-                        android:orientation="vertical">
-
-                        <GridLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/ratatouille" >
-
-                            <Button
-                                android:id="@+id/Ingrédients"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_row="0"
-                                android:layout_column="0"
-                                android:text="Ingrédients"
-                                android:textSize="20sp"
-                                android:background="#a4accf"
-                                android:paddingLeft="15dp"
-                                android:paddingRight="15dp"/>
-
-                            <Button
-                                android:id="@+id/Ajouter"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_row="4"
-                                android:layout_column="2"
-                                android:text="Ajouter à la commande"
-                                android:textSize="30sp"
-                                android:background="#a4accf"
-                                android:paddingLeft="25dp"
-                                android:paddingRight="25dp"
-                                android:paddingBottom="15dp"
-                                android:paddingTop="15dp"/>
-                        </GridLayout>
-
-
-
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginTop="5dp"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/title"
-                                android:layout_width="wrap_content"
-                                android:layout_height="40dp"
-                                android:layout_gravity="left"
-                                android:text="@string/ratatouille"
-                                android:textColor="#000000"
-                                android:textStyle="bold"
-                                android:textSize="30sp" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginTop="5dp"
-                            android:orientation="horizontal">
-
-                            <RatingBar
-                                android:id="@+id/ratingBar"
-                                style="?android:attr/ratingBarStyleSmall"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:numStars="5"
-                                android:rating="4"
-                                android:saveEnabled="false" />
-
-                            <TextView
-                                android:id="@+id/opinions"
-                                android:layout_width="wrap_content"
-                                android:layout_height="40dp"
-                                android:layout_gravity="left"
-                                android:layout_marginLeft="10dp"
-                                android:clickable="true"
-                                android:text="@string/opinions_lasagnes"
-                                android:textSize="10sp" />
-                        </LinearLayout>
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spaceBetweenDiv"
+                        android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/dish_description"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_gravity="left"
-                            android:layout_marginLeft="10dp"
-                            android:text="@string/description_lasagnes"
-                            android:textSize="10sp" />
-
-                        <LinearLayout
+                            android:id="@+id/title"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginTop="5dp"
-                            android:orientation="horizontal">
-
-                            <ImageButton
-                                android:layout_width="70dp"
-                                android:layout_height="100dp"
-                                android:layout_gravity="center"
-                                android:background="@drawable/conseil_boisson" />
-
-
-                            <ImageButton
-                                android:layout_width="100dp"
-                                android:layout_height="80dp"
-                                android:layout_marginLeft="70dp"
-                                android:layout_gravity="center"
-                                android:background="@drawable/nutriscore_c"
-                                android:onClick="nutriscore" />
-
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginRight="5dp"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/avis"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="left"
-                                android:layout_marginTop="20dp"
-                                android:layout_marginBottom="10dp"
-                                android:text="@string/avis"
-                                android:textColor="#000000"
-                                android:textSize="15sp" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginRight="5dp"
-                                android:orientation="horizontal">
-
-                                <LinearLayout
-                                    android:layout_width="120dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginRight="5dp"
-                                    android:orientation="vertical">
-
-                                    <ImageView
-                                        android:id="@+id/icone_personne1"
-                                        android:layout_width="38dp"
-                                        android:layout_height="41dp"
-                                        android:layout_gravity="center"
-                                        android:src="@drawable/personne1" />
-
-                                    <TextView
-                                        android:id="@+id/nom_personne1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
-                                        android:layout_gravity="center"
-                                        android:text="@string/nom1"
-                                        android:textSize="10sp" />
-
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:layout_marginRight="5dp"
-                                    android:orientation="vertical">
-
-                                    <RatingBar
-                                        android:id="@+id/ratingBar_avis1"
-                                        style="?android:attr/ratingBarStyleSmall"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:numStars="5"
-                                        android:rating="4"
-                                        android:saveEnabled="false" />
-
-                                    <TextView
-                                        android:id="@+id/avis_personne1"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="left"
-                                        android:text="@string/avis1"
-                                        android:textSize="10sp" />
-
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginRight="5dp"
-                                android:orientation="horizontal">
-
-                                <LinearLayout
-                                    android:layout_width="120dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginRight="5dp"
-                                    android:orientation="vertical">
-
-                                    <ImageView
-                                        android:id="@+id/icone_personne2"
-                                        android:layout_width="38dp"
-                                        android:layout_height="41dp"
-                                        android:layout_gravity="center"
-                                        android:src="@drawable/personne2" />
-
-                                    <TextView
-                                        android:id="@+id/nom_personne2"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
-                                        android:layout_gravity="center"
-                                        android:text="@string/nom2"
-                                        android:textSize="10sp" />
-
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:layout_marginRight="5dp"
-                                    android:orientation="vertical">
-
-                                    <RatingBar
-                                        android:id="@+id/ratingBar_avis2"
-                                        style="?android:attr/ratingBarStyleSmall"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:numStars="5"
-                                        android:rating="4"
-                                        android:saveEnabled="false" />
-
-                                    <TextView
-                                        android:id="@+id/avis_personne2"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="left"
-                                        android:text="@string/avis2"
-                                        android:textSize="10sp" />
-
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginRight="5dp"
-                                android:orientation="horizontal">
-
-                                <LinearLayout
-                                    android:layout_width="120dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginRight="5dp"
-                                    android:orientation="vertical">
-
-                                    <ImageView
-                                        android:id="@+id/icone_personne3"
-                                        android:layout_width="38dp"
-                                        android:layout_height="41dp"
-                                        android:layout_gravity="center"
-                                        android:src="@drawable/personne3" />
-
-                                    <TextView
-                                        android:id="@+id/nom_personne3"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
-                                        android:layout_gravity="center"
-                                        android:text="@string/nom3"
-                                        android:textSize="10sp" />
-
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:layout_marginRight="5dp"
-                                    android:orientation="vertical">
-
-                                    <RatingBar
-                                        android:id="@+id/ratingBar_avis3"
-                                        style="?android:attr/ratingBarStyleSmall"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:numStars="5"
-                                        android:rating="4"
-                                        android:saveEnabled="false" />
-
-                                    <TextView
-                                        android:id="@+id/avis_personne3"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="left"
-                                        android:text="@string/avis3"
-                                        android:textSize="10sp" />
-
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-
-                        </LinearLayout>
+                            android:layout_gravity="start"
+                            android:layout_marginStart="@dimen/marginTitrePlats"
+                            android:layout_marginLeft="@dimen/marginTitrePlats"
+                            android:text="@string/ratatouille"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/txtTitrePlats" />
 
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/marginTitrePlats"
+                        android:layout_marginLeft="@dimen/marginTitrePlats"
+                        android:layout_marginTop="@dimen/spaceBetweenDiv"
+                        android:layout_marginBottom="@dimen/marginAvisB"
+                        android:orientation="horizontal"
+                        android:gravity="start|center_vertical">
+
+                        <RatingBar
+                            android:id="@+id/ratingBar"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:numStars="5"
+                            android:rating="4"
+                            android:saveEnabled="false" />
+
+                        <TextView
+                            android:id="@+id/opinions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/marginAvisL"
+                            android:layout_marginStart="@dimen/marginAvisL"
+                            android:focusable="true"
+                            android:clickable="true"
+                            android:text="@string/opinions_lasagnes"
+                            android:textSize="@dimen/txtAvis" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/dish_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spaceBetweenDiv"
+                        android:text="@string/description_lasagnes"
+                        android:textSize="@dimen/txtMotDuChef"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/hauteurBarreVinEtScore"
+                        android:layout_marginTop="@dimen/spaceBetweenDiv"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:scaleType="fitCenter"
+                            android:background="@android:color/transparent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/conseil_boisson" />
+
+                        <ImageButton
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:scaleType="centerInside"
+                            android:background="@android:color/transparent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/nutriscore_c"
+                            android:onClick="nutriscore" />
 
 
-                </ScrollView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spaceBetweenDiv"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/avis"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="@dimen/spaceBeforeComments"
+                            android:text="@string/avis"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/txtTitreAvis"/>
+
+                        <LinearLayout
+                            android:baselineAligned="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="@dimen/marginComments"
+                                android:orientation="vertical"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/icone_personne1"
+                                    android:layout_width="@dimen/imgCommentsW"
+                                    android:layout_height="@dimen/imgCommentsH"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/personne1" />
+
+                                <TextView
+                                    android:id="@+id/nom_personne1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/nom1"
+                                    android:textSize="@dimen/txtNameComments" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/marginCommentsRate"
+                                android:orientation="vertical">
+
+                                <RatingBar
+                                    android:id="@+id/ratingBar_avis1"
+                                    style="?android:attr/ratingBarStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:numStars="5"
+                                    android:rating="4"
+                                    android:saveEnabled="false" />
+
+                                <TextView
+                                    android:id="@+id/avis_personne1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:text="@string/avis1"
+                                    android:textSize="@dimen/txtComments" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:baselineAligned="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_marginVertical="@dimen/spaceBetweenComments">
+
+                                <ImageView
+                                    android:id="@+id/icone_personne2"
+                                    android:layout_width="@dimen/imgCommentsW"
+                                    android:layout_height="@dimen/imgCommentsH"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/personne2" />
+
+                                <TextView
+                                    android:id="@+id/nom_personne2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/nom2"
+                                    android:textSize="@dimen/txtNameComments" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/marginCommentsRate"
+                                android:orientation="vertical">
+
+                                <RatingBar
+                                    android:id="@+id/ratingBar_avis2"
+                                    style="?android:attr/ratingBarStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:numStars="5"
+                                    android:rating="4"
+                                    android:saveEnabled="false" />
+
+                                <TextView
+                                    android:id="@+id/avis_personne2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:text="@string/avis2"
+                                    android:textSize="@dimen/txtComments" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:baselineAligned="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_marginVertical="@dimen/spaceBetweenComments">
+
+                                <ImageView
+                                    android:id="@+id/icone_personne3"
+                                    android:layout_width="@dimen/imgCommentsW"
+                                    android:layout_height="@dimen/imgCommentsH"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/personne3" />
+
+                                <TextView
+                                    android:id="@+id/nom_personne3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/nom3"
+                                    android:textSize="@dimen/txtNameComments" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/marginCommentsRate"
+                                android:orientation="vertical">
+
+                                <RatingBar
+                                    android:id="@+id/ratingBar_avis3"
+                                    style="?android:attr/ratingBarStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:numStars="5"
+                                    android:rating="4"
+                                    android:saveEnabled="false" />
+
+                                <TextView
+                                    android:id="@+id/avis_personne3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:text="@string/avis3"
+                                    android:textSize="@dimen/txtComments"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
 
 
-            </LinearLayout>
-        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </FrameLayout>
+
 
     </LinearLayout>
 

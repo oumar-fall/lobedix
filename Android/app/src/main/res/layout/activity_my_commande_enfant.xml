@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
-    tools:context=".Ingredients_feuillete"
-    android:orientation="vertical">
+    tools:context=".MyCommandeEnfant">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,8 +31,7 @@
                     android:id="@+id/back"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/back"
-                    android:onClick="retour"/>
+                    android:src="@drawable/back"/>
 
             </FrameLayout>
 
@@ -110,71 +108,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_marginEnd="@dimen/marginGlobalH"
-                android:layout_marginRight="@dimen/marginGlobalH"
-                android:layout_marginStart="@dimen/marginIngredientsL"
-                android:layout_marginLeft="@dimen/marginIngredientsL"
+                android:layout_marginHorizontal="@dimen/marginGlobalH"
                 android:layout_marginTop="@dimen/marginGlobalV"
-                android:gravity="top|center_horizontal">
+                android:gravity="top">
 
-                <FrameLayout
+                <TextView
+                    android:id="@+id/commande"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginCommandeV"
+                    android:gravity="center"
+                    android:text="Vous n'avez rien commandé pour l'instant"
+                    android:textSize="35sp"></TextView>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/ingredients"
-                        android:layout_gravity="center"
-                        android:textAlignment="center"
-                        android:textSize="@dimen/txtTitreIngredients"/>
-
-                </FrameLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="3"
-                    android:gravity="center">
-
-                    <ImageView
-                        android:id="@+id/photo"
-                        android:layout_width="@dimen/imgIngredients"
-                        android:layout_height="@dimen/imgIngredients"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/feuillete" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:paddingHorizontal="@dimen/paddingNameIngredientsH"
-                        android:gravity ="center_vertical|end"
-                        android:textSize="@dimen/txtNameIngredients"
-                        android:text="@string/feuillete"/>
-
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="2"
-                    android:paddingHorizontal="@dimen/paddingListeIngredientsH">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="@string/ingredient_feuillete"
-                        android:textSize="@dimen/txtListeIngredients"/>
-
-                </LinearLayout>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Valider"
+                    android:layout_gravity="center"
+                    ></Button>
 
             </LinearLayout>
 
         </FrameLayout>
+
 
     </LinearLayout>
 
@@ -184,5 +141,4 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:menu="@menu/main_menu"/>
-
 </androidx.drawerlayout.widget.DrawerLayout>

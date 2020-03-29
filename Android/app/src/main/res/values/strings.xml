@@ -22,7 +22,6 @@
     <string name="ingredient_salade">Pomme, banane, orange, pamplemousse, kiwi, raisin noir, jus de citron, sucre</string>
 
 
-
     <string name="opinions">3 avis</string>
     <string name="opinions_lasagnes"> <u>3 avis </u></string>
     <string name="description_lasagnes"> <u>Le mot du chef: </u> \n Plates, mais avec de la personnalité. UN plat de pâtes plates, ça m\'éclate !</string>
@@ -39,7 +38,7 @@
     <string name="avis2">Agréablement surprise de trouver un plat végétarienne, moi qui ne mange pas de viande</string>
     <string name="nom3">Camille Tavernier</string>
     <string name="avis3">Très bon :)</string>
-    <string name="avis"><u>Avis des clients</u></string>
+    <string name="avis"><u>Avis des clients:</u></string>
 
 
     <string name="taboule">6€ Taboulé oriental</string>
@@ -56,7 +55,6 @@
     <string name="creme">7€ Crème brûlée</string>
     <string name="salade">6€ Salade de fruits</string>
     <string name="glace">4€ Glace à la vanille</string>
-
 
 
     <string name="desserts">Nos desserts</string>
@@ -77,7 +75,12 @@
     <string name="valGraissesLasagnes">3,5g</string>
     <string name="txtSucreLasagnes">SUCRE : Faible impact</string>
     <string name="valSucreLasagnes">0,7g</string>
+<<<<<<< ours
     <string name="menu_jour">Menu du jour</string>
     <string name="menu_simple">Formule simple</string>
     <string name="menu_vege">Menu végétarien</string>
+=======
+
+    <string name="ajouterCommande">Ajouter à la commande</string>
+>>>>>>> theirs
 </resources>

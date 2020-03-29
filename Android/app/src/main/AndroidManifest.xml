@@ -9,22 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MenuEnfant"></activity>
+        <activity android:name=".MyCommandeEnfant"></activity>
+        <activity android:name=".MenuEnfant" />
         <activity android:name=".Ingredients_tomates" />
         <activity android:name=".Ingredients_feuillete" />
         <activity android:name=".Ingredients_soupe" />
         <activity android:name=".Ingredients_taboule" />
-
         <activity android:name=".Ingredients_lasagnes" />
         <activity android:name=".Ingredients_spaghetti" />
         <activity android:name=".Ingredients_ratatouille" />
         <activity android:name=".Ingredients_curry" />
-
         <activity android:name=".Ingredients_creme" />
         <activity android:name=".Ingredients_mousse" />
         <activity android:name=".Ingredients_salade" />
         <activity android:name=".Ingredients_glace" />
-
         <activity android:name=".MyCommand" />
         <activity android:name=".listePlats" />
         <activity android:name=".listeDesserts" />
@@ -35,7 +33,6 @@
         <activity android:name=".Dish_informations_spaghetti" />
         <activity android:name=".Dish_informations_ratatouille" />
         <activity android:name=".Dish_informations_curry" />
-
         <activity android:name=".Dish_informations_creme" />
         <activity android:name=".Dish_informations_mousse" />
         <activity android:name=".Dish_informations_salade" />

@@ -113,30 +113,38 @@
                 android:layout_marginRight="@dimen/marginGlobalH"
                 android:layout_marginStart="@dimen/marginInfosNutL"
                 android:layout_marginLeft="@dimen/marginInfosNutL"
-                android:layout_marginTop="@dimen/marginGlobalV"
+                android:layout_marginTop="@dimen/marginInfosNutT"
                 android:gravity="top">
 
-                <TextView
+                <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:text="@string/valeursNutritionelles"
-                    android:layout_gravity="center"
-                    android:textAlignment="center"
-                    android:textSize="33sp"/>
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/valeursNutritionelles"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/txtInfosNut"/>
+
+                </FrameLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
+
                     <ImageView
                         android:id="@+id/photo"
-                        android:layout_width="240dp"
-                        android:layout_height="240dp"
-                        android:layout_weight="5"
-                        android:src="@drawable/lasagnes" />
+                        android:layout_width="@dimen/imgInformationsNutritionellesW"
+                        android:layout_height="@dimen/imgInformationsNutritionellesH"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/lasagnes"
+                        android:layout_marginVertical="@dimen/marginGlobalV"/>
+
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_gravity="center"
                         android:gravity ="center"
                         android:text="@string/lasagnes"/>
