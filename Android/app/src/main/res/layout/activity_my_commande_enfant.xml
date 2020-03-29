@@ -113,7 +113,8 @@
                     android:layout_marginTop="@dimen/marginCommandeV"
                     android:gravity="center"
                     android:text="Vous n'avez rien commandé pour l'instant"
-                    android:textSize="35sp"/>
+                    android:textSize="35sp"
+                    android:onClick="confirm"/>
 
                 <Button
                     android:layout_width="wrap_content"
