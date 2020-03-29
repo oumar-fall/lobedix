@@ -170,7 +170,8 @@
                             android:layout_width="@dimen/assiettes"
                             android:layout_height="@dimen/assiettes"
                             android:layout_gravity="center_horizontal"
-                            android:background="@drawable/assiette"/>
+                            android:background="@drawable/assiette"
+                            android:onClick="coup_de_pouce"/>
 
                         <TextView
                             android:layout_width="match_parent"

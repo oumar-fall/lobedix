@@ -94,7 +94,7 @@ public class Dish_Informations_Nutri extends AppCompatActivity {
     }
 
     public void retour(View view){
-        Intent entrees = new Intent(Dish_Informations_Nutri.this, Dish_informations_lasagnes.class);
+        Intent entrees = new Intent(Dish_Informations_Nutri.this, Dish_informations_creme.class);
         startActivity(entrees);
     }
 }

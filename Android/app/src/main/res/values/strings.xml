@@ -69,18 +69,50 @@
     <string name="txtCaloriesLasagnes">CALORIES : un peu trop calorique</string>
     <string name="valCaloriesLasagnes">451 kCal</string>
     <string name="txtLegumesLasagnes">LEGUMES : un peu de légumes</string>
+    <string name="txtpasLegumes">LEGUMES : pas de légumes </string>
+    <string name="valPasLegumes">0%</string>
     <string name="valLegumesLasagnes">41%</string>
     <string name="txtSelLasagnes">SEL : peu de sel</string>
     <string name="valSelLasagnes">0,5g</string>
     <string name="txtGraissesLasagnes">GRAISSES SATUREES : Faible impact</string>
     <string name="valGraissesLasagnes">3,5g</string>
+    <string name="txtBcpLegumes">LEGUMES : Parfait</string>
+    <string name="valBcpLegumes">95%</string>
+    <string name="txtSelOrange">SEl : Un peu trop salé</string>
+    <string name="valSelOrange">1.5g</string>
+    <string name="txtBcpSucre">SUCRE : Trop sucré</string>
+    <string name="valSucretrop">30g</string>
+    <string name="txtCaloriesParfait">CALORIES : Parfait</string>
+    <string name="txtlegumesOrange">LEGUMES : très peu de légumes</string>
+    <string name="vallegumesOrange">15%</string>
+    <string name="valCaloriesParfait">350 kCal</string>
     <string name="txtSucreLasagnes">SUCRE : Faible impact</string>
     <string name="valSucreLasagnes">0,7g</string>
+    <string name="menu_jour">Menu du jour</string>
+    <string name="menu_simple">Formule simple</string>
+    <string name="txtBcpFruits">FRUITS : Parfait</string>
+    <string name="txtPeuCalorique">CALORIES : peu calorique</string>
+    <string name="valPeuCalorique">140 kCal</string>
+    <string name="txtLegumesOrange">LEGUMES : très peu de légumes</string>
+    <string name="valLegumesOrange">10%</string>
+
+    <string name="menu_vege">Menu végétarien</string>
     <string name="menuJour">Menu du jour</string>
     <string name="menuSimple">Formule simple</string>
     <string name="menuVege">Menu végétarien</string>
 
+
     <string name="ajouterCommande">Ajouter à la commande</string>
+
+    <string name="sucre_sale">Sucré ou salé ?</string>
+    <string name="chaud_froid">Chaud ou Froid ?</string>
+    <string name="healthy">D\'humeur healthy ?</string>
+    <string name="exotique">Envie d\'ailleurs ?</string>
+    <string name="vegetarien">Végétarien ?</string>
+    <string name="petite_glace">Une petite glace ?</string>
+    <string name="chocolat">Passion chocolat ?</string>
+    <string name="petite_soupe">Une petite soupe ?</string>
+
     <string name="feuilleteMenu">Feuilleté au fromage</string>
     <string name="spaghettiMenu">Spaghetti Bolognaise</string>
     <string name="mousseMenu">Mousse au chocolat</string>
@@ -94,4 +126,42 @@
     <string name="lasagnesMenu">Lasagnes végétariennes</string>
     <string name="cremeMenu">Crème brûlée</string>
     <string name="prixMenuVege">Prix du menu: 22€</string>
+
+    <string name="Boisson">Boisson</string>
+
+    <string name="Boisson_creme">3€ Vin Blanc Moelleux Monbazillac</string>
+    <string name="Description_Boisson_creme">Vin vraiment concentré, mais toujours équilibré, saura relever vos desserts (prix au verre).</string>
+
+    <string name="Boisson_mousse">6€ Domaine Madeloc Cirera - Rouge</string>
+    <string name="Description_Boisson_mousse">Un joli nez de cerise noire, et une bouche voluptueuse, aux tannins soyeux. Le sucre équilibré par l\'aromatique et les tannins arrondissent la bouche et l\'allonge (prix au verre). </string>
+
+    <string name="Boisson_glace">3€ Muscat Petit Grain Saint Jean de Minervois</string>
+    <string name="Description_Boisson_glace">Le Muscat de Saint Jean de Minervois est un vin doux issu des vendanges manuelles (prix au verre).</string>
+
+    <string name="Boisson_salade">5€ Goose Island Sofie </string>
+    <string name="Description_Boisson_salade">Une saison vieillie en fût aux arômes d\'épices, d\'orange, de levure et de citron (35,5 cl).</string>
+
+    <string name="Boisson_feuillete">6€ Vin Rouge Haut Médoc Cru Bourgeois Château Clément-Pichon</string>
+    <string name="Description_Boisson_feuillete">Robe sombre. Ample et rond en attaque, le palais réussit l\'alliance du gras et du fruit, avec toujours beaucoup de fraicheur et un peu l\'amertume en finale (prix au verre)</string>
+
+    <string name="Boisson_tomate">3€ Beaujolais Villages «Rouge»</string>
+    <string name="Description_Boisson_Tomate">Fruité à la robe cerise , en laissant s\’exprimer ses tanins agréables , il s\’impose comme un vin particulièrement équilibré (prix au verre).</string>
+
+    <string name="Boisson_taboulet">3€ Vin Rosé Tavel La Cave d\'Augustin Florent</string>
+    <string name="Description_Boisson_taboulet">Après un an de bouteile ce rosé de Tavel haut en couleurs évolue vers un beau fruit évoquant les fraises des bois saupoudrées par du poivre concassée (prix au verre).</string>
+
+    <string name="Boisson_spaghetti">8€ Vin Rouge Gevrey Chambertin Jean Bouchard</string>
+    <string name="Description_boisson_spaghetti">Vin harmonieux et gourmand, délicatement fruité, laissant place à une finale plus minérale.</string>
+
+    <string name="Boisson_curry">5€ Crozes-Hermitage</string>
+    <string name="Description_Boisson_curry">La prestigieuse maison Guigal signe un crozes-hermitage souple sur des arômes épicés apportés par la syrah (prix au verre).</string>
+
+    <string name="Boisson_lasagnes">3€ Vin Rosé Coteaux d\'Aix en Provence Château Virant</string>
+    <string name="Description_Boisson_lasagnes">Notes de bonbons anglais (prix au verre).</string>
+
+    <string name="Boisson_ratatouille">6€ BANDOL ROUGE - DOMAINE LA BASTIDE BLANCHE</string>
+    <string name="Description_boisson_ratatouille">Ce vin présente une belle robe sombre, un nez puissant et sauvage qui associe des notes de réglisse, d\'épices et de fruits noirs (prix au verre).</string>
+
+    <string name="Boisson_soupe">4€ Vin Rosé Côtes de Provence Cru Classé Château Roubine "Réserve"</string>
+    <string name="Description_boisson_soupe">Un rosé provençal typique de son cru. Il se dévoile avec des nunces joliment épicées et une élégance de texture en bouche. Harmonieux et fin (prix au verre).</string>
 </resources>
