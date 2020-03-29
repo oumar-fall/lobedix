@@ -202,24 +202,24 @@ public class DataHolder {
     public void setNbVege(Integer nbVege) { this.nbVege = nbVege;}
 
     public int getNbBoissonSpaghetti(){
-        return(nbSpaghetti);
+        return(nbBoissonSpaghetti);
     }
-    public void setNbBoissonSpaghetti(int nbSpaghetti){
-        this.nbSpaghetti = nbSpaghetti;
+    public void setNbBoissonSpaghetti(int nbBoissonSpaghetti){
+        this.nbBoissonSpaghetti = nbBoissonSpaghetti;
     }
 
     public int getNbBoissonLasagnes(){
-        return(nbLasagnes);
+        return(nbBoissonLasagnes);
     }
-    public void setNbBoissonLasagnes(int nbLasagnes){
-        this.nbLasagnes= nbLasagnes;
+    public void setNbBoissonLasagnes(int nbBoissonLasagnes){
+        this.nbBoissonLasagnes= nbBoissonLasagnes;
     }
 
     public int getNbBoissonCurry(){
-        return(nbCurry);
+        return(nbBoissonCurry);
     }
-    public void setNbBoissonCurry(int nbCurry){
-        this.nbCurry = nbCurry;
+    public void setNbBoissonCurry(int nbBoissonCurry){
+        this.nbBoissonCurry = nbBoissonCurry;
     }
 
     public int getNbBoissonRatatouille(){
