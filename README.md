@@ -7,6 +7,7 @@ Cette application a été réalisée par :
 - Domitille Dommergues
 - Julie Keisler
 - Marion Candelier
+
 Elle a été codée sur Android Studio.
 Elle a pour but de remplacer la carte papier d’un restaurant par une carte numérique plus interactive. Bien que nous souhaitions au départ réaliser cette application pour tablette, elle est aujourd’hui adaptée aux smartphones (plus facile à tester pour nous dans le temps imparti).
 
@@ -37,13 +38,15 @@ Pour chaque plat 4 activités ont été créées :
 - Dish_Informations_Nutri_Nomduplat (contient les informations nutritionnelles du plat en question, on y accède en cliquant sur le nutriscore de la page Dish_Information_Nomduplat)
 - Ingredient_Nomduplat (contient les ingrédients du plat en question, on y accède depuis la page Dish_Information_Nomduplat)
 - Boisson_Nomduplat (conseille la boisson à boire avec ce plat, on y accède depuis la page Dish_Information_Nomduplat)
+
 Le coup de pouce est divisé en 11 classes différentes. Le but est de pouvoir accéder à tous les plats en répondant à des questions. Chaque classe correspond à une question. L’ajout de plats supplémentaires nécessiterait également de revoir l’ensemble de la structure du coup de pouce, qui repose entièrement sur les plats proposés de la carte. Néanmoins on peut facilement voir comment généraliser cette méthode avec une carte de restaurant classique, quitte à proposer plusieurs choix de plats après une série de réponse, au lieu de juste un seul comme nous avons voulu faire ici. Cette méthode du choix du plat façon tinder permet de donner des idées aux indécis.
 L’interface enfant nécessite un prétraitement de toutes les images afin que celles-ci représentent des pièces de puzzle. Nous avons essayé de rendre ce traitement dynamique mais en vain.
 
 ### Objectifs non atteints :
 Nous avions pour objectif d’implémenter également le changement de langue. L’idée
 initiale était d’utiliser le fichier strings.xml et d’en changer son contenu. Nous nous sommes finalement rendus compte que les valeurs renseignée dans les fichier XML annexes étaient en fait encodées “en dur” et qu’il était impossible de les modifier directement depuis le code.
-Description de l’interface :
+
+### Description de l’interface :
 Comme voulu dans le cahier des charges, nous avons essayé de faire l’interface la plus sobre et intuitive qui soit. Nous nous sommes volontairement appuyées sur des modèles d’interfaces bien connues du grand public : tripadvisor pour la présentation desplats, Yuka pour les valeurs nutritionnelles et tinder pour les swipes au début de l’application et pour le coup de pouce. Le but recherché est que l’utilisateur se sente en confiance avec notre application et trouve rapidement ses repères. De plus, ce système nous permet de ne pas surcharger l’application d’informations.
 Le swipe que nous avons fait a été limité par nos compétences techniques et ne reflète pas vraiment ce que nous avions en tête.
 En ce qui concerne l’interface enfant, celle-ci est relativement fidèle à l’idée de départ. Il s’agit d’un espace où les plats proposés sont adaptés au contenu du menu enfant.
