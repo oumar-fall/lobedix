@@ -2,7 +2,7 @@
 <resources>
     <dimen name="marginBurgerMenu">20dp</dimen>
     <dimen name="marginGlobalH">10dp</dimen>
-    <dimen name="marginGlobalV">10dp</dimen>
+    <dimen name="marginGlobalV">40dp</dimen>
     <dimen name="marginSearchH">70dp</dimen>
     <dimen name="marginSearchB">30dp</dimen>
 
@@ -11,7 +11,7 @@
     <dimen name="marginBoutonsPlatsV">10dp</dimen>
     <dimen name="paddingTxtListePlatsV">10dp</dimen>
     <dimen name="paddingTxtListePlatsL">10dp</dimen>
-    <dimen name="marginListePlatsT">40dp</dimen>
+    <dimen name="marginListePlatsT">60dp</dimen>
 
     <!--sliders-->
     <dimen name="marginImgSliderT">30dp</dimen>

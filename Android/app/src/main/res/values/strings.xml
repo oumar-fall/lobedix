@@ -169,4 +169,6 @@
     <string name="vinBlanc">4€ vin blanc</string>
     <string name="biere">5€ bière</string>
     <string name="eauPetillante">3.5€ eau pétillante</string>
+
+    <string name="voirCommande">Voir ma commande</string>
 </resources>
