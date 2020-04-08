@@ -68,7 +68,7 @@ public class Boisson_creme_brulee extends AppCompatActivity {
                     startActivity(new Intent(Boisson_creme_brulee.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){ // Coup de pouce
-                    startActivity(new Intent(Boisson_creme_brulee.this, commandType.class));}
+                    startActivity(new Intent(Boisson_creme_brulee.this, CommandType.class));}
 
                 if (title.equals("quitter")){ // Quitter
                     startActivity(new Intent(Boisson_creme_brulee.this, MainActivity.class));}

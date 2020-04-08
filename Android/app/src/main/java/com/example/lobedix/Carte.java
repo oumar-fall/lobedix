@@ -12,8 +12,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
-import com.google.android.material.navigation.NavigationView;
-
 public class Carte extends AppCompatActivity {
 
     private ImageButton menu_button;
@@ -55,7 +53,7 @@ public class Carte extends AppCompatActivity {
                 }
 
                 if (title.equals("espace")) { // Changer d'espace
-                    startActivity(new Intent(Carte.this, commandType.class));
+                    startActivity(new Intent(Carte.this, CommandType.class));
                 }
 
                 if (title.equals("commande")) { // Ma commande
@@ -69,11 +67,11 @@ public class Carte extends AppCompatActivity {
                     startActivity(new Intent(Carte.this, listePlats.class));}
 
                 if (title.equals("desserts")) {
-                    startActivity(new Intent(Carte.this, commandType.class));
+                    startActivity(new Intent(Carte.this, CommandType.class));
                 }
 
                 if (title.equals("coupdepouce")) {
-                    startActivity(new Intent(Carte.this, commandType.class));
+                    startActivity(new Intent(Carte.this, CommandType.class));
                 }
 
                 if (title.equals("quitter")) {
@@ -110,7 +108,7 @@ public class Carte extends AppCompatActivity {
     }
 
     public void retour(View view){
-        Intent entrees = new Intent(Carte.this, commandType.class);
+        Intent entrees = new Intent(Carte.this, CommandType.class);
         startActivity(entrees);
     }
 }

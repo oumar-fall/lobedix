@@ -132,11 +132,14 @@ tools:context=".ChoixApero">
                 android:gravity="center_vertical">
 
                 <ImageButton
+                    android:onClick="removeVinRouge"
+                    android:id="@+id/moinsvinRouge"
                     android:layout_width="@dimen/plusMoins"
                     android:layout_height="@dimen/plusMoins"
                     android:background="@drawable/moins"/>
 
                 <TextView
+                    android:id="@+id/vinRouge"
                     android:layout_width="@dimen/plusMoins"
                     android:layout_height="@dimen/plusMoins"
                     android:background="@drawable/rect"
@@ -145,6 +148,8 @@ tools:context=".ChoixApero">
                     android:layout_marginHorizontal="2dp"/>
 
                 <ImageButton
+                    android:onClick="addVinRouge"
+                    android:id="@+id/plusvinRouge"
                     android:layout_width="@dimen/plusMoins"
                     android:layout_height="@dimen/plusMoins"
                     android:background="@drawable/plus"/>
@@ -180,13 +185,14 @@ tools:context=".ChoixApero">
                 android:gravity="center_vertical">
 
                 <ImageButton
-
+                    android:onClick="removeVinBlanc"
+                    android:id="@+id/moinsvinBlanc"
                     android:layout_width="@dimen/plusMoins"
                     android:layout_height="@dimen/plusMoins"
                     android:background="@drawable/moins"/>
 
                 <TextView
-
+                    android:id="@+id/vinBlanc"
                     android:layout_width="@dimen/plusMoins"
                     android:layout_height="@dimen/plusMoins"
                     android:background="@drawable/rect"
@@ -195,7 +201,8 @@ tools:context=".ChoixApero">
                     android:layout_marginHorizontal="2dp"/>
 
                 <ImageButton
-
+                    android:onClick="addVinBlanc"
+                    android:id="@+id/plusvinBlanc"
                     android:layout_width="@dimen/plusMoins"
                     android:layout_height="@dimen/plusMoins"
                     android:background="@drawable/plus"/>
@@ -230,13 +237,14 @@ tools:context=".ChoixApero">
                 android:gravity="center_vertical">
 
                 <ImageButton
-
+                    android:onClick="removeBiere"
+                    android:id="@+id/moinsbiere"
                     android:layout_width="@dimen/plusMoins"
                     android:layout_height="@dimen/plusMoins"
                     android:background="@drawable/moins"/>
 
                 <TextView
-                    android:id="@+id/tomates"
+                    android:id="@+id/biere"
                     android:layout_width="@dimen/plusMoins"
                     android:layout_height="@dimen/plusMoins"
                     android:background="@drawable/rect"
@@ -245,8 +253,8 @@ tools:context=".ChoixApero">
                     android:layout_marginHorizontal="2dp"/>
 
                 <ImageButton
-
-                    android:id="@+id/plusTomates"
+                    android:onClick="addBiere"
+                    android:id="@+id/plusbiere"
                     android:layout_width="@dimen/plusMoins"
                     android:layout_height="@dimen/plusMoins"
                     android:background="@drawable/plus"/>
@@ -280,14 +288,14 @@ tools:context=".ChoixApero">
                 android:gravity="center_vertical">
 
                 <ImageButton
-
-                    android:id="@+id/moinsFeuillete"
+                    android:onClick="removeEauPetillante"
+                    android:id="@+id/moinseauPetillante"
                     android:layout_width="@dimen/plusMoins"
                     android:layout_height="@dimen/plusMoins"
                     android:background="@drawable/moins"/>
 
                 <TextView
-                    android:id="@+id/feuillete"
+                    android:id="@+id/eauPetillante"
                     android:layout_width="@dimen/plusMoins"
                     android:layout_height="@dimen/plusMoins"
                     android:background="@drawable/rect"
@@ -296,8 +304,8 @@ tools:context=".ChoixApero">
                     android:layout_marginHorizontal="2dp"/>
 
                 <ImageButton
-
-                    android:id="@+id/plusFeuillete"
+                    android:onClick="addEauPetillante"
+                    android:id="@+id/pluseauPetillante"
                     android:layout_width="@dimen/plusMoins"
                     android:layout_height="@dimen/plusMoins"
                     android:background="@drawable/plus"/>
@@ -333,6 +341,38 @@ tools:context=".ChoixApero">
                 android:textAlignment="center"
                 android:paddingHorizontal="@dimen/paddingNoResults"/>
 
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="40dp"
+            android:layout_gravity="bottom"
+            >
+
+            <Button
+                android:id="@+id/commander_immediatement"
+                android:onClick="commander"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Commander immédiatement"
+                android:background="@drawable/button1"
+                android:layout_marginHorizontal="20dp"
+                />
+
+            <Button
+                android:id="@+id/continuer_commande"
+                android:onClick="continuerCommande"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Poursuivre sa commande"
+                android:background="@drawable/button1"
+                android:layout_marginHorizontal="20dp"
+                />
 
         </LinearLayout>
 

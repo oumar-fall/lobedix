@@ -5,10 +5,8 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Menu;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -81,7 +79,7 @@ public class Menu_jour extends AppCompatActivity {
                 }
 
                 if (title.equals("coupdepouce")) {
-                    startActivity(new Intent(Menu_jour.this, commandType.class));
+                    startActivity(new Intent(Menu_jour.this, CommandType.class));
                 }
 
                 if (title.equals("quitter")) {

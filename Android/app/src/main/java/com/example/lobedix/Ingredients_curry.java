@@ -64,7 +64,7 @@ public class Ingredients_curry extends AppCompatActivity {
                     startActivity(new Intent(Ingredients_curry.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){ // Coup de pouce
-                    startActivity(new Intent(Ingredients_curry.this, commandType.class));}
+                    startActivity(new Intent(Ingredients_curry.this, CommandType.class));}
 
                 if (title.equals("quitter")){ // Quitter
                     startActivity(new Intent(Ingredients_curry.this, MainActivity.class));}

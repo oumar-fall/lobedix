@@ -20,18 +20,23 @@ public class MainActivity extends AppCompatActivity {
         DataHolder.getInstance().setInitialDessert();
         DataHolder.getInstance().setInitialMenus();
         DataHolder.getInstance().setInitialBoissons();
+        DataHolder.getInstance().setInitialApero();
 
         DataHolder.getInstance().setListeEntree();
         DataHolder.getInstance().setListePlat();
         DataHolder.getInstance().setListeDessert();
         DataHolder.getInstance().setListeMenus();
         DataHolder.getInstance().setListeBoisson();
+        DataHolder.getInstance().setListeApero();
+
 
         DataHolder.getInstance().setBelleListeEntree();
         DataHolder.getInstance().setBelleListePlat();
         DataHolder.getInstance().setBelleListeDessert();
         DataHolder.getInstance().setBelleListeMenus();
         DataHolder.getInstance().setBelleListeBoissons();
+        DataHolder.getInstance().setBelleListeApero();
+
 
 
         DataHolder.getInstance().initNb();

@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
-import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -13,10 +12,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.google.android.material.navigation.NavigationView;
-
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 
 public class Ingredients_mousse extends AppCompatActivity {
 
@@ -72,7 +67,7 @@ public class Ingredients_mousse extends AppCompatActivity {
                     startActivity(new Intent(Ingredients_mousse.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){ // Coup de pouce
-                    startActivity(new Intent(Ingredients_mousse.this, commandType.class));}
+                    startActivity(new Intent(Ingredients_mousse.this, CommandType.class));}
 
                 if (title.equals("quitter")){ // Quitter
                     startActivity(new Intent(Ingredients_mousse.this, MainActivity.class));}

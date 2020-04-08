@@ -16,17 +16,15 @@ import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class MyCommand extends AppCompatActivity {
+public class MyApero extends AppCompatActivity {
     private DrawerLayout drawer;
     private ImageButton menu_button;
     private NavigationView view;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_command);
-        /* commande = findViewById(R.id.commande);
-        String c = DataHolder.getInstance().textCommande();
-        commande.setText(c);*/
+        setContentView(R.layout.activity_my_apero);
+
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         menu_button=(ImageButton)findViewById(R.id.menu_button);
@@ -53,32 +51,32 @@ public class MyCommand extends AppCompatActivity {
                 CharSequence title = menuItem.getTitleCondensed();
 
                 if(title.equals("aperitif")){ // Choix apéro
-                    startActivity(new Intent(MyCommand.this, ChoixApero.class));}
+                    startActivity(new Intent(MyApero.this, ChoixApero.class));}
 
                 if (title.equals("espace")){ // Changer d'espace
-                    startActivity(new Intent(MyCommand.this, Enfant_Adulte.class));}
+                    startActivity(new Intent(MyApero.this, Enfant_Adulte.class));}
 
-                if (title.equals("commande")){ // Ma commande
-                    startActivity(new Intent(MyCommand.this, MyCommand.class));}
+                if (title.equals("aperoe")){ // Ma aperoe
+                    startActivity(new Intent(MyApero.this, MyApero.class));}
 
 
                 if (title.equals("entrees")){
-                    startActivity(new Intent(MyCommand.this, listeEntrees.class));}
+                    startActivity(new Intent(MyApero.this, listeEntrees.class));}
 
                 if (title.equals("plats")){
-                    startActivity(new Intent(MyCommand.this, listePlats.class));}
+                    startActivity(new Intent(MyApero.this, listePlats.class));}
 
                 if (title.equals("desserts")){
-                    startActivity(new Intent(MyCommand.this, listeDesserts.class));}
+                    startActivity(new Intent(MyApero.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){
-                    startActivity(new Intent(MyCommand.this, CommandType.class));}
+                    startActivity(new Intent(MyApero.this, CommandType.class));}
 
                 if (title.equals("quitter")){
-                    startActivity(new Intent(MyCommand.this, MainActivity.class));}
+                    startActivity(new Intent(MyApero.this, MainActivity.class));}
 
                 if (title.equals("menus")){
-                    startActivity(new Intent(MyCommand.this, Menus.class));}
+                    startActivity(new Intent(MyApero.this, Menus.class));}
 
                 drawer.closeDrawers();
                 return true;
@@ -93,27 +91,22 @@ public class MyCommand extends AppCompatActivity {
     public void onResume(){
         super.onResume();
         TextView commande = findViewById(R.id.commande);
-        String c = DataHolder.getInstance().textCommande(false);
+        String c = DataHolder.getInstance().textCommande(true);
         commande.setText(c);
 
     }
 
     public void confirm(View view){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Validation de la commande");
-        builder.setMessage("Etes-vous sûr.e de vouloir confirmer votre commande ?");
+        builder.setTitle("Validation de l'aperitif");
+        builder.setMessage("Etes-vous sûr.e de vouloir confirmer votre aperitif ?");
         builder.setCancelable(true);
         builder.setPositiveButton("Oui",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        Toast.makeText(MyCommand.this, "Votre commande est en cours de préparation.", Toast.LENGTH_SHORT).show();
-                        DataHolder.getInstance().cleanListeDessert();
-                        DataHolder.getInstance().cleanListeEntree();
-                        DataHolder.getInstance().cleanListeMenu();
-                        DataHolder.getInstance().cleanListePlat();
-                        DataHolder.getInstance().cleanListeBoisson();
+                        Toast.makeText(MyApero.this, "Votre aperitif est en cours de préparation.", Toast.LENGTH_SHORT).show();
                         DataHolder.getInstance().cleanListeApero();
-                        startActivity(new Intent(MyCommand.this, MainActivity.class));
+                        startActivity(new Intent(MyApero.this, CommandType.class));
                     }
                 });
 
@@ -128,7 +121,7 @@ public class MyCommand extends AppCompatActivity {
     }
 
     public void retour(View view){
-        Intent menus = new Intent(MyCommand.this, CommandType.class);
+        Intent menus = new Intent(MyApero.this, ChoixApero.class);
         startActivity(menus);
     }
 }

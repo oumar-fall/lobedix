@@ -64,7 +64,7 @@ public class Ingredients_glace extends AppCompatActivity {
                     startActivity(new Intent(Ingredients_glace.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){ // Coup de pouce
-                    startActivity(new Intent(Ingredients_glace.this, commandType.class));}
+                    startActivity(new Intent(Ingredients_glace.this, CommandType.class));}
 
                 if (title.equals("quitter")){ // Quitter
                     startActivity(new Intent(Ingredients_glace.this, MainActivity.class));}

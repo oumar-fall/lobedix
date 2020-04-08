@@ -67,11 +67,11 @@ public class Dish_Informations_Nutri_Feuillete extends AppCompatActivity {
                     startActivity(new Intent(Dish_Informations_Nutri_Feuillete.this, listeDesserts.class));}
 
                 if (title.equals("desserts")) { // Nos desserts
-                    startActivity(new Intent(Dish_Informations_Nutri_Feuillete.this, commandType.class));
+                    startActivity(new Intent(Dish_Informations_Nutri_Feuillete.this, CommandType.class));
                 }
 
                 if (title.equals("coupdepouce")) { // Coup de pouce
-                    startActivity(new Intent(Dish_Informations_Nutri_Feuillete.this, commandType.class));
+                    startActivity(new Intent(Dish_Informations_Nutri_Feuillete.this, CommandType.class));
                 }
 
                 if (title.equals("quitter")) { // Quitter

@@ -64,7 +64,7 @@ public class Ingredients_taboule extends AppCompatActivity {
                     startActivity(new Intent(Ingredients_taboule.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){ // Coup de pouce
-                    startActivity(new Intent(Ingredients_taboule.this, commandType.class));}
+                    startActivity(new Intent(Ingredients_taboule.this, CommandType.class));}
 
                 if (title.equals("quitter")){ // Quitter
                     startActivity(new Intent(Ingredients_taboule.this, MainActivity.class));}

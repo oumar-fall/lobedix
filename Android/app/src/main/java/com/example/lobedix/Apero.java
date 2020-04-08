@@ -1,13 +1,10 @@
 package com.example.lobedix;
 
 import android.content.Intent;
-import android.graphics.PointF;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.Switch;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -39,7 +36,7 @@ public class Apero extends AppCompatActivity {
 
     public void NoApero(View view){
 
-        Intent command = new Intent(Apero.this, commandType.class);
+        Intent command = new Intent(Apero.this, CommandType.class);
         startActivity(command);
     }
 
@@ -53,7 +50,7 @@ public class Apero extends AppCompatActivity {
         String message = "";
         switch(direction) {
             case LEFT_TO_RIGHT:
-                Intent command = new Intent(Apero.this, commandType.class);
+                Intent command = new Intent(Apero.this, CommandType.class);
                 startActivity(command);
 
                 message = "Pas d'apéro !";

@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Menu;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -84,7 +83,7 @@ public class Dish_informations_ratatouille extends AppCompatActivity {
                     startActivity(new Intent(Dish_informations_ratatouille.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){
-                    startActivity(new Intent(Dish_informations_ratatouille.this, commandType.class));}
+                    startActivity(new Intent(Dish_informations_ratatouille.this, CommandType.class));}
 
                 if (title.equals("quitter")){
                     startActivity(new Intent(Dish_informations_ratatouille.this, MainActivity.class));}

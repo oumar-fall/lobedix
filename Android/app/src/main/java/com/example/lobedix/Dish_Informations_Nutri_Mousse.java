@@ -67,11 +67,11 @@ public class Dish_Informations_Nutri_Mousse extends AppCompatActivity {
                     startActivity(new Intent(Dish_Informations_Nutri_Mousse.this, listeDesserts.class));}
 
                 if (title.equals("desserts")) { // Nos desserts
-                    startActivity(new Intent(Dish_Informations_Nutri_Mousse.this, commandType.class));
+                    startActivity(new Intent(Dish_Informations_Nutri_Mousse.this, CommandType.class));
                 }
 
                 if (title.equals("coupdepouce")) { // Coup de pouce
-                    startActivity(new Intent(Dish_Informations_Nutri_Mousse.this, commandType.class));
+                    startActivity(new Intent(Dish_Informations_Nutri_Mousse.this, CommandType.class));
                 }
 
                 if (title.equals("quitter")) { // Quitter

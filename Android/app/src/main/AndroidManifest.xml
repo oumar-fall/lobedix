@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Boisson_soupe"></activity>
+        <activity android:name=".MyApero"></activity>
+        <activity android:name=".Boisson_soupe" />
         <activity android:name=".Boisson_ratatouille" />
         <activity android:name=".Boisson_lasagnes" />
         <activity android:name=".Boisson_curry" />
@@ -79,7 +80,7 @@
         <activity android:name=".Dish_informations_feuillete" />
         <activity android:name=".listeEntrees" />
         <activity android:name=".Dish_Informations_Nutri" />
-        <activity android:name=".commandType" />
+        <activity android:name=".CommandType" />
         <activity android:name=".Enfant_Adulte" />
         <activity android:name=".Menus" />
         <activity android:name=".Menu_simple" />

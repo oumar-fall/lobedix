@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CommandType">
+    android:id="@+id/drawer_layout"
+    tools:context=".MyApero">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -109,90 +108,32 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:orientation="vertical"
                 android:layout_marginHorizontal="@dimen/marginGlobalH"
-                android:layout_marginTop="40dp"
-                android:gravity="center_horizontal|top"
-                android:orientation="vertical">
+                android:layout_marginTop="@dimen/marginGlobalV"
+                android:gravity="top">
 
-                <SearchView
-                    android:id="@+id/search_bar"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/searchBarH"
-                    android:background="@drawable/rect"
-                    android:layout_marginHorizontal="@dimen/marginSearchH"
-                    android:layout_marginBottom="@dimen/marginSearchB"
-                    android:inputType="text"
-                    android:queryHint="Vous cherchez un plat en particulier?"/>
-
-                <FrameLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <ImageButton
-                        android:layout_width="@dimen/assiettes"
-                        android:layout_height="@dimen/assiettes"
-                        android:layout_gravity="bottom"
-                        android:background="@drawable/assiette"
-                        android:onClick="entrees" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="@string/entrees"
-                        android:textAlignment="center"
-                        android:textSize="@dimen/txtAssiettes" />
-                </FrameLayout>
-
-                <LinearLayout
+                <TextView
+                    android:id="@+id/commande"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:orientation="horizontal">
+                    android:layout_marginTop="@dimen/marginCommandeV"
+                    android:gravity="center"
+                    android:text="Vous n'avez rien commandé pour l'instant"
+                    android:textSize="20sp">
 
-                    <FrameLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1">
+                </TextView>
 
-                        <ImageButton
-                            android:layout_width="@dimen/assiettes"
-                            android:layout_height="@dimen/assiettes"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@drawable/assiette"
-                            android:onClick="plats" />
+                <Button
+                    android:background="@drawable/button1"
+                    android:id="@+id/valider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Valider"
+                    android:layout_gravity="center"
+                    android:onClick="confirm">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:text="@string/plats"
-                            android:textAlignment="center"
-                            android:textSize="@dimen/txtAssiettes" />
-                    </FrameLayout>
-
-                    <FrameLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1">
-
-                        <ImageButton
-                            android:layout_width="@dimen/assiettes"
-                            android:layout_height="@dimen/assiettes"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@drawable/assiette" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:text="@string/desserts"
-                            android:textAlignment="center"
-                            android:textSize="@dimen/txtAssiettes"
-                            android:onClick="desserts"/>
-                    </FrameLayout>
-
-                </LinearLayout>
+                </Button>
 
             </LinearLayout>
 
@@ -207,5 +148,4 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:menu="@menu/main_menu"/>
-
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -64,7 +64,7 @@ public class Ingredients_salade extends AppCompatActivity {
                     startActivity(new Intent(Ingredients_salade.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){ // Coup de pouce
-                    startActivity(new Intent(Ingredients_salade.this, commandType.class));}
+                    startActivity(new Intent(Ingredients_salade.this, CommandType.class));}
 
                 if (title.equals("quitter")){ // Quitter
                     startActivity(new Intent(Ingredients_salade.this, MainActivity.class));}

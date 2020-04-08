@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Menu;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -83,7 +82,7 @@ public class Dish_informations_lasagnes extends AppCompatActivity {
                         startActivity(new Intent(Dish_informations_lasagnes.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){ // Coup de pouce
-                        startActivity(new Intent(Dish_informations_lasagnes.this, commandType.class));}
+                        startActivity(new Intent(Dish_informations_lasagnes.this, CommandType.class));}
 
                 if (title.equals("quitter")){ // Quitter
                         startActivity(new Intent(Dish_informations_lasagnes.this, MainActivity.class));}

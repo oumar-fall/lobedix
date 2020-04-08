@@ -67,11 +67,11 @@ public class Dish_Informations_Nutri_Curry extends AppCompatActivity {
                     startActivity(new Intent(Dish_Informations_Nutri_Curry.this, listeDesserts.class));}
 
                 if (title.equals("desserts")) { // Nos desserts
-                    startActivity(new Intent(Dish_Informations_Nutri_Curry.this, commandType.class));
+                    startActivity(new Intent(Dish_Informations_Nutri_Curry.this, CommandType.class));
                 }
 
                 if (title.equals("coupdepouce")) { // Coup de pouce
-                    startActivity(new Intent(Dish_Informations_Nutri_Curry.this, commandType.class));
+                    startActivity(new Intent(Dish_Informations_Nutri_Curry.this, CommandType.class));
                 }
 
                 if (title.equals("quitter")) { // Quitter

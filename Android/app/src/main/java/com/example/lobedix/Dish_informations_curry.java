@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Menu;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -83,7 +82,7 @@ public class Dish_informations_curry extends AppCompatActivity {
                     startActivity(new Intent(Dish_informations_curry.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){
-                    startActivity(new Intent(Dish_informations_curry.this, commandType.class));}
+                    startActivity(new Intent(Dish_informations_curry.this, CommandType.class));}
 
                 if (title.equals("quitter")){
                     startActivity(new Intent(Dish_informations_curry.this, MainActivity.class));}

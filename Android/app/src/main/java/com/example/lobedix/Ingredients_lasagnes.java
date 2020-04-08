@@ -64,7 +64,7 @@ public class Ingredients_lasagnes extends AppCompatActivity {
                     startActivity(new Intent(Ingredients_lasagnes.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){ // Coup de pouce
-                    startActivity(new Intent(Ingredients_lasagnes.this, commandType.class));}
+                    startActivity(new Intent(Ingredients_lasagnes.this, CommandType.class));}
 
                 if (title.equals("quitter")){ // Quitter
                     startActivity(new Intent(Ingredients_lasagnes.this, MainActivity.class));}

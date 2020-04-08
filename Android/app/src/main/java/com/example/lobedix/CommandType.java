@@ -12,7 +12,7 @@ import android.widget.ImageButton;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class commandType extends AppCompatActivity {
+public class CommandType extends AppCompatActivity {
 
     private ImageButton menu_button;
     private DrawerLayout drawer;
@@ -49,30 +49,30 @@ public class commandType extends AppCompatActivity {
                 CharSequence title = menuItem.getTitleCondensed();
 
                 if(title.equals("aperitif")){ // Choix apéro
-                    startActivity(new Intent(commandType.this, ChoixApero.class));}
+                    startActivity(new Intent(CommandType.this, ChoixApero.class));}
 
                 if (title.equals("espace")){ // Changer d'espace
-                    startActivity(new Intent(commandType.this, Enfant_Adulte.class));}
+                    startActivity(new Intent(CommandType.this, Enfant_Adulte.class));}
 
                 if (title.equals("commande")){ // Ma commande
-                    startActivity(new Intent(commandType.this, MyCommand.class));}
+                    startActivity(new Intent(CommandType.this, MyCommand.class));}
 
                 if (title.equals("entrees")){
-                    startActivity(new Intent(commandType.this, listeEntrees.class));}
+                    startActivity(new Intent(CommandType.this, listeEntrees.class));}
 
                 if (title.equals("plats")){
-                    startActivity(new Intent(commandType.this, listePlats.class));}
+                    startActivity(new Intent(CommandType.this, listePlats.class));}
 
                 if (title.equals("desserts")){
-                    startActivity(new Intent(commandType.this, listeDesserts.class));}
+                    startActivity(new Intent(CommandType.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){
-                    startActivity(new Intent(commandType.this, commandType.class));}
+                    startActivity(new Intent(CommandType.this, CommandType.class));}
 
                 if (title.equals("quitter")){
-                    startActivity(new Intent(commandType.this, MainActivity.class));}
+                    startActivity(new Intent(CommandType.this, MainActivity.class));}
                 if (title.equals("menus")){
-                    startActivity(new Intent(commandType.this, Menus.class));}
+                    startActivity(new Intent(CommandType.this, Menus.class));}
 
                 drawer.closeDrawers();
                 return true;
@@ -86,23 +86,23 @@ public class commandType extends AppCompatActivity {
 
     public void carte_menu(View view) {
 
-        Intent c = new Intent(commandType.this, Carte.class);
+        Intent c = new Intent(CommandType.this, Carte.class);
         startActivity(c);
     }
 
     public void retour(View view){
-        Intent entrees = new Intent(commandType.this, Apero.class);
+        Intent entrees = new Intent(CommandType.this, Apero.class);
         startActivity(entrees);
     }
 
     public void menus(View view){
-        Intent menus = new Intent(commandType.this, Menus.class);
+        Intent menus = new Intent(CommandType.this, Menus.class);
         startActivity(menus);
 
     }
 
     public void coup_de_pouce(View view){
-        Intent pouce = new Intent(commandType.this, Pouce_sucre_sale.class);
+        Intent pouce = new Intent(CommandType.this, Pouce_sucre_sale.class);
         startActivity(pouce);
     }
 }

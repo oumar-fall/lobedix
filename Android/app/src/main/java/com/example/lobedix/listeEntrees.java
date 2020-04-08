@@ -5,11 +5,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
@@ -103,7 +101,7 @@ public class listeEntrees extends AppCompatActivity {
                     startActivity(new Intent(listeEntrees.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){
-                    startActivity(new Intent(listeEntrees.this, commandType.class));}
+                    startActivity(new Intent(listeEntrees.this, CommandType.class));}
 
                 if (title.equals("quitter")){
                     startActivity(new Intent(listeEntrees.this, MainActivity.class));}

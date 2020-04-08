@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
@@ -105,7 +104,7 @@ public class listePlats extends AppCompatActivity {
                     startActivity(new Intent(listePlats.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){
-                    startActivity(new Intent(listePlats.this, commandType.class));}
+                    startActivity(new Intent(listePlats.this, CommandType.class));}
 
                 if (title.equals("quitter")){
                     startActivity(new Intent(listePlats.this, MainActivity.class));}

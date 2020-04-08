@@ -10,6 +10,8 @@ public class DataHolder {
     private static Hashtable<String,Integer> dessert = new Hashtable<String,Integer>();
     private static Hashtable<String,Integer> menu = new Hashtable<String,Integer>();
     private static Hashtable<String,Integer> boisson = new Hashtable<String,Integer>();
+    private static Hashtable<String,Integer> apero = new Hashtable<String,Integer>();
+
 
 
     private static final DataHolder holder = new DataHolder();
@@ -19,12 +21,16 @@ public class DataHolder {
     private  static ArrayList<String> listeDessert = new ArrayList<String>();
     private  static ArrayList<String> listeMenus = new ArrayList<String>();
     private  static ArrayList<String> listeBoissons = new ArrayList<String>();
+    private  static ArrayList<String> listeApero = new ArrayList<String>();
+
 
     private static ArrayList<String> belleListePlat = new ArrayList<String>(); //pour garder les noms entiers des plats et pas juste la clé
     private  static ArrayList<String> belleListeEntree = new ArrayList<String>();
     private  static ArrayList<String> belleListeDessert= new ArrayList<String>();
     private  static ArrayList<String> belleListeMenu= new ArrayList<String>();
     private  static ArrayList<String> belleListeBoisson= new ArrayList<String>();
+    private  static ArrayList<String> belleListeApero= new ArrayList<String>();
+
 
     private static Hashtable<String,Integer> prix = new Hashtable<String,Integer>();
 
@@ -37,6 +43,11 @@ public class DataHolder {
     private static int nbLasagnes;
     private static int nbCurry;
     private static int nbRatatouille;
+
+    private static int nbVinRouge;
+    private static int nbVinBlanc;
+    private static int nbBiere;
+    private static int nbEauPetillante;
 
     private static int nbCreme;
     private static int nbSalade;
@@ -76,6 +87,11 @@ public class DataHolder {
         nbLasagnes=0;
         nbCurry=0;
         nbRatatouille=0;
+
+        nbVinRouge=0;
+        nbVinBlanc=0;
+        nbBiere=0;
+        nbEauPetillante=0;
 
         nbCreme=0;
         nbSalade=0;
@@ -130,6 +146,22 @@ public class DataHolder {
     public void setNbRatatouille(int nbRatatouille){
         this.nbRatatouille = nbRatatouille;
     }
+
+
+
+    public int getNbVinRouge(){
+        return(nbVinRouge);
+    }
+    public void setNbVinRouge(int nbVinRouge){ this.nbVinRouge = nbVinRouge; }
+
+    public int getNbVinBlanc(){ return(nbVinBlanc); }
+    public void setNbVinBlanc(int nbVinBlanc){ this.nbVinBlanc= nbVinBlanc; }
+
+    public int getNbBiere(){ return(nbBiere); }
+    public void setNbBiere(int nbBiere){ this.nbBiere = nbBiere; }
+
+    public int getNbEauPetillante(){ return(nbEauPetillante); }
+    public void setNbEauPetillante(int nbEauPetillante){ this.nbEauPetillante = nbEauPetillante; }
 
 
 
@@ -296,6 +328,10 @@ public class DataHolder {
         prix.put("Lasagnes",15);
         prix.put("Curry",14);
         prix.put("Ratatouille",11);
+        prix.put("VinRouge", 5);
+        prix.put("VinBlanc", 4);
+        prix.put("Biere", 5);
+        prix.put("EauPetillante", 3);
         prix.put("Creme", 7);
         prix.put("Salade", 6);
         prix.put("Mousse", 7);
@@ -338,6 +374,29 @@ public class DataHolder {
         belleListeEntree.add("Feuilleté au fromage");
     }
 
+
+
+    public void setBelleListeApero(){
+        belleListeApero.add("Vin Rouge");
+        belleListeApero.add("Vin Blanc");
+        belleListeApero.add("Bière");
+        belleListeApero.add("Eau Pétillante");
+    }
+
+    public void setInitialApero(){
+        apero.put("VinRouge",0);
+        apero.put("VinBlanc",0);
+        apero.put("Biere",0);
+        apero.put("EauPetillante",0);
+
+    }
+
+    public void setListeApero(){
+        listeApero.add("VinRouge");
+        listeApero.add("VinBlanc");
+        listeApero.add("Biere");
+        listeApero.add("EauPetillante");
+    }
 
 
     public void setBelleListePlat(){
@@ -483,6 +542,13 @@ public class DataHolder {
         this.plat = plat;
     }
 
+    public Hashtable<String,Integer> getApero() {
+        return apero;
+    }
+    public void setApero(Hashtable<String,Integer> apero) {
+        this.apero = apero;
+    }
+
     public Hashtable<String,Integer> getDessert() {
         return dessert;
     }
@@ -511,17 +577,24 @@ public class DataHolder {
     }
     public ArrayList<String> getListeMenus(){ return(listeMenus); }
     public ArrayList<String> getListeBoissons(){ return(listeBoissons); }
+    public ArrayList<String> getListeApero(){ return(listeApero); }
 
     public void cleanListeEntree(){
         listeEntree = new ArrayList<String>();
         entree = new Hashtable<String,Integer>();
-        belleListePlat = new ArrayList<String>();
+        belleListeEntree = new ArrayList<String>();
     }
 
     public void cleanListePlat(){
         listePlat = new ArrayList<String>();
         plat = new Hashtable<String,Integer>();
         belleListePlat = new ArrayList<String>();
+    }
+
+    public void cleanListeApero(){
+        listeApero = new ArrayList<String>();
+        apero = new Hashtable<String,Integer>();
+        belleListeApero = new ArrayList<String>();
     }
 
     public void cleanListeDessert(){
@@ -542,62 +615,80 @@ public class DataHolder {
         belleListeBoisson = new ArrayList<String>();
     }
 
-    public String textCommande() {
+    public String textCommande(boolean onlyApero) {
         String c = "";
         Integer prixfinal =0;
-        for (int i = 0; i < listeEntree.size(); i++) {
-            String p1 = listeEntree.get(i);
-            Integer pr = prix.get(p1); //prix du plat en question
-            String p = belleListeEntree.get(i);
-            Integer k = entree.get(p1);
-            prixfinal = prixfinal + k*pr;
-            if (k != 0) {
-                c = c + k.toString() +" " + p + "\n";
-            }
-        }
-        for (int i = 0; i < listePlat.size(); i++) {
-            String p1 = listePlat.get(i);
-            Integer k = plat.get(p1);
-            String p = belleListePlat.get(i);
-            Integer pr = prix.get(p1); //prix du plat en question
+        System.out.println("*****" + listeApero.size() + "******");
+
+        for (int i = 0; i < listeApero.size(); i++) {
+            String p1 = listeApero.get(i);
+            Integer k = apero.get(p1);
+            String p = belleListeApero.get(i);
+            Integer pr = prix.get(p1); //prix du apero en question
             prixfinal = prixfinal + k*pr;
             if (k != 0) {
                 c = c + k.toString() + " " + p + "\n";
             }
         }
 
-        for (int i = 0; i < listeDessert.size(); i++) {
-            String p1 = listeDessert.get(i);
-            Integer k = dessert.get(p1);
-            String p = belleListeDessert.get(i);
-            Integer pr = prix.get(p1); //prix du plat en question
-            prixfinal = prixfinal + k*pr;
-            if (k != 0) {
-                c = c + k.toString() + " " + p + "\n";
+        if (!onlyApero){
+            for (int i = 0; i < listeEntree.size(); i++) {
+                String p1 = listeEntree.get(i);
+                Integer pr = prix.get(p1); //prix du plat en question
+                String p = belleListeEntree.get(i);
+                Integer k = entree.get(p1);
+                prixfinal = prixfinal + k*pr;
+                if (k != 0) {
+                    c = c + k.toString() +" " + p + "\n";
+                }
+            }
+            for (int i = 0; i < listePlat.size(); i++) {
+                String p1 = listePlat.get(i);
+                Integer k = plat.get(p1);
+                String p = belleListePlat.get(i);
+                Integer pr = prix.get(p1); //prix du plat en question
+                prixfinal = prixfinal + k*pr;
+                if (k != 0) {
+                    c = c + k.toString() + " " + p + "\n";
+                }
+            }
+
+
+
+            for (int i = 0; i < listeDessert.size(); i++) {
+                String p1 = listeDessert.get(i);
+                Integer k = dessert.get(p1);
+                String p = belleListeDessert.get(i);
+                Integer pr = prix.get(p1); //prix du plat en question
+                prixfinal = prixfinal + k*pr;
+                if (k != 0) {
+                    c = c + k.toString() + " " + p + "\n";
+                }
+            }
+
+            for (int i = 0; i < listeMenus.size(); i++) {
+                String p1 = listeMenus.get(i);
+                Integer k = menu.get(p1);
+                String p = belleListeMenu.get(i);
+                Integer pr = prix.get(p1); //prix du plat en question
+                prixfinal = prixfinal + k*pr;
+                if (k != 0) {
+                    c = c + k.toString() + " " + p + "\n";
+                }
+            }
+
+            for (int i = 0; i < listeBoissons.size(); i++) {
+                String p1 = listeBoissons.get(i);
+                Integer k = boisson.get(p1);
+                String p = belleListeBoisson.get(i);
+                Integer pr = prix.get(p1); //prix du plat en question
+                prixfinal = prixfinal + k*pr;
+                if (k != 0) {
+                    c = c + k.toString() + " " + p + "\n";
+                }
             }
         }
 
-        for (int i = 0; i < listeMenus.size(); i++) {
-            String p1 = listeMenus.get(i);
-            Integer k = menu.get(p1);
-            String p = belleListeMenu.get(i);
-            Integer pr = prix.get(p1); //prix du plat en question
-            prixfinal = prixfinal + k*pr;
-            if (k != 0) {
-                c = c + k.toString() + " " + p + "\n";
-            }
-        }
-
-        for (int i = 0; i < listeBoissons.size(); i++) {
-            String p1 = listeBoissons.get(i);
-            Integer k = boisson.get(p1);
-            String p = belleListeBoisson.get(i);
-            Integer pr = prix.get(p1); //prix du plat en question
-            prixfinal = prixfinal + k*pr;
-            if (k != 0) {
-                c = c + k.toString() + " " + p + "\n";
-            }
-        }
         c = c+ "\n" + "TOTAL : " + prixfinal.toString() +"€";
         return(c);
     }

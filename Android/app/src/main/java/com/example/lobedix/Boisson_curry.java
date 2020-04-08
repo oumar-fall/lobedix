@@ -68,7 +68,7 @@ public class Boisson_curry extends AppCompatActivity {
                     startActivity(new Intent(Boisson_curry.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){ // Coup de pouce
-                    startActivity(new Intent(Boisson_curry.this, commandType.class));}
+                    startActivity(new Intent(Boisson_curry.this, CommandType.class));}
 
                 if (title.equals("quitter")){ // Quitter
                     startActivity(new Intent(Boisson_curry.this, MainActivity.class));}

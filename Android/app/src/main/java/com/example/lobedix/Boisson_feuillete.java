@@ -70,7 +70,7 @@ public class Boisson_feuillete extends AppCompatActivity {
                     startActivity(new Intent(Boisson_feuillete.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){ // Coup de pouce
-                    startActivity(new Intent(Boisson_feuillete.this, commandType.class));}
+                    startActivity(new Intent(Boisson_feuillete.this, CommandType.class));}
 
                 if (title.equals("quitter")){ // Quitter
                     startActivity(new Intent(Boisson_feuillete.this, MainActivity.class));}

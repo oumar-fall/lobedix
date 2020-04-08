@@ -69,7 +69,7 @@ public class Boisson_spaghetti extends AppCompatActivity {
                     startActivity(new Intent(Boisson_spaghetti.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){ // Coup de pouce
-                    startActivity(new Intent(Boisson_spaghetti.this, commandType.class));}
+                    startActivity(new Intent(Boisson_spaghetti.this, CommandType.class));}
 
                 if (title.equals("quitter")){ // Quitter
                     startActivity(new Intent(Boisson_spaghetti.this, MainActivity.class));}

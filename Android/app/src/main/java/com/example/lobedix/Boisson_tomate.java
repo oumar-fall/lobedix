@@ -68,7 +68,7 @@ public class Boisson_tomate extends AppCompatActivity {
                     startActivity(new Intent(Boisson_tomate.this, listeDesserts.class));}
 
                 if (title.equals("coupdepouce")){ // Coup de pouce
-                    startActivity(new Intent(Boisson_tomate.this, commandType.class));}
+                    startActivity(new Intent(Boisson_tomate.this, CommandType.class));}
 
                 if (title.equals("quitter")){ // Quitter
                     startActivity(new Intent(Boisson_tomate.this, MainActivity.class));}

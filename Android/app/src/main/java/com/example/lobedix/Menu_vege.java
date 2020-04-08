@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Menu;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -82,7 +81,7 @@ public class Menu_vege extends AppCompatActivity {
                 }
 
                 if (title.equals("coupdepouce")) {
-                    startActivity(new Intent(Menu_vege.this, commandType.class));
+                    startActivity(new Intent(Menu_vege.this, CommandType.class));
                 }
 
                 if (title.equals("quitter")) {

@@ -5,20 +5,16 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
-import java.util.ArrayList;
 import java.util.Hashtable;
 
 public class listeDesserts extends AppCompatActivity {
@@ -112,7 +108,7 @@ public class listeDesserts extends AppCompatActivity {
                 }
 
                 if (title.equals("coupdepouce")) {
-                    startActivity(new Intent(listeDesserts.this, commandType.class));
+                    startActivity(new Intent(listeDesserts.this, CommandType.class));
                 }
 
                 if (title.equals("quitter")) {
