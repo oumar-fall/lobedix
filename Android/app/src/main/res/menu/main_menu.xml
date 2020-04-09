@@ -13,7 +13,7 @@
         android:titleCondensed="espace"
         />
     <item android:id="@+id/aperitif"
-        android:title="Apéritif"
+        android:title="Boissons"
         android:titleCondensed="aperitif"
         />
 
