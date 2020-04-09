@@ -171,4 +171,7 @@
     <string name="eauPetillante">3.5€ eau pétillante</string>
 
     <string name="voirCommande">Voir ma commande</string>
+    <string name="masquerCommande">Masquer ma commande</string>
+    <string name="gererCommande">Gerer ma commande</string>
+
 </resources>

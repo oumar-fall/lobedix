@@ -107,25 +107,6 @@
                 android:background = "@drawable/menu_icon"/>
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="@dimen/marginBurgerMenu"
-                android:layout_gravity="top|right"
-                android:gravity="center">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/voirCommande"
-                    android:layout_marginRight="10dp"/>
-                <ImageButton
-                    android:id="@+id/panier_button"
-                    android:layout_width="@dimen/burgerMenu"
-                    android:layout_height="@dimen/burgerMenu"
-                    android:background = "@drawable/panier"/>
-            </LinearLayout>
-
-            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
@@ -228,6 +209,56 @@
                 </LinearLayout>
 
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="top|right"
+                android:background="@drawable/apercu_commande"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="-250dp"
+                android:padding="20dp"
+                android:gravity="center_vertical|right"
+                android:id="@+id/commandLook">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:id="@+id/txtCommand"
+                    android:textColor="@android:color/white"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gererCommande"
+                    android:onClick="gererCommande"/>
+                <!--android:textColor="@drawable/white"-->
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/marginBurgerMenu"
+                android:layout_gravity="top|right"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/voirCommande"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/txtShowCommand"/>
+                <ImageButton
+                    android:id="@+id/showCommand"
+                    android:layout_width="@dimen/burgerMenu"
+                    android:layout_height="@dimen/burgerMenu"
+                    android:background = "@drawable/panier"
+                    android:onClick="showCommand"/>
             </LinearLayout>
 
         </FrameLayout>

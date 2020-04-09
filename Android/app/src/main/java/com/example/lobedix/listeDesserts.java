@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
@@ -39,6 +41,8 @@ public class listeDesserts extends AppCompatActivity {
     private LinearLayout[] layouts;
     private String[] nom_plats;
     private int nombre_plats = 4;
+    private boolean commandShown = false;
+
 
 
     /*private  TextView Salade = findViewById(R.id.Salade);
@@ -302,6 +306,36 @@ public class listeDesserts extends AppCompatActivity {
         setNbSalade();
         setNbGlace();
 
+    }
+
+    public void showCommand(View view){
+        LinearLayout commandLook = findViewById(R.id.commandLook);
+        FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) commandLook.getLayoutParams();
+        TextView txtShowCommand = findViewById(R.id.txtShowCommand);
+        TextView txtCommand = findViewById(R.id.txtCommand);
+        ImageButton showCommand = findViewById(R.id.showCommand);
+        String c = DataHolder.getInstance().textCommande(false);
+        txtCommand.setText(c);
+        if (commandShown){
+            params.setMargins(params.leftMargin, params.topMargin, -1*params.width, params.bottomMargin);
+            txtShowCommand.setText(R.string.voirCommande);
+            txtShowCommand.setTextColor(Color.BLACK);
+            showCommand.setBackgroundResource(R.drawable.panier_black);
+        }
+        else {
+            params.setMargins(params.leftMargin, params.topMargin, params.topMargin, params.bottomMargin);
+            txtShowCommand.setText(R.string.masquerCommande);
+            txtShowCommand.setTextColor(Color.WHITE);
+            showCommand.setBackgroundResource(R.drawable.panier_white);
+
+        }
+        commandShown = !commandShown;
+        commandLook.setLayoutParams(params);
+    }
+
+    public void gererCommande(View view){
+        Intent command = new Intent(listeDesserts.this, MyCommand.class);
+        startActivity(command);
     }
 
     public void retour(View view){
