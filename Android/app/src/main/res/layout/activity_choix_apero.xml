@@ -358,7 +358,7 @@ tools:context=".ChoixApero">
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Commander immédiatement"
+                android:text="Commander mes boissons immédiatement"
                 android:background="@drawable/button1"
                 android:layout_marginHorizontal="20dp"
                 />
